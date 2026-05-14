@@ -1,0 +1,140 @@
+/*-- scss:defaults --*/
+$body-bg: #ffffff;
+$body-color: #1a1a1a;
+$presentation-font-size-root: 28px;
+$presentation-h1-font-size: 1.8em;
+$presentation-h2-font-size: 1.15em;
+$presentation-h3-font-size: 1.0em;
+$link-color: #00377C;
+$selection-bg: #00AEEF;
+
+/*-- scss:rules --*/
+.reveal {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Title page */
+.reveal .slides section.title-slide h1,
+.reveal .slides section.title-slide .title {
+  color: #00377C !important;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin-bottom: 0.6em;
+}
+.reveal .slides section.title-slide .author {
+  color: #1a1a1a;
+  font-size: 0.95em;
+  margin-top: 0.5em;
+}
+.reveal .slides section.title-slide .date {
+  color: #6C7279;
+  font-size: 0.85em;
+  margin-top: 0.4em;
+}
+
+/* Regular slide headings */
+.reveal .slides section h1 {
+  color: #00377C;
+  font-weight: 600;
+}
+.reveal .slides section h2 {
+  color: #00377C;
+  font-weight: 600;
+  border-bottom: 2px solid #1CABE2;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 1.15em;
+}
+
+/* Section divider slides — full-screen blue */
+.reveal .section-divider {
+  background-color: #00377C !important;
+}
+.reveal .section-divider h1 {
+  color: #ffffff !important;
+  font-size: 1.6em;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+/* Tables — journal style */
+.reveal table {
+  font-size: 0.72em;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.reveal table thead tr {
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+}
+.reveal table tbody tr:last-child {
+  border-bottom: 2px solid #000;
+}
+.reveal table th {
+  background: transparent;
+  color: #000;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: none;
+  text-align: right;
+}
+.reveal table th:first-child { text-align: left; }
+.reveal table td {
+  padding: 4px 12px;
+  border: none;
+  text-align: right;
+}
+.reveal table td:first-child { text-align: left; }
+
+/* Small notes / footnotes — much smaller */
+.reveal .smaller, .reveal small {
+  font-size: 0.65em !important;
+  color: #555;
+  line-height: 1.35;
+}
+.reveal .smaller p, .reveal .smaller li {
+  font-size: 0.85em;
+}
+
+/* Tighter footer */
+.reveal .footer {
+  color: #888;
+  font-size: 0.55em !important;
+}
+
+/* Blockquotes — used for narrative reading */
+.reveal blockquote {
+  border-left: 4px solid #00AEEF;
+  padding: 6px 14px;
+  background: #f0f7fb;
+  margin: 8px 0;
+  font-size: 0.85em;
+}
+
+/* Columns layout */
+.reveal .columns { display: flex; gap: 28px; }
+.reveal .columns .column { flex: 1; }
+
+/* Callouts */
+.callout-note {
+  border-left: 4px solid #00AEEF;
+  padding: 8px 12px;
+  background: #f0f7fb;
+}
+
+/* Figure captions — much smaller and grey, no duplication */
+.reveal figure figcaption,
+.reveal .figure-caption {
+  font-size: 0.55em !important;
+  color: #888;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Center figures and constrain max-width */
+.reveal section img {
+  display: block;
+  margin: 0 auto;
+}
