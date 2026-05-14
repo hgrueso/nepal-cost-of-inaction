@@ -37,19 +37,20 @@ format:
       \setbeamercolor{section in head/foot shaded}{bg=unicefblue,fg=white}
       \setbeamertemplate{navigation symbols}{}
       \setbeamertemplate{title page}{
-        \vspace*{2.5cm}
+        \vspace*{2cm}
         \begin{center}
-          \begin{beamercolorbox}[wd=\paperwidth,sep=18pt,center]{frametitle}
+          \begin{beamercolorbox}[wd=\paperwidth,sep=20pt,center]{frametitle}
             {\usebeamerfont{title}\inserttitle\par}
           \end{beamercolorbox}
         \end{center}
-        \vfill
+        \vspace*{1.2cm}
         \begin{center}
-          {\large\insertauthor\par}
-          \vspace{0.6em}
-          {\insertdate\par}
-        \end{center}
-        \vspace*{2cm}}
+          {\Large\bfseries Hernando Grueso, PhD\par}
+          \vspace{0.4em}
+          {\large UNICEF\par}
+          \vspace{0.8em}
+          {\normalsize May 2026\par}
+        \end{center}}
 execute:
   echo: false
   warning: false
@@ -299,16 +300,14 @@ if (file.exists("outputs/tables/boys_reg_full.csv")) {
 
 ##  {.unnumbered}
 
-\vfill
+\vspace*{2.5cm}
 
-::: {style="text-align: center; font-size: 2.5em; font-weight: bold; color: #00377C;"}
+::: {style="text-align: center; font-size: 4em; font-weight: bold; color: #00377C;"}
 Thank you
 :::
 
-\vspace{0.5em}
+\vspace{1em}
 
-::: {style="text-align: center; font-size: 1.4em; color: #1CABE2;"}
+::: {style="text-align: center; font-size: 2em; color: #1CABE2;"}
 hgrueso@unicef.org
 :::
-
-\vfill

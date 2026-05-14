@@ -139,7 +139,5 @@ Raw NLSS IV 2022/23 microdata is distributed by the National Statistics Office o
 
 ## Contact
 
-**Hernando Grueso, PhD**
-AImpact Lab · Tech-enabled impact evaluation
+**Hernando Grueso, UNICEF**
 📧 `hgrueso@unicef.org`
-🌐 [aimpactlab.com](https://aimpactlab.com)
