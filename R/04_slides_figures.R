@@ -106,7 +106,7 @@ figD2 <- ggplot(neet_prov,
   scale_y_continuous(labels = label_percent(scale = 1),
                      expand = expansion(mult = c(0, 0.18))) +
   coord_flip() +
-  labs(title = "Madhesh and Lumbini are crisis zones for girls",
+  labs(title = "Madhesh and Lumbini show the widest female NEET gap",
        subtitle = "Female NEET rate exceeds male in every province | Youth 15-24",
        x = NULL, y = "% NEET",
        caption = "Source: NLSS IV 2022/23 | survey-weighted with 95% CI") +
@@ -156,6 +156,51 @@ figD3 <- ggplot(intersect_data,
   th_policy() +
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5, size = 11))
 sv(figD3, "d3_intersectionality", w = 12, h = 5.5)
+
+# =============================================================================
+# D3b — Enrolment intersectionality (mirror of D3 but enrolment outcome)
+# =============================================================================
+cat("\n=== D3b ===\n")
+intersect_enrol <- df_girls %>%
+  filter(!is.na(caste_broad),
+         caste_broad %in% c("Dalit", "Brahmin/Chhetri", "Janajati", "Religious/Linguistic"),
+         !is.na(currently_married), !is.na(rural)) %>%
+  mutate(profile = case_when(
+    currently_married == 1 & rural == 1 ~ "Married + Rural",
+    currently_married == 1 & rural == 0 ~ "Married + Urban",
+    currently_married == 0 & rural == 1 ~ "Unmarried + Rural",
+    currently_married == 0 & rural == 0 ~ "Unmarried + Urban")) %>%
+  group_by(caste_broad, profile) %>%
+  summarise(enrol = mean(attend_any, na.rm = TRUE) * 100, n = n(), .groups = "drop") %>%
+  filter(n >= 15, !is.na(profile)) %>%
+  mutate(profile = factor(profile,
+            c("Married + Rural", "Married + Urban",
+              "Unmarried + Rural", "Unmarried + Urban")),
+         caste_broad = factor(caste_broad,
+            c("Religious/Linguistic", "Dalit", "Janajati", "Brahmin/Chhetri")))
+
+figD3b <- ggplot(intersect_enrol,
+    aes(x = profile, y = enrol, fill = caste_broad)) +
+  geom_col(position = position_dodge(0.78, preserve = "single"),
+           width = 0.7, alpha = 0.92) +
+  geom_text(aes(label = paste0(round(enrol, 0), "%"), y = enrol + 1.5),
+            position = position_dodge(0.78, preserve = "single"),
+            size = 3, fontface = "bold") +
+  scale_fill_manual(values = c("Religious/Linguistic" = "#9467BD",
+                                "Dalit" = "#E2231A",
+                                "Janajati" = "#00833D",
+                                "Brahmin/Chhetri" = "#00377C"),
+                    name = "Caste/Ethnicity") +
+  scale_y_continuous(labels = label_percent(scale = 1),
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(title = "Marriage collapses enrolment - regardless of caste",
+       subtitle = "Married girls show enrolment rates near zero across all caste groups | Girls 15-24",
+       x = NULL, y = "% Enrolled",
+       caption = "Cells with n<15 dropped. Enrolment at any school level.") +
+  th_policy() +
+  theme(axis.text.x = element_text(angle = 0, hjust = 0.5, size = 11))
+sv(figD3b, "d3b_enrolment_intersectionality", w = 12, h = 5.5)
+
 
 # =============================================================================
 # R1 — Coefficient plot in pp
