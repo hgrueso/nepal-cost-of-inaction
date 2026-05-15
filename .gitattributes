@@ -1,0 +1,6 @@
+# Tell GitHub's linguist this is an R project, not HTML
+*.html linguist-generated=true
+*.css linguist-generated=true
+reports/*.html linguist-vendored=true
+archive/* linguist-vendored=true
+*.R linguist-detectable=true

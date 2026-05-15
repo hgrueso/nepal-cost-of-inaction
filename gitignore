@@ -1,0 +1,27 @@
+# Raw microdata — not redistributed
+data/NLSSIV_microdata/
+data/*.dta
+data/*.sav
+
+# R artefacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Generated outputs (regenerate from pipeline)
+outputs/*.RData
+outputs/figures/*.png
+outputs/log_*.txt
+
+# Quarto build artefacts
+reports/*_files/
+reports/.quarto/
+reports/*.tex
+reports/*.log
+reports/*.aux
+reports/*.knit.md
+
+# OS files
+.DS_Store
+Thumbs.db

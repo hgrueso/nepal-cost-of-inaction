@@ -1,0 +1,31 @@
+# Raw microdata — not redistributed
+data/NLSSIV_microdata/
+data/*.dta
+data/*.sav
+
+# Build artefacts and R workspace
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+Rplots.pdf
+
+# Generated outputs
+outputs/*.RData
+outputs/log_*.txt
+outputs/*_output.txt
+
+# Quarto build artefacts
+reports/*_files/
+reports/.quarto/
+reports/*.tex
+reports/*.log
+reports/*.aux
+reports/*.knit.md
+
+# Archive folder (locally kept, but not pushed to GitHub)
+archive/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -37,16 +37,16 @@ format:
       \setbeamercolor{section in head/foot shaded}{bg=unicefblue,fg=white}
       \setbeamertemplate{navigation symbols}{}
       \setbeamertemplate{title page}{
-        \vspace*{2cm}
+        \vspace*{1.5cm}
         \begin{center}
-          \begin{beamercolorbox}[wd=\paperwidth,sep=20pt,center]{frametitle}
-            {\usebeamerfont{title}\inserttitle\par}
+          \begin{beamercolorbox}[wd=\paperwidth,sep=22pt,center]{frametitle}
+            {\fontsize{22pt}{28pt}\selectfont\bfseries\inserttitle\par}
           \end{beamercolorbox}
         \end{center}
-        \vspace*{1.2cm}
+        \vspace*{1.5cm}
         \begin{center}
           {\Large\bfseries Hernando Grueso, PhD\par}
-          \vspace{0.4em}
+          \vspace{0.5em}
           {\large UNICEF\par}
           \vspace{0.8em}
           {\normalsize May 2026\par}
@@ -95,6 +95,20 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 | **Disability** | Washington Group 6+ functional difficulty | q08_16–q08_21 |
 | **Monthly wage** | Long-term salaried workers, NPR | q10_07, q10_09 |
 
+# Key Findings at a Glance {.section-divider background-color="#00377C"}
+
+## Five Headline Findings {.smaller}
+
+> **1.** Nepal's gender gap is **not in schools** — it is in labour markets. Girls' enrolment (40.2%) exceeds boys' (34.8%), but NEET (46.8%) is nearly double boys' (26.4%).
+
+> **2.** **Child marriage is the single most powerful driver of exclusion.** Being currently married reduces girls' enrolment by −61 pp and raises NEET by +42 pp, dwarfing the combined effect of poverty, caste, and disability.
+
+> **3.** **Secondary education has a verified causal effect**: −13.2 pp on NEET probability, stable across all provinces and caste groups (causal forest, n = 13,586).
+
+> **4.** **Each additional year of schooling raises projected lifetime earnings substantially** — at the secondary level, returns are *exponentially larger* for girls than for boys. This is the heart of the cost of inaction.
+
+> **5.** **Nepal forgoes ~NPR 8 billion per cohort** by not educating its adolescent girls — equivalent to **~10% of the annual health-sector budget**.
+
 # Diagnostic: Gender Gaps in Education and Employment {.section-divider background-color="#00377C"}
 
 ## The Gender Gap is Not in Schools — It is in Labour Markets
@@ -103,20 +117,33 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 
 ## Madhesh and Lumbini are Crisis Zones for Adolescent Girls
 
-![](../outputs/figures/d2_neet_by_province.png){fig-align="center" width="80%"}
+![](../outputs/figures/d2_neet_by_province.png){fig-align="center" width="74%"}
+
+::: {style="font-size: 0.55em; color: #555; margin-top: 4px;"}
+*"Crisis zone" definition:* provinces where female NEET exceeds 40% **and** the female–male NEET gap is greater than 20 pp. By this criterion, Madhesh (61% NEET, gap +18 pp) and Lumbini (51%, gap +27 pp) meet the threshold; Karnali and Sudurpashchim approach it. Threshold to be confirmed with Nepal CO.
+:::
 
 ## Marriage Drives Near-Universal NEET — Regardless of Caste
 
-![](../outputs/figures/d3_intersectionality.png){fig-align="center" width="90%"}
+![](../outputs/figures/d3_intersectionality.png){fig-align="center" width="84%"}
 
-## Headline Numbers — The Gender Gap in One Slide
+::: {style="font-size: 0.6em; color: #555; margin-top: 4px;"}
+Marriage also collapses enrolment: married girls' enrolment is 12% versus 73% for unmarried girls — see Section 3 (multivariate analysis) for the full −61 pp marginal effect on enrolment.
+:::
 
-| Indicator (youth 15–24)            | Girls           | Boys           | Gap (pp)         |
+## Headline Numbers — Where Each Girl Aged 15–24 Is {.smaller}
+
+| Status (youth 15–24)               | Girls           | Boys           | Gap (pp)         |
 |------------------------------------|-----------------|----------------|------------------|
-| Currently enrolled (any school)    | 40.2%           | 34.8%          | +5.4 pp          |
-| Employed (ILO 7-day)               | 17.8%           | 40.9%          | **−23.1 pp**     |
-| NEET (Not in Education/Employment) | 46.8%           | 26.4%          | **+20.4 pp**     |
-| Currently married (girls 15–24)    | 37.4%           | 17.6%          | **+19.8 pp**     |
+| In school only (not working)       | 35.4%           | 32.8%          | +2.6 pp          |
+| In school **and** working          | 4.8%            | 2.0%           | +2.8 pp          |
+| Working only (not in school)       | 13.0%           | 38.9%          | **−25.9 pp**     |
+| **NEET** (Not in Educ/Employment)  | **46.8%**       | **26.4%**      | **+20.4 pp**     |
+| *Of which: currently married*      | 37.4%           | 17.6%          | +19.8 pp         |
+
+::: {style="font-size: 0.55em; color: #555; margin-top: 6px;"}
+The 46.8% NEET figure reflects girls who are *neither* in school *nor* employed under the ILO 7-day definition (which excludes unpaid family work and unsuccessful job search). These four categories are mutually exclusive and sum to 100%.
+:::
 
 # Multivariate Analysis {.section-divider background-color="#00377C"}
 
@@ -136,13 +163,21 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 
 # Estimating Education Returns for Adolescent Girls {.section-divider background-color="#00377C"}
 
-## Secondary Education Reduces NEET by ~13 pp — For Every Group
+## Secondary Education Reduces NEET by ~13 pp — For Every Caste
 
-![](../outputs/figures/r2_cate_caste.png){fig-align="center" width="80%"}
+![](../outputs/figures/r2_cate_caste.png){fig-align="center" width="74%"}
 
-## Each Year of Schooling Raises Lifetime Earnings Substantially
+::: {style="font-size: 0.55em; color: #555; margin-top: 4px;"}
+The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate for men is smaller (~−7 pp) — boys' NEET is shaped more by labour-demand conditions than by individual schooling. Causal-forest details and boys' coefficients in the appendix.
+:::
 
-![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="86%"}
+## Returns to Schooling are Exponentially Larger for Girls
+
+![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="84%"}
+
+::: {style="font-size: 0.55em; color: #555; margin-top: 4px;"}
+Each additional year of schooling raises a girl's projected lifetime earnings by **14.5%** versus **12.0%** for boys. Compounded over 10 years of schooling and 35 working years, the gap between the two curves widens substantially. *This is where the cost of inaction concentrates — every year of foregone schooling is a multiplicative loss.*
+:::
 
 ## Marriage Erodes the Protective Effect of Education
 
@@ -176,7 +211,9 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 
 > **Karnali, Sudurpashchim and Madhesh** carry the largest relative burden — per-girl losses are smaller than in Bagmati because wages are lower, but a larger share of the local economy is at stake.
 
-> **At USD `r nums$national_coi_usdm` million per cohort**, a secondary-completion programme would justify per-girl spending up to roughly **USD 90 (lifetime, undiscounted)** before reaching break-even.
+> **What does "per cohort" mean?** The NPR `r nums$national_coi_b` billion figure is the *lifetime* productivity loss for the **one current cohort** of 680,000 adolescent girls (aged 15–24 today) who will not complete secondary education. A *new* cohort enters this stage every year — so this is a recurring, not one-off, annual loss.
+
+> **Break-even spending per girl.** USD `r nums$national_coi_usdm` million ÷ 680,000 girls ≈ **USD 90 per girl** in cumulative lifetime social spending. Any secondary-completion programme costing less than USD 90 per beneficiary girl over her lifetime would have a *positive* return on investment in pure productivity terms — before counting health, fertility, intergenerational, and social-cohesion gains.
 
 # Recommendations {.section-divider background-color="#00377C"}
 
@@ -184,7 +221,7 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 
 > **1 · End child marriage as an economic priority.** Marriage explains more variation in girls' NEET than poverty, caste and disability combined. Enforcement of existing legislation in Madhesh and Lumbini would yield the largest single gain.
 
-> **2 · Universal secondary completion targeting.** Each girl moved from non-completion to completion = NPR ~12,000 in PV earnings. Pair conditional cash transfers with scholarships in Karnali and Sudurpashchim.
+> **2 · Universal secondary completion AND year-by-year retention.** Each girl moved from non-completion to completion is worth ~NPR 12,000 in PV earnings; however, *each additional year of schooling* below that threshold also yields a 14.5% earnings premium. Programme design should reward *every year retained*, not only the completion milestone.
 
 > **3 · Dalit-specific labour-market measures.** Education alone leaves Dalit women with a 2 pp residual disadvantage. Pair education with apprenticeships and anti-discrimination measures.
 

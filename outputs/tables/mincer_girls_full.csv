@@ -1,0 +1,7 @@
+Variable,Coefficient,SE,95% CI,p-value
+Years of schooling,0.3298,0.0114,"[0.3074, 0.3521]",<0.001
+Experience (years),0.1109,0.0108,"[0.0898, 0.1320]",<0.001
+Experience squared,-0.0014,0.0002,"[-0.0019, -0.0009]",<0.001
+Rural,-0.4351,0.0631,"[-0.5588, -0.3114]",<0.001
+N,2214,,,
+R-squared,0.363,,,
