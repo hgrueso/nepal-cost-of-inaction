@@ -36,19 +36,28 @@ format:
       \setbeamercolor{date in head/foot}{bg=unicefblue,fg=white}
       \setbeamercolor{section in head/foot shaded}{bg=unicefblue,fg=white}
       \setbeamertemplate{navigation symbols}{}
+      \usepackage{tikz}
+      \usetikzlibrary{shadows}
+      \usepackage{caption}
+      \captionsetup[table]{labelformat=empty,labelsep=none,font=tiny}
       \setbeamertemplate{title page}{
         \vspace*{1.5cm}
         \begin{center}
-          \begin{beamercolorbox}[wd=\paperwidth,sep=22pt,center]{frametitle}
-            {\fontsize{22pt}{28pt}\selectfont\bfseries\inserttitle\par}
-          \end{beamercolorbox}
+          \begin{tikzpicture}
+            \node[
+              fill=unicefblue, rounded corners=8pt,
+              text=white, text width=0.85\paperwidth, align=center,
+              inner sep=16pt, drop shadow={shadow xshift=2pt, shadow yshift=-3pt, opacity=0.35},
+              anchor=center
+            ] {\fontsize{16pt}{20pt}\selectfont\bfseries\inserttitle};
+          \end{tikzpicture}
         \end{center}
-        \vspace*{1.5cm}
+        \vspace{0.6cm}
         \begin{center}
           {\Large\bfseries Hernando Grueso, PhD\par}
-          \vspace{0.5em}
+          \vspace{0.3em}
           {\large UNICEF\par}
-          \vspace{0.8em}
+          \vspace{0.5em}
           {\normalsize May 2026\par}
         \end{center}}
 execute:
@@ -119,7 +128,7 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 
 ![](../outputs/figures/d2_neet_by_province.png){fig-align="center" width="74%"}
 
-::: {style="font-size: 0.55em; color: #555; margin-top: 4px;"}
+::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
 *"Crisis zone" definition:* provinces where female NEET exceeds 40% **and** the female–male NEET gap is greater than 20 pp. By this criterion, Madhesh (61% NEET, gap +18 pp) and Lumbini (51%, gap +27 pp) meet the threshold; Karnali and Sudurpashchim approach it. Threshold to be confirmed with Nepal CO.
 :::
 
@@ -127,7 +136,7 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 
 ![](../outputs/figures/d3_intersectionality.png){fig-align="center" width="84%"}
 
-::: {style="font-size: 0.6em; color: #555; margin-top: 4px;"}
+::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
 Marriage also collapses enrolment: married girls' enrolment is 12% versus 73% for unmarried girls — see Section 3 (multivariate analysis) for the full −61 pp marginal effect on enrolment.
 :::
 
@@ -141,7 +150,7 @@ Marriage also collapses enrolment: married girls' enrolment is 12% versus 73% fo
 | **NEET** (Not in Educ/Employment)  | **46.8%**       | **26.4%**      | **+20.4 pp**     |
 | *Of which: currently married*      | 37.4%           | 17.6%          | +19.8 pp         |
 
-::: {style="font-size: 0.55em; color: #555; margin-top: 6px;"}
+::: {style="font-size: 0.35em; color: #555; margin-top: 6px;"}
 The 46.8% NEET figure reflects girls who are *neither* in school *nor* employed under the ILO 7-day definition (which excludes unpaid family work and unsuccessful job search). These four categories are mutually exclusive and sum to 100%.
 :::
 
@@ -167,7 +176,7 @@ The 46.8% NEET figure reflects girls who are *neither* in school *nor* employed 
 
 ![](../outputs/figures/r2_cate_caste.png){fig-align="center" width="74%"}
 
-::: {style="font-size: 0.55em; color: #555; margin-top: 4px;"}
+::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
 The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate for men is smaller (~−7 pp) — boys' NEET is shaped more by labour-demand conditions than by individual schooling. Causal-forest details and boys' coefficients in the appendix.
 :::
 
@@ -175,7 +184,7 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 ![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="84%"}
 
-::: {style="font-size: 0.55em; color: #555; margin-top: 4px;"}
+::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
 Each additional year of schooling raises a girl's projected lifetime earnings by **14.5%** versus **12.0%** for boys. Compounded over 10 years of schooling and 35 working years, the gap between the two curves widens substantially. *This is where the cost of inaction concentrates — every year of foregone schooling is a multiplicative loss.*
 :::
 
@@ -276,7 +285,7 @@ $$
 \log(\text{wage}_{ip}) = \alpha + \beta_1 \cdot \text{schooling}_{ip} + \beta_2 \cdot \text{exp}_{ip} + \beta_3 \cdot \text{exp}^2_{ip} + \beta_4 \cdot \text{rural}_{ip} + \gamma_p + \varepsilon_{ip}
 $$
 
-::: {style="font-size: 0.75em;"}
+::: {style="font-size: 0.35em;"}
 - $\log(\text{wage}_{ip})$ — natural log of monthly wage (NPR) for individual $i$ in province $p$
 - $\beta_1$ — **key parameter**: return per additional year of schooling (Mincer return)
 - $\text{exp}$ — years of potential labour market experience (age − schooling − 6)
@@ -290,27 +299,29 @@ $$
 
 ## Appendix Table A1: Mincer Wage Equation, Female Salary Workers {.smaller}
 
-```{r tbl-mincer-girls}
+```{r}
+#| label: mincer-girls
 if (file.exists("outputs/tables/mincer_girls_full.csv")) {
   mincer_girls <- read_csv("outputs/tables/mincer_girls_full.csv", show_col_types = FALSE)
-  knitr::kable(mincer_girls, align = "lrrrr")
+  knitr::kable(mincer_girls, align = "lrrrr", caption = NULL, format = "simple")
 }
 ```
 
-::: {style="font-size: 0.45em; color: #555; line-height: 1.25; margin-top: 4px;"}
+::: {style="font-size: 0.35em; color: #555; line-height: 1.25; margin-top: 4px;"}
 *Notes:* Dependent variable is log of monthly wage (NPR). Sample: women aged 15–64 in long-term salaried employment (N = 952). Specification includes years of schooling, experience, experience squared, rural indicator, and province fixed effects. Standard errors are heteroskedasticity-robust (HC1). *Source*: Author's calculations using NLSS IV 2022/23. \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.
 :::
 
 ## Appendix Table A2: Mincer Wage Equation, Male Salary Workers {.smaller}
 
-```{r tbl-mincer-boys}
+```{r}
+#| label: mincer-boys
 if (file.exists("outputs/tables/mincer_boys_full.csv")) {
   mincer_boys <- read_csv("outputs/tables/mincer_boys_full.csv", show_col_types = FALSE)
-  knitr::kable(mincer_boys, align = "lrrrr")
+  knitr::kable(mincer_boys, align = "lrrrr", caption = NULL, format = "simple")
 }
 ```
 
-::: {style="font-size: 0.45em; color: #555; line-height: 1.25; margin-top: 4px;"}
+::: {style="font-size: 0.35em; color: #555; line-height: 1.25; margin-top: 4px;"}
 *Notes:* Dependent variable is log of monthly wage (NPR). Sample: men aged 15–64 in long-term salaried employment. Specification includes years of schooling, experience, experience squared, rural indicator, and province fixed effects. Standard errors are heteroskedasticity-robust (HC1). *Source*: Author's calculations using NLSS IV 2022/23. \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.
 :::
 
@@ -324,27 +335,26 @@ if (file.exists("outputs/tables/mincer_boys_full.csv")) {
 
 ## Appendix Table A3: Boys' NEET Linear Probability Model {.smaller}
 
-```{r tbl-boys-reg}
+```{r}
+#| label: boys-reg
 if (file.exists("outputs/tables/boys_reg_full.csv")) {
   boys_reg <- read_csv("outputs/tables/boys_reg_full.csv", show_col_types = FALSE)
-  knitr::kable(boys_reg, align = "lrrrr")
+  knitr::kable(boys_reg, align = "lrrrr", caption = NULL, format = "simple")
 }
 ```
 
-::: {style="font-size: 0.45em; color: #555; line-height: 1.25; margin-top: 4px;"}
+::: {style="font-size: 0.35em; color: #555; line-height: 1.25; margin-top: 4px;"}
 *Notes:* Dependent variable is NEET status. Linear probability model. Sample: boys aged 15–24 (n ≈ 4,300). Controls: rural, poverty status, wealth quintile, marital status, disability (WG 6+), caste/ethnicity. Reference categories: Brahmin/Chhetri, urban, non-poor. Province fixed effects included. Standard errors are heteroskedasticity-robust (HC1). *Source*: Author's calculations using NLSS IV 2022/23. \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.
 :::
 
 ##  {.unnumbered}
 
-\vspace*{2.5cm}
+\vfill
 
-::: {style="text-align: center; font-size: 4em; font-weight: bold; color: #00377C;"}
-Thank you
-:::
-
+\begin{center}
+{\fontsize{36pt}{44pt}\selectfont\bfseries\color{black} Thank you\par}
 \vspace{1em}
+{\fontsize{20pt}{24pt}\selectfont\color{uniceflight} hgrueso@unicef.org\par}
+\end{center}
 
-::: {style="text-align: center; font-size: 2em; color: #1CABE2;"}
-hgrueso@unicef.org
-:::
+\vfill
