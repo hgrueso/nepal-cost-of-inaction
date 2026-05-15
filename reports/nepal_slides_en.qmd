@@ -182,10 +182,10 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 ## Returns to Schooling are Exponentially Larger for Girls
 
-![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="84%"}
+![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="76%"}
 
-::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
-Each additional year of schooling raises a girl's projected lifetime earnings by **14.5%** versus **12.0%** for boys. Compounded over 10 years of schooling and 35 working years, the gap between the two curves widens substantially. *This is where the cost of inaction concentrates — every year of foregone schooling is a multiplicative loss.*
+::: {style="font-size: 0.28em; color: #555; line-height: 1.2; margin-top: 2px;"}
+Each additional year of schooling raises a girl's lifetime earnings by **14.5%** vs **12.0%** for boys. Compounded over schooling years and 35 working years, the gap widens — *this is where the cost of inaction concentrates.*
 :::
 
 ## Marriage Erodes the Protective Effect of Education
