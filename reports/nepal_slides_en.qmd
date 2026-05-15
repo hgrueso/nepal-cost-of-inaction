@@ -108,23 +108,15 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 
 ## Five Headline Findings {.smaller}
 
-> **1.** Nepal's gender gap is **not in schools** — it is in labour markets. Girls' enrolment (40.2%) exceeds boys' (34.8%), yet NEET (46.8%) is nearly double boys' (26.4%).
-
-\vspace{0.3em}
-
-> **2.** **Child marriage is strongly associated with exclusion.** Being currently married is associated with a 61 pp reduction in enrolment and a 42 pp increase in NEET — dwarfing the associations with poverty, caste, and disability combined.
-
-\vspace{0.3em}
-
-> **3.** **Secondary education has a robust estimated effect on inclusion**: a −13.2 pp reduction in NEET probability, stable across all provinces and caste groups (causal forest, n = 13,586).
-
-\vspace{0.3em}
-
-> **4.** **Each additional year of schooling is associated with a 14.5% rise in lifetime earnings for girls vs 12.0% for boys.** Beyond secondary completion, returns are *exponentially larger for girls* — the heart of the cost of inaction.
-
-\vspace{0.3em}
-
-> **5.** **Nepal forgoes ~NPR 8 billion per cohort** by not educating its adolescent girls — equivalent to **~10% of the annual health-sector budget**.
+```{=latex}
+\begin{itemize}\setlength\itemsep{0.9em}
+\item[\textbf{1.}] Nepal's gender gap is \textbf{not in schools} — it is in labour markets. Girls' enrolment (40.2\%) exceeds boys' (34.8\%), yet NEET (46.8\%) is nearly double boys' (26.4\%).
+\item[\textbf{2.}] \textbf{Child marriage is strongly associated with exclusion.} Being currently married is associated with a 61 pp reduction in enrolment and a 42 pp increase in NEET — dwarfing the associations with poverty, caste, and disability combined.
+\item[\textbf{3.}] \textbf{Secondary education has a robust estimated effect on inclusion}: a $-$13.2 pp reduction in NEET probability, stable across all provinces and caste groups (causal forest, n = 13{,}586).
+\item[\textbf{4.}] \textbf{Each additional year of schooling is associated with a 14.5\% rise in lifetime earnings for girls vs 12.0\% for boys.} Beyond secondary completion the gap \textit{widens}: $\sim$+15\% per year for girls vs $\sim$+10\% per year for boys — the heart of the cost of inaction.
+\item[\textbf{5.}] \textbf{Nepal forgoes $\sim$NPR 8 billion per cohort} by not educating its adolescent girls — equivalent to \textbf{$\sim$10\% of the annual health-sector budget}.
+\end{itemize}
+```
 
 # Diagnostic: Gender Gaps in Education and Employment {.section-divider background-color="#00377C"}
 
@@ -276,12 +268,16 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 We combine three components:
 
+\vspace{0.4em}
+
 ::: {.columns}
 ::: {.column width="50%"}
 
 **1 · Causal effect**
 
 Generalised Random Forest (Wager & Athey 2018) on women 15–64, treatment = secondary completion, outcome = NEET. ATE = −13.2 pp.
+
+\vspace{0.8em}
 
 **2 · Earnings projection**
 
@@ -294,6 +290,8 @@ Mincer wage equation on 952 women in long-term salaried employment. Conservative
 
 Survey weights from NLSS IV scaled to national total of 1.4M girls aged 15–24. Provincial CoI = ATE × N excluded × PV per girl.
 
+\vspace{0.8em}
+
 **Discount rate**: 5% | **Horizon**: 35 working years | **GDP source**: NSO Nepal 2023/24 provincial accounts.
 
 :::
@@ -301,13 +299,14 @@ Survey weights from NLSS IV scaled to national total of 1.4M girls aged 15–24.
 
 ## Assumptions and Limitations {.smaller}
 
-> **1 · Formal-sector selection bias.** Mincer estimated on 952 salary workers — likely upper bound on returns. The 9% ILO benchmark partially corrects.
-
-> **2 · NEET-to-earnings transition.** Assumes girls who exit NEET access the median wage. Childcare, mobility and norms may delay this — implying our CoI is a **conservative lower bound**.
-
-> **3 · Male migration not captured.** Boys leaving school for foreign employment generates remittances. The analysis does not yet quantify the parallel earnings that educated girls could generate through skilled migration.
-
-> **4 · Population scaling.** Provincial girl counts derived from survey weights × 1.4M national total. NSO Census 2021 tabulations would tighten the figure.
+```{=latex}
+\begin{itemize}\setlength\itemsep{0.9em}
+\item[\textbf{1.}] \textbf{Formal-sector selection bias.} Mincer estimated on 952 salary workers — likely upper bound on returns. The 9\% ILO benchmark partially corrects.
+\item[\textbf{2.}] \textbf{NEET-to-earnings transition.} Assumes girls who exit NEET access the median wage. Childcare, mobility, and norms may delay this — implying our CoI is a \textbf{conservative lower bound}.
+\item[\textbf{3.}] \textbf{Male migration not captured.} Boys leaving school for foreign employment generates remittances. The analysis does not yet quantify the parallel earnings that educated girls could generate through skilled migration.
+\item[\textbf{4.}] \textbf{Population scaling.} Provincial girl counts derived from survey weights $\times$ 1.4M national total. NSO Census 2021 tabulations would tighten the figure.
+\end{itemize}
+```
 
 ## The Mincer Wage Equation: Specification {.smaller}
 
