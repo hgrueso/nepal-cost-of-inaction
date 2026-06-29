@@ -31,3 +31,8 @@ archive/
 Thumbs.db
 ~$*.pptx
 .~lock.*
+
+# PowerPoint lock files
+~$*.docx
+~$*.pptx
+.~lock.*
