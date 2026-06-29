@@ -1,0 +1,5 @@
+Model,Return per year (%),Std. error (pp)
+OLS Mincer (uncorrected),24.4,1.07
+Heckman (child cutoff <4),25.8,1.23
+"Heckman (main, child cutoff <5)",25.8,1.23
+Heckman (child cutoff <6),25.8,1.23
