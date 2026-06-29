@@ -6,6 +6,8 @@ author: |
 date: "May 2026"
 lang: en
 format:
+  pptx:
+    slide-level: 2
   revealjs:
     theme: [default, slides_theme.scss]
     footer: "Hernando Grueso, UNICEF · Cost of Inaction Nepal · May 2026"
@@ -75,7 +77,8 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
                  error = function(e) list(
                    national_coi_b = 8.1, national_coi_usdm = 61,
                    national_excluded = 680231,
-                   coi_pct_health_budget = 10, coi_pct_education_budget = 4,
+                   coi_pct_health_budget = 9.4, coi_pct_ssallow_budget = 7.6,
+                   coi_pct_education_budget = 4.0,
                    girls_return_pct = 14.5, boys_return_pct = 12.0))
 ```
 
@@ -114,7 +117,7 @@ nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
 \item[\textbf{2.}] \textbf{Child marriage is strongly associated with exclusion.} Being currently married is associated with a 61 pp reduction in enrolment and a 42 pp increase in NEET — dwarfing the associations with poverty, caste, and disability combined.
 \item[\textbf{3.}] \textbf{Secondary education has a robust estimated effect on inclusion}: a $-$13.2 pp reduction in NEET probability, stable across all provinces and caste groups (causal forest, n = 13{,}586).
 \item[\textbf{4.}] \textbf{Each additional year of schooling is associated with a 14.5\% rise in lifetime earnings for girls vs 12.0\% for boys.} Beyond secondary completion the gap \textit{widens}: $\sim$+15\% per year for girls vs $\sim$+10\% per year for boys — the heart of the cost of inaction.
-\item[\textbf{5.}] \textbf{Nepal forgoes $\sim$NPR 8 billion per cohort} by not educating its adolescent girls — equivalent to \textbf{$\sim$10\% of the annual health-sector budget}.
+\item[\textbf{5.}] \textbf{Nepal forgoes $\sim$NPR 8 billion per cohort} by not educating its adolescent girls — equivalent to \textbf{$\sim$9\% of the annual health-sector budget} (and $\sim$8\% of the social-security-allowance budget).
 \end{itemize}
 ```
 
@@ -216,7 +219,7 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 ![](../outputs/figures/c1_total_coi_billion.png){fig-align="center" width="88%"}
 
-## Cost of Inaction is `r nums$coi_pct_health_budget`% of the Annual Health Budget
+## Cost of Inaction vs Government Budget Lines
 
 ![](../outputs/figures/c3_coi_vs_budget.png){fig-align="center" width="80%"}
 
@@ -226,7 +229,7 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 \vspace{0.5em}
 
-- That equals about **`r nums$coi_pct_health_budget`% of the national health-sector budget** and **`r nums$coi_pct_education_budget`% of the education-sector budget** for fiscal year 2024/25.
+- That equals about **`r nums$coi_pct_health_budget`% of the national health-sector budget** (NPR 86.2B, FY2024/25), **`r nums$coi_pct_ssallow_budget`% of the social security allowance budget** (NPR 106B, FY2022/23), and **`r nums$coi_pct_education_budget`% of the education-sector budget** (NPR 203.7B, FY2024/25).
 
 \vspace{0.5em}
 
@@ -238,29 +241,20 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 \vspace{0.5em}
 
-- **Break-even spending per girl.** USD `r nums$national_coi_usdm` million ÷ 680,000 girls ≈ **USD 90 per girl** in cumulative lifetime social spending. Any secondary-completion programme costing less than USD 90 per beneficiary would yield a positive return on investment in productivity terms alone.
+- **Break-even spending per girl.** USD `r nums$national_coi_usdm` million ÷ 680,000 girls ≈ **USD 90 per girl** in cumulative lifetime social spending. *Important caveat:* this break-even assumes every girl who completes secondary education enters the labour market and earns the median wage — which overstates realised returns, since many will not enter wage work. The figure is best read as the **theoretical maximum** spend that would still break even, not a prediction of per-girl returns.
 
 # Recommendations {.section-divider background-color="#00377C"}
 
-## Five Investment Priorities for the New Government {.smaller}
+## Four Priority Areas for Investment {.smaller}
 
-> **1 · End child marriage as an economic priority.** Marriage is associated with more variation in girls' NEET than poverty, caste, and disability combined. Enforcement of existing legislation in Madhesh and Lumbini would yield the largest single gain.
-
-\vspace{0.5em}
-
-> **2 · Universal secondary completion AND year-by-year retention.** Each year of schooling is associated with a **14.5% earnings premium** for girls. **Beyond secondary completion the gender differential in returns widens** (~+15% per year for girls vs ~+10% for boys) — programme design should reward *every year retained*, with the largest gains realised in upper-secondary and tertiary education.
-
-\vspace{0.5em}
-
-> **3 · Dalit-specific labour-market measures.** Education alone is associated with a 2 pp residual disadvantage for Dalit women. Pair education with apprenticeships and anti-discrimination measures.
-
-\vspace{0.5em}
-
-> **4 · Bridge programmes for the 19–24 cohort.** The female NEET rate rises sharply after age 18 (+24.7 pp gap). Vocational and second-chance education could capture earnings that current schooling cannot.
-
-\vspace{0.5em}
-
-> **5 · Track and report sex-disaggregated NEET by province annually.** What is not measured is not managed. Make this the new headline statistic of NLSS V.
+```{=latex}
+\begin{itemize}\setlength\itemsep{0.8em}
+\item[\textbf{1.}] \textbf{Education — universal secondary completion with year-by-year retention.} Each year of schooling is associated with a 14.5\% earnings premium for girls, and returns are \textit{convex} — rising from $\sim$8\% at primary to $\sim$27\% at secondary and $\sim$35\% at higher secondary. Programme design should reward \textit{every year retained}, with the largest gains realised in upper-secondary and tertiary education.
+\item[\textbf{2.}] \textbf{Child marriage — treat prevention as an economic priority.} Marriage is associated with more variation in girls' NEET than poverty, caste, and disability combined, and the marriage rate jumps from 10\% at ages 15--18 to 56\% at 19--24. Enforcement of existing legislation, concentrated in Madhesh and Lumbini, would yield the largest single gain — and must reach girls \textit{before} the post-18 transition.
+\item[\textbf{3.}] \textbf{Livelihoods — bridge programmes, vocational training, and economic opportunity.} Because returns are concentrated in formal wage work (which absorbs only $\sim$25\% of women), education must be paired with demand-side measures: skills bridges from upper-secondary to the labour market, vocational training, and second-chance pathways for those who have already exited.
+\item[\textbf{4.}] \textbf{Equity — close the gaps facing Dalit girls.} Education alone leaves Dalit women with a residual labour-market disadvantage that does not disappear when controlling for wealth. Pair education investment with apprenticeships, targeted scholarships, and anti-discrimination measures.
+\end{itemize}
+```
 
 # Methodological Appendix {.section-divider background-color="#00377C"}
 
@@ -301,8 +295,8 @@ Survey weights from NLSS IV scaled to national total of 1.4M girls aged 15–24.
 
 ```{=latex}
 \begin{itemize}\setlength\itemsep{0.9em}
-\item[\textbf{1.}] \textbf{Formal-sector selection bias.} Mincer estimated on 952 salary workers — likely upper bound on returns. The 9\% ILO benchmark partially corrects.
-\item[\textbf{2.}] \textbf{NEET-to-earnings transition.} Assumes girls who exit NEET access the median wage. Childcare, mobility, and norms may delay this — implying our CoI is a \textbf{conservative lower bound}.
+\item[\textbf{1.}] \textbf{Formal-sector selection bias.} Wages are observed only for the $\sim\,$25\% of women in wage employment. We test for this with a Heckman selection model (see appendix): selection is statistically significant ($\rho=0.34$, $p<0.01$) but correcting for it shifts the estimated return by less than 2 pp, so the Mincer estimates are robust. The conservative 9\% ILO benchmark sits below even the primary-school return.
+\item[\textbf{2.}] \textbf{NEET-to-earnings transition.} The estimate assumes a girl who exits NEET earns the median wage \textit{immediately}. In reality, job search, childcare, mobility, and social norms create friction that delays or reduces actual earnings. Assuming instant median-wage access therefore \textbf{overstates} the realised gain, making the cost-of-inaction figure an \textbf{upper bound} on what is realistically recoverable.
 \item[\textbf{3.}] \textbf{Male migration not captured.} Boys leaving school for foreign employment generates remittances. The analysis does not yet quantify the parallel earnings that educated girls could generate through skilled migration.
 \item[\textbf{4.}] \textbf{Population scaling.} Provincial girl counts derived from survey weights $\times$ 1.4M national total. NSO Census 2021 tabulations would tighten the figure.
 \end{itemize}
@@ -376,6 +370,27 @@ if (file.exists("outputs/tables/boys_reg_full.csv")) {
 
 ::: {style="font-size: 0.35em; color: #555; line-height: 1.25; margin-top: 4px;"}
 *Notes:* Dependent variable is NEET status. Linear probability model. Sample: boys aged 15–24 (n ≈ 4,300). Controls: rural, poverty status, wealth quintile, marital status, disability (WG 6+), caste/ethnicity. Reference categories: Brahmin/Chhetri, urban, non-poor. Province fixed effects included. Standard errors are heteroskedasticity-robust (HC1). *Source*: Author's calculations using NLSS IV 2022/23. \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.
+:::
+
+## Appendix: Heckman Selection Model {.smaller}
+
+Wages are observed only for women in wage employment (about 25% of working-age women). If the women who work differ systematically from those who do not, the Mincer return could be biased. We test this with a Heckman (1979) two-step model.
+
+```{=latex}
+\begin{itemize}\setlength\itemsep{0.6em}
+\item \textbf{Selection equation} (probit): probability of being in the wage sample, with exclusion restrictions — children under 5, other adult women in household, household size, and wealth quintile (factors affecting participation, not the wage itself).
+\item \textbf{Outcome equation}: the Mincer wage equation, corrected for selection via the inverse Mills ratio.
+\item \textbf{Result}: selection is statistically significant ($\rho = 0.34$, inverse Mills ratio $p < 0.01$) — there \textit{is} positive selection into wage work. But the correction changes the estimated return by less than 2 pp.
+\item \textbf{Interpretation}: the Mincer estimates are robust to selection. This is \textit{not} a causal-identification claim (that rests on the causal forest); it addresses only sample selection into observed wages.
+\end{itemize}
+```
+
+## Appendix: Returns are Robust Across Specifications {.smaller}
+
+![](../outputs/figures/n1_heckman_returns.png){fig-align="center" width="82%"}
+
+::: {style="font-size: 0.34em; color: #555; margin-top: 2px;"}
+Average marginal return per year of schooling, women 15–64. The OLS (uncorrected) and Heckman-corrected estimates are nearly identical, and stable across the choice of child-age cutoff in the exclusion restriction. The 9% ILO benchmark used for the cost-of-inaction calculation is far below all estimates — making the CoI a conservative figure. Returns are convex: marginal return rises from ~8% at primary to ~27% at secondary and ~35% at higher secondary.
 :::
 
 ##  {.unnumbered}

@@ -483,37 +483,53 @@ figC1 <- ggplot(coi %>% filter(!is.na(total_coi_b)),
   th_policy()
 sv(figC1, "c1_total_coi_billion", w = 12, h = 5.5)
 
-# C3 — CoI vs national budgets (replaces the empty C2 wage-months plot)
+# C3 — CoI vs national budgets (CORRECTED figures, properly sourced)
+# Health: NPR 86.24B FY2024/25 (total MoHP allocation) — was mislabelled 84B (FY2023/24)
+# Social security allowance: NPR 106B FY2022/23 (9 cash-transfer programmes, UNICEF brief)
+# Education: NPR 203.66B FY2024/25 (MoF Budget Speech para 176) — was 197B
+# See docs/SOURCES_budget_figures.md for full source links and correction log.
+HEALTH_B  <- 86.24    # FY2024/25, MoHP total (Kathmandu Post 29 May 2024)
+SSALLOW_B <- 106      # FY2022/23, social security allowances (UNICEF SP Budget Brief)
+EDU_B     <- 203.66   # FY2024/25, MoEST (MoF Budget Speech para 176)
+
 benchmarks <- tribble(
   ~item, ~value_b, ~lbl,
-  "Annual CoI\n(adolescent girls)",                  national_coi_b, paste0("NPR ", round(national_coi_b, 1), "B"),
-  "Nepal Health Sector\nbudget (2024/25)",           84,             "NPR 84B",
-  "Nepal Education Sector\nbudget (2024/25)",        197,            "NPR 197B")
+  "Annual CoI\n(adolescent girls)",                       national_coi_b, paste0("NPR ", round(national_coi_b, 1), "B"),
+  "Health Sector\nbudget (FY2024/25)",                    HEALTH_B,       "NPR 86.2B",
+  "Social Security\nAllowances (FY2022/23)",              SSALLOW_B,      "NPR 106B",
+  "Education Sector\nbudget (FY2024/25)",                 EDU_B,          "NPR 203.7B")
 benchmarks$item <- factor(benchmarks$item, levels = benchmarks$item)
+
+pct_health  <- round(national_coi_b / HEALTH_B  * 100, 1)
+pct_ssallow <- round(national_coi_b / SSALLOW_B * 100, 1)
+pct_edu     <- round(national_coi_b / EDU_B     * 100, 1)
 
 figC3 <- ggplot(benchmarks, aes(x = item, y = value_b)) +
   geom_col(aes(fill = ifelse(grepl("CoI", item), ur, ud)),
-           alpha = 0.9, width = 0.55) +
-  geom_text(aes(label = lbl, y = value_b + 5), size = 4.5, fontface = "bold") +
+           alpha = 0.9, width = 0.6) +
+  geom_text(aes(label = lbl, y = value_b + 6), size = 4.2, fontface = "bold") +
   scale_fill_identity() +
   scale_y_continuous(labels = label_number(suffix = "B", scale = 1),
                      expand = expansion(mult = c(0, 0.20))) +
-  labs(title = paste0("Nepal's cost of inaction = ",
-                       round(national_coi_b / 84 * 100),
-                       "% of the annual health budget"),
-       subtitle = "One-cohort lifetime productivity loss vs annual sector spending",
+  labs(title = paste0("Cost of inaction = ", pct_health, "% of health & ",
+                       pct_ssallow, "% of social-security-allowance budgets"),
+       subtitle = "One-cohort lifetime productivity loss vs annual government spending lines",
        x = NULL, y = "NPR Billion",
-       caption = "Sources: NLSS IV 2022/23 | Ministry of Finance Nepal (2024/25 fiscal year)") +
-  th_policy() + theme(axis.text.x = element_text(size = 11))
-sv(figC3, "c3_coi_vs_budget", w = 11, h = 5.5)
+       caption = paste0("Sources: NLSS IV 2022/23 (NSO Nepal) | Health: MoHP FY2024/25 (NPR 86.24B, Kathmandu Post 29 May 2024) | ",
+                        "Social security allowances: UNICEF Nepal SP Budget Brief FY2022/23 (NPR 106B) | ",
+                        "Education: MoF Budget Speech FY2024/25, para 176 (NPR 203.66B). See docs/SOURCES_budget_figures.md.")) +
+  th_policy() + theme(axis.text.x = element_text(size = 10),
+                      plot.caption = element_text(size = 6.5))
+sv(figC3, "c3_coi_vs_budget", w = 12, h = 5.8)
 
 # Save summary numbers
 summary_nums <- list(
   national_coi_b           = round(national_coi_b, 1),
   national_coi_usdm        = round(national_coi_usdm),
   national_excluded        = national_excluded,
-  coi_pct_health_budget    = round(national_coi_b / 84 * 100),
-  coi_pct_education_budget = round(national_coi_b / 197 * 100),
+  coi_pct_health_budget    = round(national_coi_b / 86.24 * 100, 1),
+  coi_pct_ssallow_budget   = round(national_coi_b / 106 * 100, 1),
+  coi_pct_education_budget = round(national_coi_b / 203.66 * 100, 1),
   girls_return_pct         = round(coef(m_g_basic)[edu_var] * 100, 1),
   boys_return_pct          = round(coef(m_b_basic)[edu_var] * 100, 1)
 )

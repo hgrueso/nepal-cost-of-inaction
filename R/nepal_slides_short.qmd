@@ -1,0 +1,151 @@
+---
+title: "Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal"
+author: |
+  Hernando Grueso, PhD\
+  UNICEF
+date: "May 2026"
+lang: en
+format:
+  pptx:
+    slide-level: 2
+  revealjs:
+    theme: [default, slides_theme.scss]
+    footer: "Hernando Grueso, UNICEF · Cost of Inaction Nepal · May 2026"
+    slide-number: c/t
+    transition: fade
+    incremental: false
+    embed-resources: true
+    fig-align: center
+  beamer:
+    theme: Madrid
+    colortheme: default
+    aspectratio: 169
+    fontsize: 9pt
+    fig-align: center
+    shorttitle: "Cost of Inaction · Adolescent Girls Nepal"
+    shortauthor: "Hernando Grueso, UNICEF"
+    shortdate: "May 2026"
+    header-includes: |
+      \definecolor{unicefblue}{HTML}{00377C}
+      \definecolor{uniceflight}{HTML}{1CABE2}
+      \setbeamercolor{frametitle}{bg=unicefblue,fg=white}
+      \setbeamercolor{structure}{fg=unicefblue}
+      \setbeamercolor{section in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{author in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{title in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{date in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{section in head/foot shaded}{bg=unicefblue,fg=white}
+      \setbeamertemplate{navigation symbols}{}
+      \usepackage{tikz}
+      \usetikzlibrary{shadows}
+      \setbeamertemplate{title page}{
+        \vspace*{1.5cm}
+        \begin{center}
+          \begin{tikzpicture}
+            \node[
+              fill=unicefblue, rounded corners=8pt,
+              text=white, text width=0.85\paperwidth, align=center,
+              inner sep=16pt, drop shadow={shadow xshift=2pt, shadow yshift=-3pt, opacity=0.35},
+              anchor=center
+            ] {\fontsize{16pt}{20pt}\selectfont\bfseries\inserttitle};
+          \end{tikzpicture}
+        \end{center}
+        \vspace{0.6cm}
+        \begin{center}
+          {\Large\bfseries Hernando Grueso, PhD\par}
+          \vspace{0.3em}
+          {\large UNICEF\par}
+          \vspace{0.5em}
+          {\normalsize May 2026\par}
+        \end{center}}
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## The Problem: Girls Enrol, but Don't Find Work {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+![](../outputs/figures/d1_overall_gap.png){fig-align="center" width="100%"}
+:::
+::: {.column width="45%"}
+
+```{=latex}
+\vspace{0.5cm}
+\begin{itemize}\setlength\itemsep{0.6em}
+\item Girls' enrolment (\textbf{40.2\%}) exceeds boys' (\textbf{34.8\%}).
+\item Yet girls' NEET (\textbf{46.8\%}) is nearly \textbf{double} boys' (26.4\%).
+\item Nepal's gender gap is not a school-access problem — it is a \textbf{labour-market} problem.
+\item Marriage explains more variation in girls' NEET than poverty, caste, and disability \textit{combined}.
+\end{itemize}
+```
+
+:::
+:::
+
+## The Evidence: Education Reduces Exclusion {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="100%"}
+:::
+::: {.column width="45%"}
+
+```{=latex}
+\vspace{0.4cm}
+\begin{itemize}\setlength\itemsep{0.6em}
+\item Completing secondary school is associated with a \textbf{$-$13.2 pp} reduction in NEET probability (causal forest, $n=13{,}586$).
+\item Each year of schooling: \textbf{+14.5\% earnings for girls} vs +12.0\% for boys.
+\item \textbf{Beyond secondary} the gap widens: $\sim$+15\% per year for girls vs $\sim$+10\% for boys.
+\item Effect is stable across all 7 provinces and all caste groups.
+\end{itemize}
+```
+
+:::
+:::
+
+## The Cost: NPR 8 Billion per Cohort {.smaller}
+
+::: {.columns}
+::: {.column width="55%"}
+![](../outputs/figures/c3_coi_vs_budget.png){fig-align="center" width="100%"}
+:::
+::: {.column width="45%"}
+
+```{=latex}
+\vspace{0.4cm}
+\begin{itemize}\setlength\itemsep{0.6em}
+\item \textbf{NPR 8 billion (USD 61M)} is the lifetime productivity loss from one cohort of 680,000 adolescent girls not completing secondary education.
+\item Equivalent to \textbf{$\sim$10\% of the annual health-sector budget}.
+\item A \textit{new cohort enters every year} — this is a recurring, not one-off, loss.
+\item Break-even: any programme costing under \textbf{USD 90 per girl} lifetime yields positive ROI.
+\end{itemize}
+```
+
+:::
+:::
+
+## The Recommendation: Invest at 16–18, Not 19+ {.smaller}
+
+```{=latex}
+\begin{itemize}\setlength\itemsep{0.7em}
+\item[\textbf{1.}] \textbf{End child marriage as an economic priority.} Marriage is associated with $-$61 pp enrolment and $+$42 pp NEET — the largest single lever. Enforcement of existing legislation in Madhesh and Lumbini would yield the greatest gain.
+\item[\textbf{2.}] \textbf{Universal secondary completion with year-by-year retention.} 14.5\% earnings premium per year of schooling. Reward \textit{every year retained}, not only the completion milestone.
+\item[\textbf{3.}] \textbf{Prevent the post-18 divergence — invest at ages 16--18.} The female NEET gap widens from $+$9 pp at 15--18 to $+$24.7 pp at 19--24. Retention support during upper-secondary, paired with skills bridges to the labour market and tertiary, is needed \textit{before} girls exit the system.
+\item[\textbf{4.}] \textbf{Dalit-specific labour-market measures.} Education alone is associated with a 2 pp residual disadvantage. Pair education with apprenticeships and anti-discrimination measures.
+\end{itemize}
+```
+
+##  {.unnumbered}
+
+\vfill
+
+\begin{center}
+{\fontsize{28pt}{34pt}\selectfont\bfseries\color{black} Thank you\par}
+\vspace{1em}
+{\fontsize{15pt}{18pt}\selectfont\color{uniceflight} hgrueso@unicef.org\par}
+\end{center}
+
+\vfill

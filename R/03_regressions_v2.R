@@ -1,5 +1,5 @@
 # =============================================================================
-# 03_regressions_v2.R — Regression models addressing reviewer comments
+# 03_regressions_v2.R — Regression models 
 # Key additions vs v1:
 #   - Models run separately for 15-18 and 19-24 age groups
 #   - Wealth excluded in sensitivity models (reviewer: "wealth overshadows")

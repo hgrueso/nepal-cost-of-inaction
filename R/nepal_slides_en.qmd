@@ -1,0 +1,393 @@
+---
+title: "Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal"
+author: |
+  Hernando Grueso, PhD \
+  UNICEF
+date: "May 2026"
+lang: en
+format:
+  pptx:
+    slide-level: 2
+  revealjs:
+    theme: [default, slides_theme.scss]
+    footer: "Hernando Grueso, UNICEF · Cost of Inaction Nepal · May 2026"
+    slide-number: c/t
+    transition: fade
+    incremental: false
+    smaller: false
+    embed-resources: true
+    fig-align: center
+  beamer:
+    theme: Madrid
+    colortheme: default
+    aspectratio: 169
+    fontsize: 9pt
+    fig-align: center
+    shorttitle: "Cost of Inaction · Adolescent Girls Nepal"
+    shortauthor: "Hernando Grueso, UNICEF"
+    shortdate: "May 2026"
+    keep-tex: false
+    header-includes: |
+      \definecolor{unicefblue}{HTML}{00377C}
+      \definecolor{uniceflight}{HTML}{1CABE2}
+      \setbeamercolor{frametitle}{bg=unicefblue,fg=white}
+      \setbeamercolor{structure}{fg=unicefblue}
+      \setbeamercolor{section in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{author in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{title in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{date in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{section in head/foot shaded}{bg=unicefblue,fg=white}
+      \setbeamertemplate{navigation symbols}{}
+      \usepackage{tikz}
+      \usetikzlibrary{shadows}
+      \usepackage{caption}
+      \captionsetup[table]{labelformat=empty,labelsep=none,font=tiny}
+      \setbeamertemplate{title page}{
+        \vspace*{1.5cm}
+        \begin{center}
+          \begin{tikzpicture}
+            \node[
+              fill=unicefblue, rounded corners=8pt,
+              text=white, text width=0.85\paperwidth, align=center,
+              inner sep=16pt, drop shadow={shadow xshift=2pt, shadow yshift=-3pt, opacity=0.35},
+              anchor=center
+            ] {\fontsize{16pt}{20pt}\selectfont\bfseries\inserttitle};
+          \end{tikzpicture}
+        \end{center}
+        \vspace{0.6cm}
+        \begin{center}
+          {\Large\bfseries Hernando Grueso, PhD\par}
+          \vspace{0.3em}
+          {\large UNICEF\par}
+          \vspace{0.5em}
+          {\normalsize May 2026\par}
+        \end{center}}
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+suppressPackageStartupMessages({
+  library(dplyr); library(readr); library(knitr); library(glue)
+})
+nums <- tryCatch(readRDS("../outputs/coi_summary_numbers.RData"),
+                 error = function(e) list(
+                   national_coi_b = 8.1, national_coi_usdm = 61,
+                   national_excluded = 680231,
+                   coi_pct_health_budget = 10, coi_pct_education_budget = 4,
+                   girls_return_pct = 14.5, boys_return_pct = 12.0))
+```
+
+# Data and Context {.section-divider background-color="#00377C"}
+
+## Data Source: Nepal Living Standards Survey IV (NLSS IV) 2022/23 {.smaller}
+
+- **Source**: National Statistics Office of Nepal · NLSS IV 2022/23 microdata
+- **Sampling**: Nationally representative two-stage stratified design across 7 provinces
+- **Sample size**: 46,870 individuals in 9,600 households
+- **Analysis sample**: 9,785 youth aged 15–24 (4,919 girls, 4,866 boys); 13,586 women aged 15–64 for the causal forest
+- **Modules used**: S01 (roster), S07 (education), S08 (disability, Washington Group), S09 (employment), S10 (wages), poverty file
+- **Survey design**: PSU = `psu_number`, strata = province, weights = `ind_wt`
+
+## Variables and Definitions {.smaller}
+
+| Concept | Definition | Source |
+|---|---|---|
+| **NEET** | Not in education, employment or training | S07 + S09 |
+| **Enrolled** | Currently attending any school level | q07_11 |
+| **Secondary completed** | Completed Class 10 (SLC) or higher | q07_12 |
+| **Currently married** | Self-reported marital status | q01_05 |
+| **Caste/ethnicity** | 8 NLSS groups, recoded to 5 broad categories | q01_07 |
+| **Wealth quintile** | Asset-based, household level | constructed |
+| **Below poverty line** | Official NSO poverty status | poverty file |
+| **Disability** | Washington Group 6+ functional difficulty | q08_16–q08_21 |
+| **Monthly wage** | Long-term salaried workers, NPR | q10_07, q10_09 |
+
+# Key Findings at a Glance {.section-divider background-color="#00377C"}
+
+## Five Headline Findings {.smaller}
+
+```{=latex}
+\begin{itemize}\setlength\itemsep{0.9em}
+\item[\textbf{1.}] Nepal's gender gap is \textbf{not in schools} — it is in labour markets. Girls' enrolment (40.2\%) exceeds boys' (34.8\%), yet NEET (46.8\%) is nearly double boys' (26.4\%).
+\item[\textbf{2.}] \textbf{Child marriage is strongly associated with exclusion.} Being currently married is associated with a 61 pp reduction in enrolment and a 42 pp increase in NEET — dwarfing the associations with poverty, caste, and disability combined.
+\item[\textbf{3.}] \textbf{Secondary education has a robust estimated effect on inclusion}: a $-$13.2 pp reduction in NEET probability, stable across all provinces and caste groups (causal forest, n = 13{,}586).
+\item[\textbf{4.}] \textbf{Each additional year of schooling is associated with a 14.5\% rise in lifetime earnings for girls vs 12.0\% for boys.} Beyond secondary completion the gap \textit{widens}: $\sim$+15\% per year for girls vs $\sim$+10\% per year for boys — the heart of the cost of inaction.
+\item[\textbf{5.}] \textbf{Nepal forgoes $\sim$NPR 8 billion per cohort} by not educating its adolescent girls — equivalent to \textbf{$\sim$10\% of the annual health-sector budget}.
+\end{itemize}
+```
+
+# Diagnostic: Gender Gaps in Education and Employment {.section-divider background-color="#00377C"}
+
+## The Gender Gap is Not in Schools — It is in Labour Markets
+
+![](../outputs/figures/d1_overall_gap.png){fig-align="center" width="86%"}
+
+## Madhesh and Lumbini: Provinces with the Widest Female NEET Gap
+
+![](../outputs/figures/d2_neet_by_province.png){fig-align="center" width="76%"}
+
+## Marriage Drives Near-Universal NEET — Regardless of Caste
+
+![](../outputs/figures/d3_intersectionality.png){fig-align="center" width="86%"}
+
+## Marriage Also Collapses Enrolment — Across All Castes
+
+![](../outputs/figures/d3b_enrolment_intersectionality.png){fig-align="center" width="86%"}
+
+## Headline Numbers — Where Each Girl Aged 15–24 Is {.smaller}
+
+| Status (youth 15–24)               | Girls           | Boys           | Gap (pp)         |
+|------------------------------------|-----------------|----------------|------------------|
+| In school only (not working)       | 35.4%           | 32.8%          | +2.6 pp          |
+| In school **and** working          | 4.8%            | 2.0%           | +2.8 pp          |
+| Working only (not in school)       | 13.0%           | 38.9%          | **−25.9 pp**     |
+| **NEET** (Not in Educ/Employment)  | **46.8%**       | **26.4%**      | **+20.4 pp**     |
+| *Of which: currently married*      | 37.4%           | 17.6%          | +19.8 pp         |
+
+::: {style="font-size: 0.35em; color: #555; margin-top: 6px;"}
+The 46.8% NEET figure reflects girls who are *neither* in school *nor* employed under the ILO 7-day definition (which excludes unpaid family work and unsuccessful job search). These four categories are mutually exclusive and sum to 100%.
+:::
+
+# Multivariate Analysis {.section-divider background-color="#00377C"}
+
+## Marriage is by Far the Strongest Barrier — All Factors in Percentage Points
+
+![](../outputs/figures/r1_coef_pp.png){fig-align="center" width="92%"}
+
+## Reading the Coefficient Plot {.smaller}
+
+- **Marriage is associated with the largest changes.** Being currently married is associated with a **−61 pp** lower enrolment probability and a **+42 pp** higher NEET probability, after controlling for poverty, caste, geography, and disability.
+
+\vspace{0.6em}
+
+- **Caste matters even after wealth.** Dalit girls face a −6 pp enrolment gap that does not disappear when we control for wealth quintile. Religious/Linguistic girls face a similar penalty.
+
+\vspace{0.6em}
+
+- **Wealth helps incrementally.** Each step up in the wealth quintile is associated with +5.9 pp enrolment and −4.6 pp NEET.
+
+\vspace{0.6em}
+
+- **The gender coefficient on NEET remains +9.3 pp** even after holding everything constant — a residual labour-market gap not explained by observable characteristics.
+
+# Estimating Education Returns for Adolescent Girls {.section-divider background-color="#00377C"}
+
+## Secondary Education Reduces NEET by ~13 pp — For Every Caste
+
+![](../outputs/figures/r2_cate_caste.png){fig-align="center" width="74%"}
+
+::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
+The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate for men is smaller (~−7 pp) — boys' NEET is shaped more by labour-demand conditions than by individual schooling. Causal-forest details and boys' coefficients in the appendix.
+:::
+
+## Returns to Schooling are Exponentially Larger for Girls
+
+![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="74%"}
+
+::: {style="font-size: 0.32em; color: #555; line-height: 1.25; margin-top: 4px;"}
+**Average Mincer return:** +14.5% per year of schooling for girls vs +12.0% for boys. **Beyond secondary** (10+ years): each additional year of schooling adds ~+15% to girls' lifetime earnings vs ~+10% for boys — the gender gap in returns *widens* with educational attainment. Compounded over 35 working years, this is where the cost of inaction concentrates.
+:::
+
+## Marriage Erodes the Protective Effect of Education
+
+![](../outputs/figures/m2_marriage_interaction.png){fig-align="center" width="80%"}
+
+## What the Analyses Tell Us {.smaller}
+
+- **Education is associated with inclusion everywhere.** Completing secondary school is associated with a **−13.2 pp** lower NEET probability. The estimated effect is stable across all 7 provinces and all caste groups.
+
+\vspace{0.6em}
+
+- **The Mincer return per year of schooling is `r nums$girls_return_pct`% for girls** (`r nums$boys_return_pct`% for boys). After 10 years of schooling, projected lifetime earnings roughly **double** relative to no schooling.
+
+\vspace{0.6em}
+
+- **Marriage attenuates the protective association.** Education is strongly associated with lower NEET for unmarried girls, but the relationship is weaker among married girls — education and marriage prevention act as **complements**, not substitutes.
+
+\vspace{0.6em}
+
+- **OLS and causal forest produce convergent estimates** in direction, magnitude, and stability. The investment case rests on triangulated evidence from two independent methods.
+
+# The Cost of Inaction {.section-divider background-color="#00377C"}
+
+## Nepal Forgoes NPR 8 Billion Every Year by Not Educating its Girls
+
+![](../outputs/figures/c1_total_coi_billion.png){fig-align="center" width="88%"}
+
+## Cost of Inaction is `r nums$coi_pct_health_budget`% of the Annual Health Budget
+
+![](../outputs/figures/c3_coi_vs_budget.png){fig-align="center" width="80%"}
+
+## What This Means in Concrete Policy Terms {.smaller}
+
+- **NPR `r nums$national_coi_b` billion** is the lifetime productivity loss from **one cohort** of `r format(nums$national_excluded, big.mark = ",")` adolescent girls who will not complete secondary education in Nepal.
+
+\vspace{0.5em}
+
+- That equals about **`r nums$coi_pct_health_budget`% of the national health-sector budget** and **`r nums$coi_pct_education_budget`% of the education-sector budget** for fiscal year 2024/25.
+
+\vspace{0.5em}
+
+- **Karnali, Sudurpashchim, and Madhesh** carry the largest relative burden — per-girl losses are smaller than in Bagmati because wages are lower, but a larger share of the local economy is at stake.
+
+\vspace{0.5em}
+
+- **"Per cohort" means** the *lifetime* productivity loss for the current cohort of 680,000 adolescent girls (aged 15–24 today). A new cohort enters this stage every year — so this is a **recurring annual loss**, not one-off.
+
+\vspace{0.5em}
+
+- **Break-even spending per girl.** USD `r nums$national_coi_usdm` million ÷ 680,000 girls ≈ **USD 90 per girl** in cumulative lifetime social spending. Any secondary-completion programme costing less than USD 90 per beneficiary would yield a positive return on investment in productivity terms alone.
+
+# Recommendations {.section-divider background-color="#00377C"}
+
+## Five Investment Priorities for the New Government {.smaller}
+
+> **1 · End child marriage as an economic priority.** Marriage is associated with more variation in girls' NEET than poverty, caste, and disability combined. Enforcement of existing legislation in Madhesh and Lumbini would yield the largest single gain.
+
+\vspace{0.5em}
+
+> **2 · Universal secondary completion AND year-by-year retention.** Each year of schooling is associated with a **14.5% earnings premium** for girls. **Beyond secondary completion the gender differential in returns widens** (~+15% per year for girls vs ~+10% for boys) — programme design should reward *every year retained*, with the largest gains realised in upper-secondary and tertiary education.
+
+\vspace{0.5em}
+
+> **3 · Dalit-specific labour-market measures.** Education alone is associated with a 2 pp residual disadvantage for Dalit women. Pair education with apprenticeships and anti-discrimination measures.
+
+\vspace{0.5em}
+
+> **4 · Bridge programmes for the 19–24 cohort.** The female NEET rate rises sharply after age 18 (+24.7 pp gap). Vocational and second-chance education could capture earnings that current schooling cannot.
+
+\vspace{0.5em}
+
+> **5 · Track and report sex-disaggregated NEET by province annually.** What is not measured is not managed. Make this the new headline statistic of NLSS V.
+
+# Methodological Appendix {.section-divider background-color="#00377C"}
+
+## How We Estimate the Cost of Inaction {.smaller}
+
+We combine three components:
+
+\vspace{0.4em}
+
+::: {.columns}
+::: {.column width="50%"}
+
+**1 · Causal effect**
+
+Generalised Random Forest (Wager & Athey 2018) on women 15–64, treatment = secondary completion, outcome = NEET. ATE = −13.2 pp.
+
+\vspace{0.8em}
+
+**2 · Earnings projection**
+
+Mincer wage equation on 952 women in long-term salaried employment. Conservative return = 9% per year of schooling (ILO benchmark, lower than the internal estimate of 14.5%).
+
+:::
+::: {.column width="50%"}
+
+**3 · Population scaling**
+
+Survey weights from NLSS IV scaled to national total of 1.4M girls aged 15–24. Provincial CoI = ATE × N excluded × PV per girl.
+
+\vspace{0.8em}
+
+**Discount rate**: 5% | **Horizon**: 35 working years | **GDP source**: NSO Nepal 2023/24 provincial accounts.
+
+:::
+:::
+
+## Assumptions and Limitations {.smaller}
+
+```{=latex}
+\begin{itemize}\setlength\itemsep{0.9em}
+\item[\textbf{1.}] \textbf{Formal-sector selection bias.} Mincer estimated on 952 salary workers — likely upper bound on returns. The 9\% ILO benchmark partially corrects.
+\item[\textbf{2.}] \textbf{NEET-to-earnings transition.} Assumes girls who exit NEET access the median wage. Childcare, mobility, and norms may delay this — implying our CoI is a \textbf{conservative lower bound}.
+\item[\textbf{3.}] \textbf{Male migration not captured.} Boys leaving school for foreign employment generates remittances. The analysis does not yet quantify the parallel earnings that educated girls could generate through skilled migration.
+\item[\textbf{4.}] \textbf{Population scaling.} Provincial girl counts derived from survey weights $\times$ 1.4M national total. NSO Census 2021 tabulations would tighten the figure.
+\end{itemize}
+```
+
+## The Mincer Wage Equation: Specification {.smaller}
+
+The Mincer human-capital earnings function is estimated as:
+
+$$
+\log(\text{wage}_{ip}) = \alpha + \beta_1 \cdot \text{schooling}_{ip} + \beta_2 \cdot \text{exp}_{ip} + \beta_3 \cdot \text{exp}^2_{ip} + \beta_4 \cdot \text{rural}_{ip} + \gamma_p + \varepsilon_{ip}
+$$
+
+::: {style="font-size: 0.35em;"}
+- $\log(\text{wage}_{ip})$ — natural log of monthly wage (NPR) for individual $i$ in province $p$
+- $\beta_1$ — **key parameter**: return per additional year of schooling (Mincer return)
+- $\text{exp}$ — years of potential labour market experience (age − schooling − 6)
+- $\text{exp}^2$ — captures concavity (returns to experience diminish with age)
+- $\text{rural}$ — binary indicator for rural residence
+- $\gamma_p$ — province fixed effects (regional wage differentials)
+- $\varepsilon_{ip}$ — error term, heteroskedasticity-robust SE (HC1)
+
+**Specifications tested:** (i) Basic — schooling, experience, rural; (ii) +Province FE; (iii) +Caste/ethnicity controls; (iv) Interactions with marital status. The reported estimate $\hat{\beta}_1 \approx 0.145$ implies a **14.5% return per year of schooling** for women; ILO Nepal benchmark of 9% used for the conservative CoI.
+:::
+
+## Appendix Table A1: Mincer Wage Equation, Female Salary Workers {.smaller}
+
+```{r}
+#| label: mincer-girls
+if (file.exists("outputs/tables/mincer_girls_full.csv")) {
+  mincer_girls <- read_csv("outputs/tables/mincer_girls_full.csv", show_col_types = FALSE)
+  knitr::kable(mincer_girls, align = "lrrrr", caption = NULL, format = "simple")
+}
+```
+
+::: {style="font-size: 0.35em; color: #555; line-height: 1.25; margin-top: 4px;"}
+*Notes:* Dependent variable is log of monthly wage (NPR). Sample: women aged 15–64 in long-term salaried employment (N = 952). Specification includes years of schooling, experience, experience squared, rural indicator, and province fixed effects. Standard errors are heteroskedasticity-robust (HC1). *Source*: Author's calculations using NLSS IV 2022/23. \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.
+:::
+
+## Appendix Table A2: Mincer Wage Equation, Male Salary Workers {.smaller}
+
+```{r}
+#| label: mincer-boys
+if (file.exists("outputs/tables/mincer_boys_full.csv")) {
+  mincer_boys <- read_csv("outputs/tables/mincer_boys_full.csv", show_col_types = FALSE)
+  knitr::kable(mincer_boys, align = "lrrrr", caption = NULL, format = "simple")
+}
+```
+
+::: {style="font-size: 0.35em; color: #555; line-height: 1.25; margin-top: 4px;"}
+*Notes:* Dependent variable is log of monthly wage (NPR). Sample: men aged 15–64 in long-term salaried employment. Specification includes years of schooling, experience, experience squared, rural indicator, and province fixed effects. Standard errors are heteroskedasticity-robust (HC1). *Source*: Author's calculations using NLSS IV 2022/23. \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.
+:::
+
+## Appendix Figure A1: Gender Gap by Age Group
+
+![](../outputs/figures/d4_gap_by_age.png){fig-align="center" width="92%"}
+
+## Appendix Figure A2: Boys' NEET Regression — Coefficient Plot
+
+![](../outputs/figures/a1_boys_coef.png){fig-align="center" width="86%"}
+
+## Appendix Table A3: Boys' NEET Linear Probability Model {.smaller}
+
+```{r}
+#| label: boys-reg
+if (file.exists("outputs/tables/boys_reg_full.csv")) {
+  boys_reg <- read_csv("outputs/tables/boys_reg_full.csv", show_col_types = FALSE)
+  knitr::kable(boys_reg, align = "lrrrr", caption = NULL, format = "simple")
+}
+```
+
+::: {style="font-size: 0.35em; color: #555; line-height: 1.25; margin-top: 4px;"}
+*Notes:* Dependent variable is NEET status. Linear probability model. Sample: boys aged 15–24 (n ≈ 4,300). Controls: rural, poverty status, wealth quintile, marital status, disability (WG 6+), caste/ethnicity. Reference categories: Brahmin/Chhetri, urban, non-poor. Province fixed effects included. Standard errors are heteroskedasticity-robust (HC1). *Source*: Author's calculations using NLSS IV 2022/23. \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.
+:::
+
+##  {.unnumbered}
+
+\vfill
+
+\begin{center}
+{\fontsize{28pt}{34pt}\selectfont\bfseries\color{black} Thank you\par}
+\vspace{1em}
+{\fontsize{15pt}{18pt}\selectfont\color{uniceflight} hgrueso@unicef.org\par}
+\end{center}
+
+\vfill
