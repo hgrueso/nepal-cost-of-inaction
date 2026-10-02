@@ -1,16 +1,14 @@
 ---
 title: "Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal"
-author: |
-  Hernando Grueso, PhD\
-  UNICEF
-date: "May 2026"
+author: "UNICEF"
+date: "October 2026"
 lang: en
 format:
   pptx:
     slide-level: 2
   revealjs:
     theme: [default, slides_theme.scss]
-    footer: "Hernando Grueso, UNICEF · Cost of Inaction Nepal · May 2026"
+    footer: "UNICEF · Cost of Inaction Nepal · October 2026"
     slide-number: c/t
     transition: fade
     incremental: false
@@ -23,8 +21,8 @@ format:
     fontsize: 9pt
     fig-align: center
     shorttitle: "Cost of Inaction · Adolescent Girls Nepal"
-    shortauthor: "Hernando Grueso, UNICEF"
-    shortdate: "May 2026"
+    shortauthor: "UNICEF"
+    shortdate: "October 2026"
     header-includes: |
       \definecolor{unicefblue}{HTML}{00377C}
       \definecolor{uniceflight}{HTML}{1CABE2}
@@ -39,7 +37,7 @@ format:
       \usepackage{tikz}
       \usetikzlibrary{shadows}
       \setbeamertemplate{title page}{
-        \vspace*{1.5cm}
+        \vspace*{2cm}
         \begin{center}
           \begin{tikzpicture}
             \node[
@@ -50,13 +48,11 @@ format:
             ] {\fontsize{16pt}{20pt}\selectfont\bfseries\inserttitle};
           \end{tikzpicture}
         \end{center}
-        \vspace{0.6cm}
+        \vspace{1cm}
         \begin{center}
-          {\Large\bfseries Hernando Grueso, PhD\par}
-          \vspace{0.3em}
           {\large UNICEF\par}
           \vspace{0.5em}
-          {\normalsize May 2026\par}
+          {\normalsize October 2026\par}
         \end{center}}
 execute:
   echo: false
@@ -78,7 +74,7 @@ execute:
 \item Girls' enrolment (\textbf{40.2\%}) exceeds boys' (\textbf{34.8\%}).
 \item Yet girls' NEET (\textbf{46.8\%}) is nearly \textbf{double} boys' (26.4\%).
 \item Nepal's gender gap is not a school-access problem — it is a \textbf{labour-market} problem.
-\item Marriage explains more variation in girls' NEET than poverty, caste, and disability \textit{combined}.
+\item Marriage explains more variation in girls' NEET than poverty, caste, and disability \textit{combined}, and the share of girls married rises from \textbf{9\% at 15--18 to 57\% at 19--24} (among 15--18-year-olds any current marriage is child marriage by definition).
 \end{itemize}
 ```
 
@@ -96,46 +92,66 @@ execute:
 ```{=latex}
 \vspace{0.4cm}
 \begin{itemize}\setlength\itemsep{0.6em}
-\item Completing secondary school is associated with a \textbf{$-$13.2 pp} reduction in NEET probability (causal forest, $n=13{,}586$).
+\item For girls and women, completing secondary school is associated with a \textbf{$-$13.2 pp} reduction in NEET probability (causal forest, $n=13{,}586$), stable across all 7 provinces and caste groups.
 \item Each year of schooling: \textbf{+14.5\% earnings for girls} vs +12.0\% for boys.
-\item \textbf{Beyond secondary} the gap widens: $\sim$+15\% per year for girls vs $\sim$+10\% for boys.
-\item Effect is stable across all 7 provinces and all caste groups.
+\item Returns are \textbf{convex} — rising from $\sim$8\% at primary to $\sim$27\% at secondary and $\sim$35\% at higher secondary.
+\item Estimates are \textbf{robust to a Heckman selection correction} (selection significant but shifts the return $<$2 pp within the test specification).
 \end{itemize}
 ```
 
 :::
 :::
 
-## The Cost: NPR 8 Billion per Cohort {.smaller}
+## The Cost: NPR 16 Billion per Cohort {.smaller}
 
 ::: {.columns}
 ::: {.column width="55%"}
-![](../outputs/figures/c3_coi_vs_budget.png){fig-align="center" width="100%"}
+![](../outputs/figures/c3_coi_vs_budget_census.png){fig-align="center" width="100%"}
 :::
 ::: {.column width="45%"}
 
 ```{=latex}
 \vspace{0.4cm}
 \begin{itemize}\setlength\itemsep{0.6em}
-\item \textbf{NPR 8 billion (USD 61M)} is the lifetime productivity loss from one cohort of 680,000 adolescent girls not completing secondary education.
-\item Equivalent to \textbf{$\sim$10\% of the annual health-sector budget}.
+\item \textbf{NPR 16.3 billion (USD 123M)} is the lifetime productivity loss from one cohort of 1.43 million adolescent girls not completing secondary education (counts anchored to the 2021 Census).
+\item Equivalent to \textbf{18.9\% of the health budget}, \textbf{15.4\% of the social-security-allowance budget} and \textbf{8.0\% of the education budget}. At the boys' 12\% wage premium the loss is NPR 22.1 billion; the 9\% ILO headline is the conservative floor.
 \item A \textit{new cohort enters every year} — this is a recurring, not one-off, loss.
-\item Break-even: any programme costing under \textbf{USD 90 per girl} lifetime yields positive ROI.
+\item Break-even: any programme costing under \textbf{USD 86 per girl} lifetime yields positive ROI, a theoretical maximum that assumes jobs are available on completion.
 \end{itemize}
 ```
 
 :::
 :::
 
-## The Recommendation: Invest at 16–18, Not 19+ {.smaller}
+## The Recommendation: Four Priority Areas, Employment First {.smaller}
 
 ```{=latex}
 \begin{itemize}\setlength\itemsep{0.7em}
-\item[\textbf{1.}] \textbf{End child marriage as an economic priority.} Marriage is associated with $-$61 pp enrolment and $+$42 pp NEET — the largest single lever. Enforcement of existing legislation in Madhesh and Lumbini would yield the greatest gain.
-\item[\textbf{2.}] \textbf{Universal secondary completion with year-by-year retention.} 14.5\% earnings premium per year of schooling. Reward \textit{every year retained}, not only the completion milestone.
-\item[\textbf{3.}] \textbf{Prevent the post-18 divergence — invest at ages 16--18.} The female NEET gap widens from $+$9 pp at 15--18 to $+$24.7 pp at 19--24. Retention support during upper-secondary, paired with skills bridges to the labour market and tertiary, is needed \textit{before} girls exit the system.
-\item[\textbf{4.}] \textbf{Dalit-specific labour-market measures.} Education alone is associated with a 2 pp residual disadvantage. Pair education with apprenticeships and anti-discrimination measures.
+\item[\textbf{1.}] \textbf{Livelihoods: pathways from education to employment.} Every gain assumes jobs exist for qualified young women. Pair upper-secondary retention with skills bridges, TVET, apprenticeships and return-to-education pathways, and invest in employment-generating sectors alongside education.
+\item[\textbf{2.}] \textbf{Education: universal secondary completion with year-by-year retention.} 14.5\% earnings premium per year of schooling, rising through lower and upper secondary. Reward \textit{every year retained}, not only the completion milestone.
+\item[\textbf{3.}] \textbf{Marriage: treat prevention as an economic priority, starting in adolescence.} Marriage is associated with $-$61 pp enrolment and $+$42 pp NEET, the largest single lever, and dropout is itself a risk factor for child marriage. Combine enforcement of existing legislation, social-norm change and social protection, concentrated in Madhesh and Lumbini, reaching girls \textit{before} the post-18 transition.
+\item[\textbf{4.}] \textbf{Equity: close the gaps facing Dalit girls.} Even with the same education, Dalit women face a $\sim$2 pp residual labour-market disadvantage. Pair education with apprenticeships and anti-discrimination measures.
 \end{itemize}
+```
+
+## The Same Lens Elsewhere — Bolivia: a Different Diagnosis {.smaller}
+
+![](../outputs/figures/bolivia_f7_violence_2panel_en.png){fig-align="center" width="84%"}
+
+```{=latex}
+\vspace{1pt}
+{\fontsize{4.5pt}{5.5pt}\selectfont\color{gray}
+In Bolivia (Aula Conectada investment case) girls are \textbf{already in school} ($\sim$92\% enrolment ages 10--19, no gender gap in access); the binding constraints are \textbf{learning quality, retention past 15, and the home environment}. Violent discipline is concentrated in rural (52\% vs 32\% urban) and indigenous (46\% vs 35\%) homes and is associated with $\sim$2 fewer years of schooling; \textbf{early pregnancy} is the strongest schooling correlate ($-$2.9 years). Contrast with Nepal: Nepal's gap is the school-to-work transition; Bolivia's is learning and retention --- the same lens, a different policy answer. Source: EDSA 2023 (INE Bolivia), survey-weighted.\par}
+```
+
+## Bolivia: Evidence-Matched Theory of Change — BCR ≈ 4–6 {.smaller}
+
+![](../outputs/figures/bolivia_f_toc_en.png){fig-align="center" width="86%"}
+
+```{=latex}
+\vspace{1pt}
+{\fontsize{4.5pt}{5.5pt}\selectfont\color{gray}
+Each layer answers a diagnosed problem: \textbf{learning} (gender-responsive pedagogy --- Evans \& Yuan, 73+ RCTs), \textbf{empowerment} (ELA-style clubs --- the retention answer, incl.\ early pregnancy; Bandiera 2018, $\varphi$-adjusted), and \textbf{home environment} (parenting --- Cluver 2017 effect, Janowski 2025 delivery). Combined attendance effect $\approx$ +6.6 pp $\rightarrow$ +0.28 school-years $\rightarrow$ $\sim$USD 970 PV per girl; \textbf{BCR $\approx$ 4.1--6.1} (central $\sim$5.1), a conservative floor since learning gains (+0.06 SD) are not monetised. At full priority scale ($\sim$568{,}000 girls): $\sim$USD 551M lifetime earnings for $\sim$USD 107M invested.\par}
 ```
 
 ##  {.unnumbered}
@@ -145,7 +161,9 @@ execute:
 \begin{center}
 {\fontsize{28pt}{34pt}\selectfont\bfseries\color{black} Thank you\par}
 \vspace{1em}
-{\fontsize{15pt}{18pt}\selectfont\color{uniceflight} hgrueso@unicef.org\par}
+{\fontsize{14pt}{17pt}\selectfont\color{black} Hernando Grueso, PhD\par}
+\vspace{0.35em}
+{\fontsize{13pt}{16pt}\selectfont\color{uniceflight} hgrueso@unicef.org\par}
 \end{center}
 
 \vfill
