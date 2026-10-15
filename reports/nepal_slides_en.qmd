@@ -274,8 +274,8 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 ## Four Priority Areas for Investment: Employment Opportunities First {.smaller}
 
 ```{=latex}
-\footnotesize
-\begin{itemize}\setlength\itemsep{0.4em}
+\small
+\begin{itemize}\setlength\itemsep{0.3em}
 \item[\textbf{1.}] \textbf{Livelihoods: pathways from education to employment.} Every gain in this report assumes jobs exist for newly qualified young women; the estimates are partial-equilibrium and depend on labour demand. Pair education with demand-side measures: skills bridges from upper-secondary to work, TVET, apprenticeships, second-chance and return-to-education pathways, and investment in employment-generating sectors. This is an explicit budget trade-off, to be planned together with education rather than in competition with it.
 \item[\textbf{2.}] \textbf{Education: universal secondary completion with year-by-year retention.} Each year of schooling is associated with a 14.5\% earnings premium for girls, and returns are \textit{convex}, rising from $\sim$8\% at primary to $\sim$27\% at secondary and $\sim$35\% at higher secondary. Programme design should reward \textit{every year retained}, with the largest gains in upper-secondary.
 \item[\textbf{3.}] \textbf{Marriage: treat prevention as an economic priority, starting in adolescence.} Marriage is associated with more variation in girls' NEET than poverty, caste, and disability combined; the married share rises from 9\% at ages 15--18 to 57\% at 19--24, and the penalty is severe in both groups. Dropout is itself a risk factor for child marriage, so retention and prevention reinforce each other. Enforcement, concentrated in Madhesh and Lumbini, must reach girls \textit{before} the post-18 transition.
@@ -286,10 +286,10 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 ## Reaching Those Already Left Behind {.smaller}
 
 ```{=latex}
-\footnotesize
+\small
 The four priorities need to reach three groups explicitly.
-\vspace{0.6em}
-\begin{itemize}\setlength\itemsep{0.7em}
+\vspace{0.5em}
+\begin{itemize}\setlength\itemsep{0.5em}
 \item[\textbf{a.}] \textbf{Young people with disabilities.} Disability is associated with about \textbf{+23 pp NEET} among youth aged 15--24 and about \textbf{$-$20 pp enrolment} among girls (the enrolment estimate is imprecise). Include accessible schooling, reasonable accommodations and support for the transition into work. The analysis does not identify which disability-specific measures work best.
 \item[\textbf{b.}] \textbf{Girls already married or out of school.} Married girls show very low enrolment and high NEET in every caste group and in both age groups. Prevention alone misses those already excluded: include flexible re-entry, second-chance learning and employment support. Childcare is an option worth assessing; it is not evaluated here.
 \item[\textbf{c.}] \textbf{Madhesh and Lumbini.} Female NEET reaches about \textbf{65\% in Madhesh and 50\% in Lumbini}, the highest of the seven provinces. Prioritise both for integrated education-to-employment support, not only marriage enforcement. Madhesh also carries the second-largest cost of inaction (NPR 4.3 billion per cohort).
