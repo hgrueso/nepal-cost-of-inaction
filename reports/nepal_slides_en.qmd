@@ -283,6 +283,19 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 \end{itemize}
 ```
 
+## Reaching Those Already Left Behind {.smaller}
+
+```{=latex}
+\footnotesize
+The four priorities need to reach three groups explicitly.
+\vspace{0.6em}
+\begin{itemize}\setlength\itemsep{0.7em}
+\item[\textbf{a.}] \textbf{Young people with disabilities.} Disability is associated with about \textbf{+23 pp NEET} among youth aged 15--24 and about \textbf{$-$20 pp enrolment} among girls (the enrolment estimate is imprecise). Include accessible schooling, reasonable accommodations and support for the transition into work. The analysis does not identify which disability-specific measures work best.
+\item[\textbf{b.}] \textbf{Girls already married or out of school.} Married girls show very low enrolment and high NEET in every caste group and in both age groups. Prevention alone misses those already excluded: include flexible re-entry, second-chance learning and employment support. Childcare is an option worth assessing; it is not evaluated here.
+\item[\textbf{c.}] \textbf{Madhesh and Lumbini.} Female NEET reaches about \textbf{65\% in Madhesh and 50\% in Lumbini}, the highest of the seven provinces. Prioritise both for integrated education-to-employment support, not only marriage enforcement. Madhesh also carries the second-largest cost of inaction (NPR 4.3 billion per cohort).
+\end{itemize}
+```
+
 # Methodological Appendix {.section-divider background-color="#00377C"}
 
 ## How We Estimate the Cost of Inaction {.smaller}
@@ -325,7 +338,7 @@ Census-anchored: NLSS IV weighted proportions applied to the Census 2021 female 
 \item[\textbf{1.}] \textbf{Formal-sector selection bias.} Wages are observed only for the $\sim\,$25\% of women in wage employment. We test for this with a Heckman selection model (see appendix): selection is statistically significant ($\rho=0.34$, $p<0.01$) but correcting for it shifts the estimated return by less than 2 pp, so the Mincer estimates are robust within that specification; the selection test uses its own specification, whose uncorrected baseline (24.4\%) differs from the main model's 14.5\%. The conservative 9\% ILO benchmark sits below all estimates.
 \item[\textbf{2.}] \textbf{NEET-to-earnings transition.} The estimate assumes a girl who exits NEET earns the median wage \textit{immediately}. In reality, job search, childcare, mobility, and social norms create friction that delays or reduces actual earnings. Assuming instant median-wage access therefore \textbf{overstates} the realised gain, making the cost-of-inaction figure an \textbf{upper bound} on what is realistically recoverable.
 \item[\textbf{3.}] \textbf{Male migration not captured.} Boys leaving school for foreign employment generates remittances. The analysis does not yet quantify the parallel earnings that educated girls could generate through skilled migration.
-\item[\textbf{4.}] \textbf{Population scaling.} Raw NLSS IV weights sum to 163.5M people against a census population of 29.2M, so absolute counts use survey proportions applied to the Census 2021 base. This revision, prompted by the country office review, doubled the headline relative to earlier drafts; proportions and per-girl results are unchanged.
+\item[\textbf{4.}] \textbf{Population scaling.} Raw NLSS IV weights sum to 163.5M people against a census population of 29.2M, so absolute counts use survey proportions applied to the Census 2021 base. Proportions, regression estimates and per-girl results do not depend on this choice.
 \item[\textbf{5.}] \textbf{Partial equilibrium.} Earnings gains are valued at current wages and current labour demand, and assume employment opportunities exist for those who become qualified. If many more girls completed secondary at once, wages and job availability would adjust, so the average gain would be smaller than the marginal gain estimated here.
 \end{itemize}
 ```
