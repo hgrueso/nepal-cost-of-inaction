@@ -64,7 +64,7 @@ execute:
 
 ::: {.columns}
 ::: {.column width="55%"}
-![](../outputs/figures/d1_overall_gap.png){fig-align="center" width="100%"}
+![](../outputs/figures/slides/d1_overall_gap.png){fig-align="center" width="100%"}
 :::
 ::: {.column width="45%"}
 
@@ -85,7 +85,7 @@ execute:
 
 ::: {.columns}
 ::: {.column width="55%"}
-![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="100%"}
+![](../outputs/figures/slides/m1_mincer_lifetime.png){fig-align="center" width="100%"}
 :::
 ::: {.column width="45%"}
 
@@ -106,7 +106,7 @@ execute:
 
 ::: {.columns}
 ::: {.column width="55%"}
-![](../outputs/figures/c3_coi_vs_budget_census.png){fig-align="center" width="100%"}
+![](../outputs/figures/slides/c3_coi_vs_budget_census.png){fig-align="center" width="100%"}
 :::
 ::: {.column width="45%"}
 

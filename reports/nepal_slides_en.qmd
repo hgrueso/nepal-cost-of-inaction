@@ -133,15 +133,15 @@ nums <- if (!is.null(res)) list(
 
 ## The Gender Gap is Not in Schools — It is in Labour Markets
 
-![](../outputs/figures/d1_overall_gap.png){fig-align="center" width="86%"}
+![](../outputs/figures/slides/d1_overall_gap.png){fig-align="center" width="86%"}
 
 ## Madhesh and Lumbini: Provinces with the Widest Female NEET Gap
 
-![](../outputs/figures/d2_neet_by_province.png){fig-align="center" width="76%"}
+![](../outputs/figures/slides/d2_neet_by_province.png){fig-align="center" width="76%"}
 
 ## Marriage Rises Sharply Across the Adolescent Transition
 
-![](../outputs/figures/b1_marriage_by_age.png){fig-align="center" width="74%"}
+![](../outputs/figures/slides/b1_marriage_by_age.png){fig-align="center" width="74%"}
 
 ::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
 NLSS IV records current marital status, not age at first marriage. Among 15–18-year-olds any current marriage is child marriage by definition; for 19–24-year-olds only current status is observed.
@@ -149,11 +149,11 @@ NLSS IV records current marital status, not age at first marriage. Among 15–18
 
 ## The Marriage Penalty on NEET Holds in Both Age Groups, Regardless of Caste
 
-![](../outputs/figures/b3_neet_marriage_caste_age.png){fig-align="center" width="92%"}
+![](../outputs/figures/slides/b3_neet_marriage_caste_age.png){fig-align="center" width="92%"}
 
 ## Married Girls' Enrolment Collapses in Both Age Groups, Across All Castes
 
-![](../outputs/figures/b4_enrol_marriage_caste_age.png){fig-align="center" width="92%"}
+![](../outputs/figures/slides/b4_enrol_marriage_caste_age.png){fig-align="center" width="92%"}
 
 ## Headline Numbers — Where Each Girl Aged 15–24 Is {.smaller}
 
@@ -173,15 +173,15 @@ The 46.8% NEET figure reflects girls who are *neither* in school *nor* employed 
 
 ## What is Associated with Girls' Enrolment: All Factors in Percentage Points
 
-![](../outputs/figures/r1a_coef_enrolment.png){fig-align="center" width="80%"}
+![](../outputs/figures/slides/r1a_coef_enrolment.png){fig-align="center" width="80%"}
 
 ## What is Associated with Youth NEET: All Factors in Percentage Points
 
-![](../outputs/figures/r1b_coef_neet.png){fig-align="center" width="80%"}
+![](../outputs/figures/slides/r1b_coef_neet.png){fig-align="center" width="80%"}
 
 ## The Marriage Association Strengthens with Age; Other Factors are Stable
 
-![](../outputs/figures/b5_coef_by_age.png){fig-align="center" width="92%"}
+![](../outputs/figures/slides/b5_coef_by_age.png){fig-align="center" width="92%"}
 
 ## Reading the Coefficient Plot {.smaller}
 
@@ -203,7 +203,7 @@ The 46.8% NEET figure reflects girls who are *neither* in school *nor* employed 
 
 ## Secondary Education Reduces NEET by ~13 pp — For Every Caste
 
-![](../outputs/figures/r2_cate_caste.png){fig-align="center" width="74%"}
+![](../outputs/figures/slides/r2_cate_caste.png){fig-align="center" width="74%"}
 
 ::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
 The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate for men is smaller (~−7 pp) — boys' NEET is shaped more by labour-demand conditions than by individual schooling. Causal-forest details and boys' coefficients in the appendix.
@@ -211,7 +211,7 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 ## Returns to Schooling are Exponentially Larger for Girls
 
-![](../outputs/figures/m1_mincer_lifetime.png){fig-align="center" width="74%"}
+![](../outputs/figures/slides/m1_mincer_lifetime.png){fig-align="center" width="74%"}
 
 ::: {style="font-size: 0.32em; color: #555; line-height: 1.25; margin-top: 4px;"}
 **Average Mincer return:** +14.5% per year of schooling for girls vs +12.0% for boys. **Beyond secondary** (10+ years): each additional year of schooling adds ~+15% to girls' lifetime earnings vs ~+10% for boys — the gender gap in returns *widens* with educational attainment. Compounded over 35 working years, this is where the cost of inaction concentrates.
@@ -219,7 +219,7 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 ## Marriage Erodes the Protective Effect of Education
 
-![](../outputs/figures/m2_marriage_interaction.png){fig-align="center" width="80%"}
+![](../outputs/figures/slides/m2_marriage_interaction.png){fig-align="center" width="80%"}
 
 ## What the Analyses Tell Us {.smaller}
 
@@ -241,11 +241,11 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 ## Nepal Forgoes NPR 16 Billion Every Year by Not Educating its Girls
 
-![](../outputs/figures/c3_coi_vs_budget_census.png){fig-align="center" width="84%"}
+![](../outputs/figures/slides/c3_coi_vs_budget_census.png){fig-align="center" width="84%"}
 
 ## Where the Cost Falls: Provincial Distribution
 
-![](../outputs/figures/coi_provincial_census.png){fig-align="center" width="78%"}
+![](../outputs/figures/slides/coi_provincial_census.png){fig-align="center" width="78%"}
 
 ## What This Means in Concrete Policy Terms {.smaller}
 
@@ -377,11 +377,11 @@ if (file.exists("outputs/tables/mincer_boys_full.csv")) {
 
 ## Appendix Figure A1: Gender Gap by Age Group
 
-![](../outputs/figures/d4_gap_by_age.png){fig-align="center" width="92%"}
+![](../outputs/figures/slides/d4_gap_by_age.png){fig-align="center" width="92%"}
 
 ## Appendix Figure A2: Boys' NEET Regression — Coefficient Plot
 
-![](../outputs/figures/a1_boys_coef.png){fig-align="center" width="86%"}
+![](../outputs/figures/slides/a1_boys_coef.png){fig-align="center" width="86%"}
 
 ## Appendix Table A3: Boys' NEET Linear Probability Model {.smaller}
 
@@ -412,7 +412,7 @@ Wages are observed only for women in wage employment (about 25% of working-age w
 
 ## Appendix: Returns are Robust Across Specifications {.smaller}
 
-![](../outputs/figures/n1_heckman_returns.png){fig-align="center" width="82%"}
+![](../outputs/figures/slides/n1_heckman_returns.png){fig-align="center" width="82%"}
 
 ::: {style="font-size: 0.34em; color: #555; margin-top: 2px;"}
 Average marginal return per year of schooling, women 15–64. The OLS (uncorrected, 24.4%) and Heckman-corrected (25.8%) estimates are nearly identical, and stable across the choice of child-age cutoff in the exclusion restriction. This test runs on its own specification; the 14.5% headline return comes from the main Mincer model, so the test speaks to stability under selection, not to the level of the headline. The 9% ILO benchmark used for the cost-of-inaction calculation is far below all estimates — making the CoI a conservative figure. Returns are convex: marginal return rises from ~8% at primary to ~27% at secondary and ~35% at higher secondary.
