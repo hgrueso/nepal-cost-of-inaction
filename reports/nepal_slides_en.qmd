@@ -249,21 +249,23 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 
 ## What This Means in Concrete Policy Terms {.smaller}
 
+\footnotesize
+
 - **NPR `r nums$national_coi_b` billion (USD `r nums$national_coi_usdm` million)** is the lifetime productivity loss from **one cohort** of `r format(nums$national_excluded, big.mark = ",")` adolescent girls who will not complete secondary education. Counts are **census-anchored**: NLSS IV proportions applied to the 2021 Census female population (`r format(nums$girls_1524, big.mark = ",")` girls aged 15–24), because raw survey weights overstate population totals about fivefold.
 
-\vspace{0.5em}
+\vspace{0.2em}
 
 - That equals about **`r nums$coi_pct_health_budget`% of the national health-sector budget** (NPR 86.2B, FY2024/25), **`r nums$coi_pct_ssallow_budget`% of the social security allowance budget** (NPR 106B, FY2022/23), and **`r nums$coi_pct_education_budget`% of the education-sector budget** (NPR 203.7B, FY2024/25).
 
-\vspace{0.5em}
+\vspace{0.2em}
 
 - **Karnali, Sudurpashchim, and Madhesh** carry the largest relative burden — per-girl losses are smaller than in Bagmati because wages are lower, but a larger share of the local economy is at stake.
 
-\vspace{0.5em}
+\vspace{0.2em}
 
 - **"Per cohort" means** the *lifetime* productivity loss for the current cohort of `r format(nums$national_excluded, big.mark = ",")` adolescent girls (aged 15–24 today). A new cohort enters this stage every year, so this is a **recurring annual loss**, not one-off. Using the boys' 12% wage premium instead of the 9% ILO benchmark gives NPR `r nums$national_coi_b_r12` billion: the headline is the conservative floor.
 
-\vspace{0.5em}
+\vspace{0.2em}
 
 - **Break-even spending per girl.** USD `r nums$national_coi_usdm` million ÷ `r format(nums$national_excluded, big.mark = ",")` girls ≈ **USD `r nums$breakeven_usd` per girl** in cumulative lifetime social spending. *Important caveat:* this break-even assumes every girl who completes secondary education enters the labour market and earns the median wage — which overstates realised returns, since many will not enter wage work. The figure is best read as the **theoretical maximum** spend that would still break even, not a prediction of per-girl returns.
 
