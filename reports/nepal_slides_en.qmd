@@ -331,10 +331,19 @@ Census-anchored: NLSS IV weighted proportions applied to the Census 2021 female 
 :::
 :::
 
+## Appendix: Causal Forest Effects by Province and Wealth {.smaller}
+
+![](../outputs/figures/slides/cf1_cate_province_wealth.png){fig-align="center" width="88%"}
+
+\scriptsize
+
+Generalised random forest (Wager and Athey 2018), women aged 15–64 (N = 13,586); treatment = completed secondary education, outcome = NEET. Average effect −13.2 pp (dotted line). Points are the mean predicted effect in each group; bars are ±1.96 standard errors of that mean, so they show how tightly predictions cluster rather than full estimation uncertainty. The provincial effects are the ones used in the cost-of-inaction calculation; effects by caste are on the main slide on education returns.
+
 ## Assumptions and Limitations {.smaller}
 
 ```{=latex}
-\begin{itemize}\setlength\itemsep{0.9em}
+\footnotesize
+\begin{itemize}\setlength\itemsep{0.5em}
 \item[\textbf{1.}] \textbf{Formal-sector selection bias.} Wages are observed only for the $\sim\,$25\% of women in wage employment. We test for this with a Heckman selection model (see appendix): selection is statistically significant ($\rho=0.34$, $p<0.01$) but correcting for it shifts the estimated return by less than 2 pp, so the Mincer estimates are robust within that specification; the selection test uses its own specification, whose uncorrected baseline (24.4\%) differs from the main model's 14.5\%. The conservative 9\% ILO benchmark sits below all estimates.
 \item[\textbf{2.}] \textbf{NEET-to-earnings transition.} The estimate assumes a girl who exits NEET earns the median wage \textit{immediately}. In reality, job search, childcare, mobility, and social norms create friction that delays or reduces actual earnings. Assuming instant median-wage access therefore \textbf{overstates} the realised gain, making the cost-of-inaction figure an \textbf{upper bound} on what is realistically recoverable.
 \item[\textbf{3.}] \textbf{Male migration not captured.} Boys leaving school for foreign employment generates remittances. The analysis does not yet quantify the parallel earnings that educated girls could generate through skilled migration.
