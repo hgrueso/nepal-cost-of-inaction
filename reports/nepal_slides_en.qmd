@@ -274,7 +274,8 @@ The −13.2 pp ATE estimate is for **women aged 15–64**. The parallel estimate
 ## Four Priority Areas for Investment: Employment Opportunities First {.smaller}
 
 ```{=latex}
-\begin{itemize}\setlength\itemsep{0.8em}
+\footnotesize
+\begin{itemize}\setlength\itemsep{0.4em}
 \item[\textbf{1.}] \textbf{Livelihoods: pathways from education to employment.} Every gain in this report assumes jobs exist for newly qualified young women; the estimates are partial-equilibrium and depend on labour demand. Pair education with demand-side measures: skills bridges from upper-secondary to work, TVET, apprenticeships, second-chance and return-to-education pathways, and investment in employment-generating sectors. This is an explicit budget trade-off, to be planned together with education rather than in competition with it.
 \item[\textbf{2.}] \textbf{Education: universal secondary completion with year-by-year retention.} Each year of schooling is associated with a 14.5\% earnings premium for girls, and returns are \textit{convex}, rising from $\sim$8\% at primary to $\sim$27\% at secondary and $\sim$35\% at higher secondary. Programme design should reward \textit{every year retained}, with the largest gains in upper-secondary.
 \item[\textbf{3.}] \textbf{Marriage: treat prevention as an economic priority, starting in adolescence.} Marriage is associated with more variation in girls' NEET than poverty, caste, and disability combined; the married share rises from 9\% at ages 15--18 to 57\% at 19--24, and the penalty is severe in both groups. Dropout is itself a risk factor for child marriage, so retention and prevention reinforce each other. Enforcement, concentrated in Madhesh and Lumbini, must reach girls \textit{before} the post-18 transition.
@@ -414,7 +415,9 @@ Wages are observed only for women in wage employment (about 25% of working-age w
 
 ## Appendix: Returns are Robust Across Specifications {.smaller}
 
-![](../outputs/figures/slides/n1_heckman_returns.png){fig-align="center" width="82%"}
+![](../outputs/figures/slides/n1_heckman_returns.png){fig-align="center" width="70%"}
+
+\scriptsize
 
 ::: {style="font-size: 0.34em; color: #555; margin-top: 2px;"}
 Average marginal return per year of schooling, women 15–64. The OLS (uncorrected, 24.4%) and Heckman-corrected (25.8%) estimates are nearly identical, and stable across the choice of child-age cutoff in the exclusion restriction. This test runs on its own specification; the 14.5% headline return comes from the main Mincer model, so the test speaks to stability under selection, not to the level of the headline. The 9% ILO benchmark used for the cost-of-inaction calculation is far below all estimates — making the CoI a conservative figure. Returns are convex: marginal return rises from ~8% at primary to ~27% at secondary and ~35% at higher secondary.
