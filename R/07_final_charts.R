@@ -13,17 +13,17 @@ th <- function(b=12) theme_minimal(base_size=b)+theme(
   legend.position="bottom")
 sv <- function(p,n,w,h) { ggsave(file.path(FIGS,paste0(n,".png")),p,width=w,height=h,dpi=300,bg="white"); cat("saved",n,"\n") }
 coi <- res$coi_b_r09
-d <- tibble(item=c("Education budget","Social security allowances","Health budget","Annual cost of inaction"),
+d <- tibble(item=c("Education budget","Social security allowances","Health budget","Cost of inaction"),
             v=c(203.66,106,86.24,coi)) %>%
-  mutate(lbl=ifelse(item=="Annual cost of inaction", sprintf("NPR %.1fB", v),
+  mutate(lbl=ifelse(item=="Cost of inaction", sprintf("NPR %.1fB", v),
                     sprintf("NPR %.1fB  (CoI = %.1f%%)", v, 100*coi/v)),
          item=factor(item, rev(item)))
-p <- ggplot(d,aes(v,item,fill=item=="Annual cost of inaction"))+
+p <- ggplot(d,aes(v,item,fill=item=="Cost of inaction"))+
   geom_col(width=.62,alpha=.92)+
   geom_text(aes(label=lbl),hjust=-.03,size=3.4,fontface="bold")+
   scale_fill_manual(values=c(`TRUE`=ur,`FALSE`=ub),guide="none")+
   scale_x_continuous(expand=expansion(mult=c(0,.33)))+
-  labs(title="The annual cost of inaction compared with national budget lines",
+  labs(title="The cost of inaction compared with national budget lines",
        subtitle="NPR billion | census-anchored estimate (r = 9%), FY 2024/25 budgets",
        x="NPR billion",y=NULL,
        caption="Author's calculations, NLSS IV 2022/23 and Census 2021; MoF Red Book FY 2024/25.")+th()
@@ -33,8 +33,8 @@ p <- ggplot(pd,aes(coi_b_r09,province_lbl))+
   geom_col(fill=ud,width=.62,alpha=.92)+
   geom_text(aes(label=sprintf("%.2f",coi_b_r09)),hjust=-.15,size=3.4,fontface="bold")+
   scale_x_continuous(expand=expansion(mult=c(0,.15)))+
-  labs(title="Provincial distribution of the annual cost of inaction",
-       subtitle="NPR billion per year, r = 9% | census-anchored population",
+  labs(title="Provincial distribution of the cost of inaction",
+       subtitle="NPR billion, r = 9% | census-anchored population",
        x="NPR billion",y=NULL,
        caption="Author's calculations, NLSS IV 2022/23 and Census 2021.")+th()
 sv(p,"coi_provincial_census",10,5.2)

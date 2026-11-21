@@ -1,0 +1,30 @@
+[31m
+
+processing file: nepal_slides_en.qmd
+[39m1/9               
+2/9 [setup]       
+3/9               
+4/9 [mincer-girls]
+5/9               
+6/9 [mincer-boys] 
+7/9               
+8/9 [boys-reg]    
+9/9               
+[31moutput file: nepal_slides_en.knit.md
+
+[39m[1mpandoc [22m
+  to: pptx
+  output-file: nepal_slides_en.pptx
+  default-image-extension: png
+  slide-level: 2
+  
+[1mmetadata[22m
+  title: Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal
+  author: |
+    Hernando Grueso, PhD \
+    UNICEF
+  date: November 2026
+  lang: en
+  
+Output created: nepal_slides_en.pptx
+

@@ -1,0 +1,89 @@
+[31m
+
+processing file: nepal_slides_en.qmd
+[39m1/9               
+2/9 [setup]       
+3/9               
+4/9 [mincer-girls]
+5/9               
+6/9 [mincer-boys] 
+7/9               
+8/9 [boys-reg]    
+9/9               
+[31moutput file: nepal_slides_en.knit.md
+
+[39m[1mpandoc [22m
+  to: beamer
+  output-file: nepal_slides_en.tex
+  standalone: true
+  pdf-engine: lualatex
+  variables:
+    graphics: true
+    tables: true
+  default-image-extension: pdf
+  
+[1mmetadata[22m
+  block-headings: true
+  title: Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal
+  author: |
+    Hernando Grueso, PhD \
+    UNICEF
+  date: November 2026
+  lang: en
+  theme: Madrid
+  colortheme: default
+  aspectratio: 169
+  fontsize: 9pt
+  shorttitle: Cost of Inaction · Adolescent Girls Nepal
+  shortauthor: Hernando Grueso, UNICEF
+  shortdate: November 2026
+  header-includes:
+    - |
+      \definecolor{unicefblue}{HTML}{00377C}
+      \definecolor{uniceflight}{HTML}{1CABE2}
+      \setbeamercolor{frametitle}{bg=unicefblue,fg=white}
+      \setbeamercolor{structure}{fg=unicefblue}
+      \setbeamercolor{section in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{author in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{title in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{date in head/foot}{bg=unicefblue,fg=white}
+      \setbeamercolor{section in head/foot shaded}{bg=unicefblue,fg=white}
+      \setbeamertemplate{navigation symbols}{}
+      \usepackage{tikz}
+      \usetikzlibrary{shadows}
+      \usepackage{caption}
+      \captionsetup[table]{labelformat=empty,labelsep=none,font=tiny}
+      \setbeamertemplate{title page}{
+        \vspace*{1.5cm}
+        \begin{center}
+          \begin{tikzpicture}
+            \node[
+              fill=unicefblue, rounded corners=8pt,
+              text=white, text width=0.85\paperwidth, align=center,
+              inner sep=16pt, drop shadow={shadow xshift=2pt, shadow yshift=-3pt, opacity=0.35},
+              anchor=center
+            ] {\fontsize{16pt}{20pt}\selectfont\bfseries\inserttitle};
+          \end{tikzpicture}
+        \end{center}
+        \vspace{0.6cm}
+        \begin{center}
+          {\Large\bfseries Hernando Grueso, PhD\par}
+          \vspace{0.3em}
+          {\large UNICEF\par}
+          \vspace{0.5em}
+          {\normalsize November 2026\par}
+        \end{center}}
+  
+[1m[34m
+Rendering PDF[39m[22m
+[1m[34mrunning lualatex - 1[39m[22m
+  This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+   restricted system commands enabled.
+  
+[1m[34mrunning lualatex - 2[39m[22m
+  This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+   restricted system commands enabled.
+  
+
+Output created: nepal_slides_en.pdf
+
