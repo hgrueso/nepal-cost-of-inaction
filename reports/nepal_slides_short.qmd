@@ -1,6 +1,6 @@
 ---
 title: "Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal"
-author: "UNICEF"
+author: "Hernando Grueso-Hurtado, UNICEF"
 date: "November 2026"
 lang: en
 format:
@@ -8,7 +8,7 @@ format:
     slide-level: 2
   revealjs:
     theme: [default, slides_theme.scss]
-    footer: "UNICEF · Cost of Inaction Nepal · November 2026"
+    footer: "Hernando Grueso-Hurtado, UNICEF · Cost of Inaction Nepal · November 2026"
     slide-number: c/t
     transition: fade
     incremental: false
@@ -21,7 +21,7 @@ format:
     fontsize: 9pt
     fig-align: center
     shorttitle: "Cost of Inaction · Adolescent Girls Nepal"
-    shortauthor: "UNICEF"
+    shortauthor: "Hernando Grueso-Hurtado, UNICEF"
     shortdate: "November 2026"
     header-includes: |
       \definecolor{unicefblue}{HTML}{00377C}
@@ -50,6 +50,8 @@ format:
         \end{center}
         \vspace{1cm}
         \begin{center}
+          {\Large\bfseries Hernando Grueso-Hurtado, PhD\par}
+          \vspace{0.3em}
           {\large UNICEF\par}
           \vspace{0.5em}
           {\normalsize November 2026\par}
