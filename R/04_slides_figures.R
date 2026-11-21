@@ -381,7 +381,7 @@ df_int <- df_b %>%
 
 m_int <- feols(neet ~ completed_secondary * currently_married +
                  rural + ppoor + quintile_n + any_difficulty + caste_broad |
-                 province_lbl, data = df_int, se = "hetero")
+                 province_lbl, data = df_int, weights = ~ind_wt, se = "hetero")
 
 # Get marginal effect: NEET reduction from secondary education,
 # separately for married and unmarried girls
@@ -409,7 +409,7 @@ figM2 <- ggplot(int_data, aes(x = group, y = effect, fill = group)) +
                     guide = "none") +
   scale_y_continuous(labels = label_number(suffix = " pp")) +
   labs(title = "NEET reduction associated with secondary schooling, by marital status",
-       subtitle = "Effect of secondary completion on NEET probability, by marital status",
+       subtitle = "Difference in NEET associated with schooling beyond grade 8, by marital status | Girls 15-24, survey-weighted",
        x = NULL, y = "Effect on NEET (pp)",
        caption = "Linear probability model with province fixed effects; schooling (grade 9 or above) interacted with marital status.") +
   th_policy()
@@ -606,7 +606,7 @@ df_boys_reg <- df_b %>%
 
 m_boys_neet <- feols(neet ~ rural + ppoor + quintile_n + currently_married +
                        any_difficulty + caste_broad | province_lbl,
-                     data = df_boys_reg, se = "hetero")
+                     data = df_boys_reg, weights = ~ind_wt, se = "hetero")
 
 boys_full <- tidy(m_boys_neet, conf.int = TRUE) %>%
   mutate(
@@ -651,9 +651,9 @@ figA1 <- ggplot(boys_coef,
   scale_x_continuous(labels = label_number(suffix = " pp"),
                      expand = expansion(mult = c(0.05, 0.25))) +
   labs(title = "What drives NEET for boys aged 15-24",
-       subtitle = "Marriage matters much less for boys; poverty matters more",
+       subtitle = "Marriage matters much less for boys than for girls | survey-weighted",
        x = "Effect on NEET (pp)", y = NULL,
-       caption = "LPM with province FE | HC1 SE | Ref: Brahmin/Chhetri, urban, non-poor.") +
+       caption = "LPM with province FE, survey-weighted | HC1 SE | Ref: Brahmin/Chhetri, urban, non-poor.") +
   th_policy() + theme(panel.grid.major.y = element_blank())
 sv(figA1, "a1_boys_coef", w = 11, h = 5)
 

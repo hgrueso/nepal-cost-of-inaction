@@ -173,7 +173,7 @@ figB5 <- ggplot(coef_age,
   scale_x_continuous(labels = label_number(suffix = " pp"),
                      expand = expansion(mult = c(0.06, 0.12))) +
   facet_wrap(~ outcome, ncol = 2) +
-  labs(title = "The marriage association strengthens with age; most other factors are stable",
+  labs(title = "The marriage association is strongest at ages 15-18; most other factors are stable",
        subtitle = "LPM coefficients estimated separately for ages 15-18 and 19-24 | Girls",
        x = "Association with outcome (pp)", y = NULL,
        caption = "NLSS IV 2022/23, survey-weighted LPM with province fixed effects. Reference: Brahmin/Chhetri, urban, non-poor.") +

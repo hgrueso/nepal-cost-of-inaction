@@ -97,7 +97,7 @@ nums <- if (!is.null(res)) list(
 
 - **Source**: National Statistics Office of Nepal · NLSS IV 2022/23 microdata
 - **Sampling**: Nationally representative two-stage stratified design across 7 provinces
-- **Sample size**: 9,600 households; 38,101 household members (the roster also lists 8,769 non-members, mostly absentees, who are not interviewed on education or work and are excluded)
+- **Sample size**: 9,600 households; 38,101 household members (the roster also lists 8,769 people who are not household members; they were not asked about education or work and are excluded)
 - **Analysis sample**: 6,950 youth aged 15–24 (3,966 girls, 2,984 boys); 13,586 women aged 15–64 for the causal forest
 - **Modules used**: S01 (roster), S07 (education), S08 (disability, Washington Group), S09 (employment), S10 (wages), poverty file
 - **Survey design**: PSU = `psu_number`, strata = province, person-level sampling weight; weighted members sum to 28.7 million (Census 2021: 29.2 million)
@@ -124,7 +124,7 @@ nums <- if (!is.null(res)) list(
 \small
 \begin{itemize}\setlength\itemsep{0.55em}
 \item[\textbf{1.}] Nepal's gender gap \textbf{opens after school, in the transition to work}. At ages 15--18 girls and boys are enrolled at the same rate (77\%). By ages 19--24, 61\% of young women are NEET against 35\% of young men. Across ages 15--24, NEET is 44\% for girls and 25\% for boys.
-\item[\textbf{2.}] \textbf{Marriage is the strongest correlate of exclusion, and it begins in adolescence.} Being currently married is associated with 63 pp lower enrolment and 43 pp higher NEET, and it is the main reason girls give for leaving school (37\%). The share married rises from 9\% at ages 15--18 (where any current marriage is child marriage by definition) to 59\% at 19--24.
+\item[\textbf{2.}] \textbf{Marriage is the strongest correlate of exclusion, and it begins in adolescence.} Being currently married is associated with 63 pp lower enrolment and 43 pp higher NEET, and it is the main reason girls give for leaving school (37\%). The share married rises from 9\% at ages 15--18 (4\% of girls in this age group are married and still under 18) to 59\% at 19--24.
 \item[\textbf{3.}] \textbf{Schooling beyond grade 8 is associated with lower exclusion}: a 15 pp lower NEET probability (95\% interval 9 to 21 pp), similar across provinces and caste groups (causal forest, n = 13{,}586).
 \item[\textbf{4.}] \textbf{Each additional year of schooling is associated with 14.3\% higher earnings for women (9.3\% for men)}, and returns rise with the level: about 11\% per year at primary, 25\% at secondary and 30\% at higher secondary.
 \item[\textbf{5.}] \textbf{About NPR 10.8 billion (USD 81 million) in lifetime earnings is forgone} by the 1.0 million girls aged 15--24 today who have not gone beyond grade 8, equivalent to \textbf{12.5\% of one year's health budget}, 10.2\% of the social-security-allowance budget and 5.3\% of the education budget. Each new yearly cohort adds about NPR 1 billion.
@@ -146,7 +146,7 @@ nums <- if (!is.null(res)) list(
 ![](../outputs/figures/slides/b1_marriage_by_age.png){fig-align="center" width="74%"}
 
 ::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
-NLSS IV records current marital status, not age at first marriage. Among 15–18-year-olds any current marriage is child marriage by definition; for 19–24-year-olds only current status is observed.
+NLSS IV records current marital status, not age at first marriage. Married girls under 18 (4% of girls aged 15–18) are in child marriage by definition. For older girls only current status is observed, so some of them also married before 18.
 :::
 
 ## The Marriage Penalty on NEET Holds in Both Age Groups, Regardless of Caste
@@ -181,7 +181,7 @@ The 44.0% NEET figure reflects girls who are *neither* in school *nor* employed 
 
 ![](../outputs/figures/slides/r1b_coef_neet.png){fig-align="center" width="80%"}
 
-## The Marriage Association Strengthens with Age; Other Factors are Stable
+## The Marriage Association is Strongest at Ages 15–18; Other Factors are Stable
 
 ![](../outputs/figures/slides/b5_coef_by_age.png){fig-align="center" width="92%"}
 
@@ -208,15 +208,15 @@ The 44.0% NEET figure reflects girls who are *neither* in school *nor* employed 
 ![](../outputs/figures/slides/r2_cate_caste.png){fig-align="center" width="74%"}
 
 ::: {style="font-size: 0.35em; color: #555; margin-top: 4px;"}
-The average effect of −15.0 pp (95% interval −21 to −9) is for **women aged 15–64** and compares those who completed grade 9 or above with those who did not. Group effects range from −11 to −14 pp. Causal-forest details by province and wealth are in the appendix.
+The average effect of −15.0 pp (95% interval −21 to −9) is for **women aged 15–64** and compares those who completed grade 9 or above with those who did not. Group values (−11 to −14 pp) are averages of the forest's individual predictions and are somewhat smaller than the overall estimate; the cost of inaction uses the provincial values, the more conservative choice. Details by province and wealth are in the appendix.
 :::
 
-## Earnings Rise with Every Level of Schooling, Most Steeply After Grade 10
+## Schooling Raises Women's Earnings Far More Than Men's
 
-![](../outputs/figures/slides/m1_mincer_lifetime.png){fig-align="center" width="74%"}
+![](../outputs/figures/slides/m1_mincer_lifetime.png){fig-align="center" width="70%"}
 
 ::: {style="font-size: 0.32em; color: #555; line-height: 1.25; margin-top: 4px;"}
-**Average return:** +14.3% per year of schooling for women vs +9.3% for men, among wage earners. Returns rise with the level: for women about 11% per year at primary, 25% at secondary and 30% at higher secondary. Men earn more than women at every level, but the gap narrows as schooling rises. Curves show wage earners with average characteristics; about one in four working-age women has wage earnings.
+**Average return:** +14.3% per year of schooling for women vs +9.3% for men, among wage earners. Compared with wage earners of the same sex with no schooling, women with secondary schooling earn **2.5 times** as much and women with higher secondary **7.6 times**; for men the multiples are 1.5 and 2.2. In money terms men still earn more at every level (annex).
 :::
 
 ## Marriage Erodes the Protective Effect of Education
@@ -229,7 +229,7 @@ The average effect of −15.0 pp (95% interval −21 to −9) is for **women age
 
 \vspace{0.6em}
 
-- **The return per year of schooling is `r nums$girls_return_pct`% for women** (`r nums$boys_return_pct`% for men). A woman wage earner with secondary schooling earns about **2.5 times** as much as one with no schooling, and the steepest gains come after grade 10.
+- **The return per year of schooling is `r nums$girls_return_pct`% for women** (`r nums$boys_return_pct`% for men). A woman wage earner with secondary schooling earns about **2.5 times** as much as one with no schooling (men: 1.5 times), and the steepest gains come after grade 10.
 
 \vspace{0.6em}
 
@@ -237,7 +237,7 @@ The average effect of −15.0 pp (95% interval −21 to −9) is for **women age
 
 \vspace{0.6em}
 
-- **OLS and causal forest produce convergent estimates** in direction, magnitude, and stability. The investment case rests on triangulated evidence from two independent methods.
+- **The estimates are robust.** The schooling effect is similar across provinces, caste groups and wealth levels, and correcting the earnings estimates for selection into wage work changes the return by only 0.1 pp.
 
 # The Cost of Inaction {.section-divider background-color="#00377C"}
 
@@ -339,7 +339,7 @@ Census-anchored: NLSS IV weighted shares applied to the Census 2021 female popul
 
 \scriptsize
 
-Generalised random forest (Wager and Athey 2018), women aged 15–64 (N = 13,586); treatment = completed grade 9 or above, outcome = NEET. Average effect −15.0 pp (dotted line). Points are the mean predicted effect in each group; bars are ±1.96 standard errors of that mean, so they show how tightly predictions cluster rather than full estimation uncertainty. The provincial effects are the ones used in the cost-of-inaction calculation; effects by caste are on the main slide on education returns.
+Generalised random forest (Wager and Athey 2018), women aged 15–64 (N = 13,586); treatment = completed grade 9 or above, outcome = NEET. Average effect −15.0 pp (dotted line). Points are the mean predicted effect in each group; bars are ±1.96 standard errors of that mean, so they show how tightly predictions cluster rather than full estimation uncertainty. Group values are somewhat smaller than the overall estimate because individual predictions are pulled toward the centre. The provincial values are the ones used in the cost-of-inaction calculation, the more conservative choice; effects by caste are on the main slide on education returns.
 
 ## Assumptions and Limitations {.smaller}
 
@@ -446,6 +446,14 @@ Wages are observed only for women in wage employment (about 25% of working-age w
 ::: {style="font-size: 0.34em; color: #555; margin-top: 2px;"}
 Average return per year of schooling, women 15–64. The main estimate (14.3%), the unweighted estimate (14.4%) and the Heckman-corrected estimate (14.5%) are nearly identical, and stable across the choice of child-age cutoff in the exclusion restriction. All use the same specification. The 9% ILO benchmark used for the cost-of-inaction calculation is below all estimates, which makes the CoI a conservative figure. Returns are convex: the return to one more year rises from about 11% at primary to 25% at secondary and 30% at higher secondary.
 :::
+
+## Appendix: Earnings by Schooling and Sex in Money Terms {.smaller}
+
+![](../outputs/figures/slides/m1b_earnings_levels.png){fig-align="center" width="80%"}
+
+\scriptsize
+
+In money terms men earn more than women at every level of schooling; the gap narrows as schooling rises. Present value of lifetime earnings for a wage earner with average characteristics (survey-weighted Mincer equation with level indicators).
 
 ##  {.unnumbered}
 

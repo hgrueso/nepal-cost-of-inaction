@@ -1,0 +1,30 @@
+main_w <- returns %>% filter(grepl("^Main", specification), sex == "Women"); main_m <- returns %>% filter(grepl("^Main", specification), sex == "Men")
+pl <- by_level %>% filter(n >= 15) %>% group_by(sex) %>% arrange(years, .by_group = TRUE) %>%
+  mutate(rel = monthly_earnings / first(monthly_earnings)) %>% ungroup() %>% mutate(sex = factor(sex, c("Women", "Men")))
+readr::write_csv(pl %>% select(sex, level, years, n, monthly_earnings, rel), file.path(TABLES, "mincer_relative_earnings.csv"))
+lab_x <- scale_x_continuous(breaks = unname(LV), labels = paste0(unname(LV), "\n", c("none", "primary", "lower sec.", "secondary", "higher sec.", "tertiary")))
+# M1: earnings relative to the same sex with no schooling (the return to schooling, shown for each level)
+figM1 <- ggplot(pl, aes(x = years, y = rel, colour = sex)) +
+  geom_hline(yintercept = 1, colour = "grey70", linewidth = 0.4) +
+  geom_line(linewidth = 1.3) + geom_point(size = 2.8) +
+  geom_text(data = pl %>% filter(years >= 10), aes(label = sprintf("x%.1f", rel), vjust = ifelse(sex == "Women", -0.9, 1.9)), size = 3.6, fontface = "bold", show.legend = FALSE) +
+  scale_colour_manual(values = c(Women = ub, Men = ud), name = NULL) + lab_x +
+  scale_y_continuous(labels = function(v) paste0("x", v), limits = c(0, NA), expand = expansion(mult = c(0, 0.12))) +
+  labs(title = "Schooling raises women's earnings far more than men's",
+       subtitle = "Monthly earnings at each level of schooling, relative to wage earners of the same sex with no schooling",
+       x = "Years of schooling (level completed)", y = "Earnings relative to no schooling",
+       caption = sprintf("Average return per year of schooling: women %.1f%%, men %.1f%% (Mincer equation, survey-weighted).\nPredicted earnings for a wage earner with average characteristics. In money terms men earn more at every level (see annex).",
+                         main_w$avg_return, main_m$avg_return)) +
+  th_policy()
+sv(figM1, "m1_mincer_lifetime", w = 11, h = 5.5)
+# M1b: the same predictions in money terms (lifetime present value)
+figM1b <- ggplot(pl, aes(x = years, y = pv_lifetime / 1e5, colour = sex)) +
+  geom_line(linewidth = 1.3) + geom_point(size = 2.8) +
+  scale_colour_manual(values = c(Women = ub, Men = ud), name = NULL) + lab_x +
+  scale_y_continuous(labels = label_comma(), limits = c(0, NA), expand = expansion(mult = c(0, 0.08))) +
+  labs(title = "Projected lifetime earnings by level of schooling and sex",
+       subtitle = "Wage earners aged 15-64 | present value over 35 working years, 5% discount rate",
+       x = "Years of schooling (level completed)", y = "Lifetime earnings (NPR lakh, present value)",
+       caption = "Predicted earnings at each level for a wage earner with average characteristics (Mincer equation with level indicators, survey-weighted).") +
+  th_policy()
+sv(figM1b, "m1b_earnings_levels", w = 11, h = 5.5)

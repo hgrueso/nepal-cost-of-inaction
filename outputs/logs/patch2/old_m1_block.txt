@@ -1,0 +1,14 @@
+main_w <- returns %>% filter(grepl("^Main", specification), sex == "Women"); main_m <- returns %>% filter(grepl("^Main", specification), sex == "Men")
+pl <- by_level %>% filter(n >= 15) %>% mutate(sex = factor(sex, c("Women", "Men")))
+figM1 <- ggplot(pl, aes(x = years, y = pv_lifetime / 1e5, colour = sex)) +
+  geom_line(linewidth = 1.3) + geom_point(size = 2.8) +
+  scale_colour_manual(values = c(Women = ub, Men = ud), name = NULL) +
+  scale_x_continuous(breaks = unname(LV), labels = paste0(unname(LV), "\n", c("none", "primary", "lower sec.", "secondary", "higher sec.", "tertiary"))) +
+  scale_y_continuous(labels = label_comma(), limits = c(0, NA), expand = expansion(mult = c(0, 0.08))) +
+  labs(title = "Projected lifetime earnings by level of schooling and sex",
+       subtitle = "Wage earners aged 15-64 | present value over 35 working years, 5% discount rate",
+       x = "Years of schooling (level completed)", y = "Lifetime earnings (NPR lakh, present value)",
+       caption = sprintf("Average return per year of schooling: women %.1f%%, men %.1f%% (Mincer equation, survey-weighted).\nPoints: predicted earnings at each level for a wage earner with average characteristics.",
+                         main_w$avg_return, main_m$avg_return)) +
+  th_policy()
+sv(figM1, "m1_mincer_lifetime", w = 11, h = 5.5)
