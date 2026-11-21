@@ -1,0 +1,42 @@
+=== STEP 1: Weight diagnostics ===
+  Sum of ind_wt, all individuals :     28740504  (census total:    29164578, ratio 0.99)
+  Sum of ind_wt, under 18        :      9857299  (reviewer ref: ~  10000000, ratio 0.99)
+  Sum of ind_wt, all females     :     15239898  (census female:   14911027, ratio 1.02)
+  Sum of ind_wt, girls 15-24     :      3022018
+  If the ratios are far from 1, raw weight totals should not be used as population counts.
+
+=== STEP 2: Census-anchored girls 15-24 ===
+  NLSS weighted share of 15-24 among females : 0.1983
+  Census-anchored girls 15-24                :      2956804
+  (Previous analysis used a fixed anchor of 1,400,000)
+  Weighted share not completing secondary    : 0.3384
+  Census-anchored N excluded                 :      1000494  (previous: 680,231)
+
+=== STEP 3: Census-anchored CoI ===
+
+Provincial build-up (census-anchored, r = 9%):
+# A tibble: 7 × 3
+  province_lbl  n_excluded coi_b_r09
+  <chr>              <dbl>     <dbl>
+1 Madhesh           383632      3.45
+2 Bagmati           110759      3.32
+3 Koshi             131825      1.55
+4 Lumbini           187628      1.27
+5 Sudurpashchim      87409      0.46
+6 Gandaki            45189      0.45
+7 Karnali            54050      0.3 
+
+=== STEP 4: Headline comparison ===
+  quantity                          previous          census_anchored
+1 Girls 15-24 (national)            1,400,000 (fixed) 2,956,804      
+2 N not completing secondary        680,231           1,000,494      
+3 CoI, r = 9% ILO (NPR billion)     8.1               10.8           
+4 CoI, r = 9% ILO (USD million)     61                81             
+5 CoI, r = 12% boys (NPR billion)   -                 14.6           
+6 CoI as % health budget 86.24B     9.4               12.5           
+7 CoI as % soc. sec. allow. 106B    7.6               10.2           
+8 CoI as % education budget 203.66B 4.0               5.3            
+9 Break-even per girl (USD)         90                81             
+
+Saved: outputs/census_anchor_results.RData, tables/census_anchor_comparison.csv
+=== DONE ===

@@ -35,6 +35,8 @@ sv <- function(p, n, w = 10, h = 5.5) {
   cat("  v", n, "\n")
 }
 
+# SUPERSEDED by R/03p_mincer_main.R (household composition is now built per household,
+# and one wage specification is used throughout). Kept for the record; not part of the pipeline.
 # =============================================================================
 # STAGE 1 — Construct exclusion restrictions from the household roster
 # =============================================================================

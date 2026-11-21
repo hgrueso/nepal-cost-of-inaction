@@ -1,0 +1,237 @@
+
+>>> slide versions from R/04_slides_figures.R 
+
+=== D1 ===
+  v d1_overall_gap 
+
+=== D2 ===
+  v d2_neet_by_province 
+
+=== D3 ===
+  v d3_intersectionality 
+
+=== D3b ===
+  v d3b_enrolment_intersectionality 
+
+=== R1 ===
+  v r1_coef_pp 
+
+=== R2 ===
+  v r2_cate_caste 
+
+=== Mincer lifetime earnings ===
+Using: edu_yrs | experience | age_num 
+
+=== Child marriage interaction ===
+  v m2_marriage_interaction 
+
+=== COI: striking numbers ===
+NATIONAL CoI: NPR 5.6B (~USD 42M) | 504,261 girls
+  v c1_total_coi_billion 
+  v c3_coi_vs_budget 
+
+=== D4: age groups ===
+  v d4_gap_by_age 
+
+=== A1: boys regression ===
+  v a1_boys_coef 
+
+=== Mincer tables for appendix ===
+
+ALL OUTPUTS SAVED. Run quarto next.
+
+>>> slide versions from R/03p_mincer_main.R 
+Women 15-64: 13586, with wage earnings 3478 (25.6%) | Men 15-64: 10396, with wage earnings 5591 (53.8%)
+
+=== Returns to schooling (% per year) ===
+   specification                                   sex   n    mean_years
+1  Main: all wage earners, survey-weighted         Women 3478  6.28     
+2  Main: all wage earners, survey-weighted         Men   5591  7.81     
+3  All wage earners, unweighted                    Women 3478  6.12     
+4  All wage earners, unweighted                    Men   5591  7.70     
+5  Excluding those who never attended school       Women 2214  9.84     
+6  Excluding those who never attended school       Men   4679  9.25     
+7  Long-term salaried workers only                 Women 1047 10.30     
+8  Long-term salaried workers only                 Men   2075 10.26     
+9  Heckman two-step, unweighted (children under 5) Women 3478  6.12     
+10 Heckman two-step, unweighted (children under 4) Women 3478  6.12     
+11 Heckman two-step, unweighted (children under 6) Women 3478  6.12     
+   avg_return avg_return_se at_primary_5 at_lower_sec_8 at_secondary_10
+1  14.27      1.02          10.67        19.12          24.75          
+2   9.32      0.48           4.54         9.65          13.06          
+3  14.44      0.69          11.19        19.85          25.63          
+4   9.47      0.41           4.63        10.02          13.62          
+5  25.42      1.97          17.18        22.29          25.69          
+6  10.64      0.68           0.97         7.79          12.34          
+7  12.88      1.12           4.44         9.22          12.40          
+8  10.44      0.61           4.12         7.73          10.13          
+9  14.47      0.71          10.56        21.00          27.96          
+10 14.48      0.71          10.61        20.92          27.79          
+11 14.47      0.71          10.53        21.04          28.04          
+   at_higher_sec_12 at_tertiary_16
+1  30.38            41.65         
+2  16.47            23.29         
+3  31.40            42.95         
+4  17.22            24.41         
+5  29.10            35.90         
+6  16.90            26.00         
+7  15.59            21.96         
+8  12.53            17.33         
+9  34.91            48.83         
+10 34.65            48.39         
+11 35.05            49.06         
+
+Selection: rho = 0.330 | inverse Mills ratio = 0.438 (p = 0.0008)
+Exclusion restrictions in the selection equation (children under 5 specification):
+              Estimate Std. Error  t value Pr(>|t|)
+n_children_u5  -0.1369     0.0222  -6.1778   0.0000
+n_other_women   0.0316     0.0193   1.6337   0.1023
+hhsize         -0.0718     0.0094  -7.6062   0.0000
+quintile_n     -0.1651     0.0103 -15.9774   0.0000
+
+Main specification, women:
+   Variable                          Coefficient SE     95% CI            
+1  Constant                          6.9441      0.1579 [6.6346, 7.2536]  
+2  Years of schooling (centred at 8) 0.1912      0.0103 [0.1710, 0.2113]  
+3  Years of schooling squared        0.0141      0.0012 [0.0117, 0.0164]  
+4  Experience (years)                0.0868      0.0102 [0.0669, 0.1067]  
+5  Experience squared                -0.0013     0.0002 [-0.0016, -0.0010]
+6  Rural                             -0.4574     0.0579 [-0.5709, -0.3438]
+7  Janajati                          0.0680      0.0800 [-0.0889, 0.2248] 
+8  Dalit                             0.0255      0.0883 [-0.1475, 0.1985] 
+9  Religious/Linguistic              -0.1467     0.1640 [-0.4682, 0.1747] 
+10 Other                             -0.6370     0.3966 [-1.4144, 0.1404] 
+11 Province fixed effects            Yes                                  
+12 N                                 3478                                 
+13 R-squared                         0.361                                
+   p-value
+1  <0.001 
+2  <0.001 
+3  <0.001 
+4  <0.001 
+5  <0.001 
+6  <0.001 
+7  0.396  
+8  0.772  
+9  0.371  
+10 0.108  
+11        
+12        
+13        
+
+Main specification, men:
+   Variable                          Coefficient SE     95% CI            
+1  Constant                          8.1100      0.0876 [7.9383, 8.2817]  
+2  Years of schooling (centred at 8) 0.0965      0.0048 [0.0872, 0.1059]  
+3  Years of schooling squared        0.0085      0.0007 [0.0071, 0.0100]  
+4  Experience (years)                0.0850      0.0055 [0.0742, 0.0957]  
+5  Experience squared                -0.0015     0.0001 [-0.0017, -0.0013]
+6  Rural                             -0.3733     0.0363 [-0.4444, -0.3021]
+7  Janajati                          -0.0220     0.0428 [-0.1059, 0.0620] 
+8  Dalit                             -0.0216     0.0592 [-0.1376, 0.0943] 
+9  Religious/Linguistic              0.2519      0.1002 [0.0555, 0.4484]  
+10 Other                             0.6103      0.2248 [0.1697, 1.0509]  
+11 Province fixed effects            Yes                                  
+12 N                                 5591                                 
+13 R-squared                         0.248                                
+   p-value
+1  <0.001 
+2  <0.001 
+3  <0.001 
+4  <0.001 
+5  <0.001 
+6  <0.001 
+7  0.608  
+8  0.715  
+9  0.012  
+10 0.007  
+11        
+12        
+13        
+
+=== Earnings by level of schooling (wage earners with average characteristics) ===
+   sex   level            years n    monthly_earnings pv_lifetime
+1  Men   No schooling      0     914  5807            1140937    
+2  Men   Primary           5    1204  6358            1249188    
+3  Men   Lower secondary   8    1062  7749            1522629    
+4  Men   Secondary        10    1255  8613            1692422    
+5  Men   Higher secondary 12     634 12927            2539991    
+6  Men   Tertiary         16     522 28780            5655008    
+7  Women No schooling      0    1264  1231             241917    
+8  Women Primary           5     514  1378             270833    
+9  Women Lower secondary   8     400  2184             429227    
+10 Women Secondary        10     567  3081             605392    
+11 Women Higher secondary 12     467  9308            1828903    
+12 Women Tertiary         16     266 22460            4413082    
+   return_per_year_vs_previous_level
+1    NA                             
+2   1.8                             
+3   6.6                             
+4   5.3                             
+5  20.3                             
+6  20.0                             
+7    NA                             
+8   2.3                             
+9  15.3                             
+10 17.2                             
+11 55.3                             
+12 22.0                             
+  saved m1_mincer_lifetime 
+
+=== Selection test ===
+  Model                                Return per year (%) Std. error (pp)
+1 OLS, survey-weighted (main estimate) 14.3                1.02           
+2 OLS, unweighted                      14.4                0.69           
+3 Heckman two-step (children under 5)  14.5                0.71           
+4 Heckman two-step (children under 4)  14.5                0.71           
+5 Heckman two-step (children under 6)  14.5                0.71           
+  saved n1_heckman_returns 
+
+=== DONE ===
+
+>>> slide versions from R/06_age_disagg_figures.R 
+=== Key disaggregated statistics ===
+  agegrp     marital_cat       n    pct_of_agegrp enrol neet
+1 Ages 15-18 Not married       1514 91.4          82.4  14.5
+2 Ages 15-18 Currently married   98  5.1          12.8  84.6
+3 Ages 15-18 Married before 18   69  3.5          24.2  71.7
+4 Ages 19-24 Not married        878 41.0          55.8  29.1
+5 Ages 19-24 Currently married 1407 59.0           5.0  82.3
+  saved b1_marriage_by_age 
+  saved b2_outcomes_marital_age 
+  saved b3_neet_marriage_caste_age 
+  saved b4_enrol_marriage_caste_age 
+  saved b5_coef_by_age 
+  saved r1a_coef_enrolment 
+  saved r1b_coef_neet 
+
+=== DONE ===
+
+>>> slide versions from R/07_final_charts.R 
+saved c3_coi_vs_budget_census 
+saved coi_provincial_census 
+saved b1_marriage_by_age 
+Warning messages:
+1: In meatHC(x, type = type, omega = omega) :
+  HC1 covariances become (close to) singular if hat values are (close to) 1 as for observation(s) 188
+2: In meatHC(x, type = type, omega = omega) :
+  HC1 covariances become (close to) singular if hat values are (close to) 1 as for observation(s) 1256
+
+=== Slide figure check ===
+  ok       d1_overall_gap 
+  ok       d2_neet_by_province 
+  ok       b1_marriage_by_age 
+  ok       b3_neet_marriage_caste_age 
+  ok       b4_enrol_marriage_caste_age 
+  ok       r1a_coef_enrolment 
+  ok       r1b_coef_neet 
+  ok       b5_coef_by_age 
+  ok       r2_cate_caste 
+  ok       m1_mincer_lifetime 
+  ok       m2_marriage_interaction 
+  ok       c3_coi_vs_budget_census 
+  ok       coi_provincial_census 
+  ok       d4_gap_by_age 
+  ok       a1_boys_coef 
+  ok       n1_heckman_returns 
+=== DONE ===

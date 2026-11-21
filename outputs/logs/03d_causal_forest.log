@@ -1,0 +1,71 @@
+=== PREPARING CAUSAL FOREST DATA ===
+Causal forest sample (women 15-64): 13586 
+Treatment (completed secondary) rate: 38 %
+
+=== CF1: Employment outcome ===
+Warning message:
+In average_treatment_effect(cf_emp, target.sample = "all") :
+  Estimated treatment propensities take values between 0.008 and 0.998 and in particular get very close to 0 and 1. In this case, using `target.sample=overlap`, or filtering data as in Crump, Hotz, Imbens, and Mitnik (Biometrika, 2009) may be helpful.
+ATE employment: 0.064 (se=0.022, p=0.0042)
+
+=== CF2: NEET outcome ===
+Warning message:
+In average_treatment_effect(cf_neet, target.sample = "all") :
+  Estimated treatment propensities take values between 0.008 and 0.998 and in particular get very close to 0 and 1. In this case, using `target.sample=overlap`, or filtering data as in Crump, Hotz, Imbens, and Mitnik (Biometrika, 2009) may be helpful.
+ATE NEET: -0.150 (se=0.031, p=0.0000)
+
+=== VARIABLE IMPORTANCE ===
+# A tibble: 9 × 4
+  variable          var_lbl            Employment   NEET
+  <chr>             <chr>                   <dbl>  <dbl>
+1 age_sq            Age²                   0.164  0.304 
+2 age_num           Age                    0.160  0.301 
+3 quintile_n        Wealth Quintile        0.149  0.0926
+4 province_n        Province               0.134  0.0611
+5 caste_num         Caste/Ethnicity        0.127  0.0704
+6 rural             Rural                  0.111  0.0604
+7 currently_married Currently Married      0.102  0.0952
+8 ppoor             Below Poverty Line     0.0533 0.0154
+9 any_difficulty    Disability             0      0     
+  ✓ figCF1_variable_importance 
+
+=== CATE BY SUBGROUP ===
+Warning message:
+`geom_errorbarh()` was deprecated in ggplot2 4.0.0.
+ℹ Please use the `orientation` argument of `geom_errorbar()` instead. 
+`height` was translated to `width`.
+  ✓ figCF2_cate_employment_subgroups 
+`height` was translated to `width`.
+  ✓ figCF3_cate_neet_subgroups 
+
+=== CORROBORATION: CATE vs OLS ===
+Corroboration plot skipped: could not find function "fixef" 
+
+=== COST-OF-INACTION USING CATE ===
+
+Cost-of-Inaction by Province (CATE × PV foregone, per 100 girls):
+# A tibble: 7 × 4
+  province_lbl  cate_neet pv_per_girl_ilo coi_per_100_girls
+  <chr>             <dbl>           <dbl>             <dbl>
+1 Koshi                 0           92400              1174
+2 Madhesh               0           73920               898
+3 Bagmati               0          258719              2996
+4 Gandaki               0           84700               990
+5 Lumbini               0           55440               676
+6 Karnali               0           39393               549
+7 Sudurpashchim         0           38500               523
+  ✓ figCF5_coi_by_province_cate 
+
+=== SUMMARY ===
+ATE of secondary education on employment: +6.4 pp (p=0.004)
+ATE of secondary education on NEET:      -15.0 pp (p=0.000)
+
+Top 3 drivers of heterogeneity (employment):
+# A tibble: 3 × 2
+  var_lbl         importance
+  <chr>                <dbl>
+1 Age²                 0.164
+2 Age                  0.160
+3 Wealth Quintile      0.149
+
+✓ Causal forest complete. Figures → outputs/figures/figCF*.png

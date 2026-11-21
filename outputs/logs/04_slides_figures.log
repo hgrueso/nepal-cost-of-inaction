@@ -1,0 +1,39 @@
+
+=== D1 ===
+  v d1_overall_gap 
+
+=== D2 ===
+  v d2_neet_by_province 
+
+=== D3 ===
+  v d3_intersectionality 
+
+=== D3b ===
+  v d3b_enrolment_intersectionality 
+
+=== R1 ===
+  v r1_coef_pp 
+
+=== R2 ===
+  v r2_cate_caste 
+
+=== Mincer lifetime earnings ===
+Using: edu_yrs | experience | age_num 
+
+=== Child marriage interaction ===
+  v m2_marriage_interaction 
+
+=== COI: striking numbers ===
+NATIONAL CoI: NPR 5.6B (~USD 42M) | 504,261 girls
+  v c1_total_coi_billion 
+  v c3_coi_vs_budget 
+
+=== D4: age groups ===
+  v d4_gap_by_age 
+
+=== A1: boys regression ===
+  v a1_boys_coef 
+
+=== Mincer tables for appendix ===
+
+ALL OUTPUTS SAVED. Run quarto next.

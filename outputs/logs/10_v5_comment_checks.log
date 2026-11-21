@@ -1,0 +1,70 @@
+
+=== 1. What the 'completed secondary' flag contains (girls 15-24) ===
+   completed_secondary edu_cat          edu_lbl_raw            n  
+1  0                   No education     Literate (levelless)     2
+2  0                   Primary          Class 1                  5
+3  0                   Primary          Class 2                 34
+4  0                   Primary          Class 3                 59
+5  0                   Primary          Class 4                 70
+6  0                   Primary          Class 5                155
+7  0                   Lower secondary  Class 6                126
+8  0                   Lower secondary  Class 7                238
+9  0                   Lower secondary  Class 8                452
+10 0                   <NA>             <NA>                   222
+11 1                   Secondary        Class 10               334
+12 1                   Secondary        Class 9                493
+13 1                   Secondary        SEE/SLC                317
+14 1                   Secondary        SLC                    595
+15 1                   Higher secondary Intermediate/Class 12  787
+16 1                   Tertiary         Bachelor level          70
+17 1                   Tertiary         Master level or higher   7
+
+=== 2. Girls 15-24 by schooling status ===
+  agegrp status                           n    pct 
+1 15-18  Grade 8 or below, out of school   261 16.1
+2 15-18  Grade 8 or below, still enrolled  356 20.3
+3 15-18  Grade 9 or above                 1064 63.6
+4 15-24  Grade 8 or below, out of school   991 25.1
+5 15-24  Grade 8 or below, still enrolled  372  8.7
+6 15-24  Grade 9 or above                 2603 66.2
+7 19-24  Grade 8 or below, out of school   730 31.4
+8 19-24  Grade 8 or below, still enrolled   16  0.6
+9 19-24  Grade 9 or above                 1539 67.9
+Census-anchored girls 15-24 at grade 8 or below: 999,400, of which out of school: 742,158, still enrolled: 257,242
+
+=== 3. NEET, employment and enrolment by sex and schooling (%) ===
+  agegrp sec              sex   n    neet employed enrolled
+1 15-18  Grade 8 or below Men    559 23.2 22.9     57.7    
+2 15-18  Grade 8 or below Women  617 40.8  5.5     55.8    
+3 15-18  Grade 9 or above Men    837  7.7  9.6     88.5    
+4 15-18  Grade 9 or above Women 1064  8.2  7.1     88.8    
+5 19-24  Grade 8 or below Men    527 41.2 57.3      1.6    
+6 19-24  Grade 8 or below Women  746 84.6 13.6      2.0    
+7 19-24  Grade 9 or above Men   1061 31.9 32.1     43.2    
+8 19-24  Grade 9 or above Women 1539 49.2 21.6     37.1    
+
+--- Ages 19-24, only those out of school ---
+  sec              sex   n   neet employed
+1 Grade 8 or below Men   517 41.9 58.1    
+2 Grade 8 or below Women 730 86.3 13.7    
+3 Grade 9 or above Men   640 56.1 43.9    
+4 Grade 9 or above Women 980 78.2 21.8    
+
+=== 4. Why girls 15-24 left school (q07_08, raw S07) ===
+Girls 15-24 out of school with a stated reason: n = 1874 
+   reason                            n   pct 
+1  MARRIAGE                          765 36.8
+2  HAD TO HELP AT HOME               360 19.2
+3  POOR ACADEMIC PROGRESS            296 18.4
+4  OTHER REASONS                     118  7.2
+5  TOO EXPENSIVE                     106  5.5
+6  PARENTS DID NOT WANT               78  4.2
+7  STARTED WORKING/GOT A JOB          58  4.0
+8  SATISFIED WITH LEVEL OF SCHOOLING  35  2.1
+9  TOO FAR AWAY                       30  1.1
+10 LACK OF BASIC  FACILITIES          14  0.8
+11 FURTHER SCHOOLING NOT AVAILABLE    12  0.7
+12 LANGUAGE PROBLEM                    1  0.1
+13 MISTREATMEMT AT SCHOOL / BULLYING   1  0.1
+
+=== DONE ===

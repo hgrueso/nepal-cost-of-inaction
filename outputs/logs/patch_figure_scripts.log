@@ -1,0 +1,4 @@
+  patched R/04_slides_figures.R 
+  patched R/08_slide_figures.R 
+  patched R/03n_heckman_mincer.R 
+All figure-text patches in place.

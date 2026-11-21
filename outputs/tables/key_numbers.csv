@@ -1,0 +1,363 @@
+section,item,value
+A sample,Persons listed on roster,46870
+A sample,Household members (analysis file),38101
+A sample,Sum of person weights,28740503.527431488
+A sample,Census 2021 population,29164578
+A sample,Youth 15-24 (n),6950
+A sample,Girls 15-24 (n),3966
+A sample,Boys 15-24 (n),2984
+A sample,Girls 15-18 (n),1681
+A sample,Girls 19-24 (n),2285
+A sample,Women 15-64 (n),13586
+B outcomes,enrolled Boys 15-18,76.49975910155942
+B outcomes,employed Boys 15-18,14.779560298837088
+B outcomes,neet Boys 15-18,13.746402105998994
+B outcomes,enrolled Girls 15-18,76.77896548787798
+B outcomes,employed Girls 15-18,6.552466330713085
+B outcomes,neet Girls 15-18,20.09796872354178
+B outcomes,enrolled Boys 15-24,50.71279380999199
+B outcomes,employed Boys 15-24,28.82252346159892
+B outcomes,neet Boys 15-24,25.375289415186348
+B outcomes,enrolled Girls 15-24,46.718293416909724
+B outcomes,employed Girls 15-24,13.931517053627184
+B outcomes,neet Girls 15-24,43.970715726084975
+B outcomes,enrolled Boys 19-24,29.37963919383942
+B outcomes,employed Boys 19-24,40.44004809207953
+B outcomes,neet Boys 19-24,34.99568670411561
+B outcomes,enrolled Girls 19-24,25.85538840143775
+B outcomes,employed Girls 19-24,19.052774288763505
+B outcomes,neet Girls 19-24,60.539036354333966
+B outcomes,gap girls-boys enrolled 15-24,-3.994500393082271
+B outcomes,gap girls-boys enrolled 15-24 p-value,0.006023181949217126
+B outcomes,gap girls-boys neet 15-24,18.595426310898606
+B outcomes,gap girls-boys neet 15-24 p-value,7.371913743890074e-38
+B outcomes,gap girls-boys enrolled 15-18,0.27920638631856975
+B outcomes,gap girls-boys enrolled 15-18 p-value,0.888314649460209
+B outcomes,gap girls-boys neet 15-18,6.351566617542781
+B outcomes,gap girls-boys neet 15-18 p-value,2.7896691726276597e-4
+B outcomes,gap girls-boys enrolled 19-24,-3.524250792401669
+B outcomes,gap girls-boys enrolled 19-24 p-value,0.05468068596994078
+B outcomes,gap girls-boys neet 19-24,25.543349650218357
+B outcomes,gap girls-boys neet 19-24 p-value,8.124181302262929e-39
+C province,NEET girls Madhesh,62.52725824476774
+C province,NEET boys Madhesh,31.311558195571312
+C province,share of girls 15-24 Madhesh,23.12053548992098
+C province,NEET girls Lumbini,47.278559118473396
+C province,NEET boys Lumbini,26.598345484997306
+C province,share of girls 15-24 Lumbini,19.097461416223982
+C province,NEET girls Koshi,43.23656472110698
+C province,NEET boys Koshi,25.543517111388862
+C province,share of girls 15-24 Koshi,14.728042955085062
+C province,NEET girls Karnali,41.820892994226405
+C province,NEET boys Karnali,30.130403118832128
+C province,share of girls 15-24 Karnali,6.012396240496853
+C province,NEET girls Sudurpashchim,41.637058210012285
+C province,NEET boys Sudurpashchim,23.07108068542988
+C province,share of girls 15-24 Sudurpashchim,9.47977866247329
+C province,NEET girls Gandaki,33.914892759731394
+C province,NEET boys Gandaki,24.754832549609716
+C province,share of girls 15-24 Gandaki,6.820657865041595
+C province,NEET girls Bagmati,25.75760096626929
+C province,NEET boys Bagmati,18.88056010332982
+C province,share of girls 15-24 Bagmati,20.74112737075824
+D marriage,married Boys 15-18,2.9286412272915965
+D marriage,married Girls 15-18,8.610879418696467
+D marriage,married Boys 15-24,14.191020050444417
+D marriage,married Girls 15-24,38.36125343869096
+D marriage,married Boys 19-24,23.508210579202352
+D marriage,married Girls 19-24,59.008803363342984
+D marriage,enrolled Married 15-18,17.479016136581997
+D marriage,neet Married 15-18,79.31088223208823
+D marriage,enrolled Not married 15-18,82.36633420475435
+D marriage,neet Not married 15-18,14.518800710887684
+D marriage,enrolled Married 15-24,6.185251187658703
+D marriage,neet Married 15-24,82.06994412290472
+D marriage,enrolled Not married 15-24,71.94428181449793
+D marriage,neet Not married 15-24,20.25942635235871
+D marriage,enrolled Married 19-24,5.041463177749263
+D marriage,neet Married 19-24,82.34937103886996
+D marriage,enrolled Not married 19-24,55.81803700695851
+D marriage,neet Not married 19-24,29.142008302277493
+E schooling,girls 15-24 share of females (%),19.829645197512054
+E schooling,girls 15-24 census-anchored (N),2956803.7494052257
+E schooling,girls 15-24 sum of weights (N),3022017.7265090942
+E schooling,"Grade 8 or below, out of school 15-18 (%)",16.088033639874098
+E schooling,"Grade 8 or below, still enrolled 15-18 (%)",20.314421119393756
+E schooling,Grade 9 or above 15-18 (%),63.597545240732146
+E schooling,"Grade 8 or below, out of school 15-24 (%)",25.134029349964276
+E schooling,"Grade 8 or below, out of school (N)",743163.9221963537
+E schooling,"Grade 8 or below, still enrolled 15-24 (%)",8.702976030590944
+E schooling,"Grade 8 or below, still enrolled (N)",257329.92158235115
+E schooling,Grade 9 or above 15-24 (%),66.16299461944477
+E schooling,Grade 9 or above (N),1956309.9056265207
+E schooling,"Grade 8 or below, out of school 19-24 (%)",31.412190690616544
+E schooling,"Grade 8 or below, still enrolled 19-24 (%)",0.6443246668372333
+E schooling,Grade 9 or above 19-24 (%),67.94348464254622
+E schooling,Grade 9 or above Boys 15-24 (%),64.20621882790739
+F by schooling,neet Boys 15-18 Grade 8 or below,23.183855884533198
+F by schooling,employed Boys 15-18 Grade 8 or below,22.92160155624391
+F by schooling,neet Girls 15-18 Grade 8 or below,40.80272718541313
+F by schooling,employed Girls 15-18 Grade 8 or below,5.5092392864043225
+F by schooling,neet Boys 15-18 Grade 9 or above,7.726801413485099
+F by schooling,employed Boys 15-18 Grade 9 or above,9.586227611683501
+F by schooling,neet Girls 15-18 Grade 9 or above,8.246818960498446
+F by schooling,employed Girls 15-18 Grade 9 or above,7.1495966938481095
+F by schooling,neet Boys 19-24 Grade 8 or below,41.24282719258032
+F by schooling,employed Boys 19-24 Grade 8 or below,57.26746888579556
+F by schooling,neet Girls 19-24 Grade 8 or below,84.57657335870991
+F by schooling,employed Girls 19-24 Grade 8 or below,13.573999502689476
+F by schooling,neet Boys 19-24 Grade 9 or above,31.892552608982708
+F by schooling,employed Boys 19-24 Grade 9 or above,32.08138490937245
+F by schooling,neet Girls 19-24 Grade 9 or above,49.197850688186726
+F by schooling,employed Girls 19-24 Grade 9 or above,21.637723073681034
+F by schooling,neet Boys 19-24 out of school Grade 8 or below,41.89871997438881
+F by schooling,employed Boys 19-24 out of school Grade 8 or below,58.10128002561119
+F by schooling,neet Girls 19-24 out of school Grade 8 or below,86.31140213866712
+F by schooling,employed Girls 19-24 out of school Grade 8 or below,13.688597861332886
+F by schooling,neet Boys 19-24 out of school Grade 9 or above,56.14466765952129
+F by schooling,employed Boys 19-24 out of school Grade 9 or above,43.85533234047871
+F by schooling,neet Girls 19-24 out of school Grade 9 or above,78.22335691862375
+F by schooling,employed Girls 19-24 out of school Grade 9 or above,21.776643081376253
+G reasons,MARRIAGE,36.786875814768855
+G reasons,HAD TO HELP AT HOME,19.18278555740218
+G reasons,POOR ACADEMIC PROGRESS,18.38042107689285
+G reasons,OTHER REASONS,7.1577639217054045
+G reasons,TOO EXPENSIVE,5.503239856316231
+G reasons,PARENTS DID NOT WANT,4.180856200299385
+G reasons,STARTED WORKING/GOT A JOB,3.9527976506562177
+G reasons,SATISFIED WITH LEVEL OF SCHOOLING,2.0911767856912733
+G reasons,TOO FAR AWAY,1.1419948809349802
+G reasons,LACK OF BASIC  FACILITIES,0.7988064092676332
+G reasons,FURTHER SCHOOLING NOT AVAILABLE,0.709856115731401
+G reasons,LANGUAGE PROBLEM,0.059699238918260185
+G reasons,MISTREATMEMT AT SCHOOL / BULLYING,0.053726491415329994
+G reasons,n with a stated reason,1874
+H regressions,"Enrolment, girls 15-24 | rural",-3.0235023466527062
+H regressions,"Enrolment, girls 15-24 | ppoor",3.0011035902801324
+H regressions,"Enrolment, girls 15-24 | quintile_n",5.7650272578323065
+H regressions,"Enrolment, girls 15-24 | any_difficulty",-20.909501398357985
+H regressions,"Enrolment, girls 15-24 | caste_broadJanajati",-8.013652734803665
+H regressions,"Enrolment, girls 15-24 | caste_broadDalit",-5.356086501894827
+H regressions,"Enrolment, girls 15-24 | caste_broadReligious/Linguistic",-15.495544379139803
+H regressions,"Enrolment, girls 15-24 | caste_broadOther",-10.935685625714312
+H regressions,"Enrolment, girls 15-24 | currently_married",-62.539894883783596
+H regressions,"Enrolment, girls 15-18 | rural",-4.710501461122766
+H regressions,"Enrolment, girls 15-18 | ppoor",-3.182938790025293
+H regressions,"Enrolment, girls 15-18 | quintile_n",5.079788650888614
+H regressions,"Enrolment, girls 15-18 | any_difficulty",-13.484162997836528
+H regressions,"Enrolment, girls 15-18 | caste_broadJanajati",-9.427055434268166
+H regressions,"Enrolment, girls 15-18 | caste_broadDalit",-7.043766582079606
+H regressions,"Enrolment, girls 15-18 | caste_broadReligious/Linguistic",-24.595509542457417
+H regressions,"Enrolment, girls 15-18 | caste_broadOther",-56.62496898237068
+H regressions,"Enrolment, girls 15-18 | currently_married",-60.80966074931264
+H regressions,"Enrolment, girls 19-24 | rural",-4.091080945700753
+H regressions,"Enrolment, girls 19-24 | ppoor",7.623978336906688
+H regressions,"Enrolment, girls 19-24 | quintile_n",7.498125630879823
+H regressions,"Enrolment, girls 19-24 | any_difficulty",-19.130930921649597
+H regressions,"Enrolment, girls 19-24 | caste_broadJanajati",-5.100600441734785
+H regressions,"Enrolment, girls 19-24 | caste_broadDalit",-6.481029145427995
+H regressions,"Enrolment, girls 19-24 | caste_broadReligious/Linguistic",-8.732103846452238
+H regressions,"Enrolment, girls 19-24 | caste_broadOther",18.841370126866344
+H regressions,"Enrolment, girls 19-24 | currently_married",-44.9694263373731
+H regressions,"NEET, youth 15-24 | female",6.941276416582359
+H regressions,"NEET, youth 15-24 | rural",6.111614796558245
+H regressions,"NEET, youth 15-24 | ppoor",0.39723216833434044
+H regressions,"NEET, youth 15-24 | quintile_n",-4.724435545012355
+H regressions,"NEET, youth 15-24 | any_difficulty",24.067197590462154
+H regressions,"NEET, youth 15-24 | caste_broadJanajati",4.9201281372165795
+H regressions,"NEET, youth 15-24 | caste_broadDalit",0.5773288442973332
+H regressions,"NEET, youth 15-24 | caste_broadReligious/Linguistic",7.18109295629142
+H regressions,"NEET, youth 15-24 | caste_broadOther",-0.34744264877306313
+H regressions,"NEET, youth 15-24 | currently_married",43.12802176061482
+H regressions,"NEET, girls 15-24 | rural",4.6934837904283055
+H regressions,"NEET, girls 15-24 | ppoor",-2.6437774986527938
+H regressions,"NEET, girls 15-24 | quintile_n",-6.2265853603661965
+H regressions,"NEET, girls 15-24 | any_difficulty",24.42685134893032
+H regressions,"NEET, girls 15-24 | caste_broadJanajati",4.080696823998927
+H regressions,"NEET, girls 15-24 | caste_broadDalit",0.8905828667260396
+H regressions,"NEET, girls 15-24 | caste_broadReligious/Linguistic",19.624766134231976
+H regressions,"NEET, girls 15-24 | caste_broadOther",0.36082868083202424
+H regressions,"NEET, girls 15-24 | currently_married",57.07613900807424
+H regressions,"NEET, girls 15-18 | rural",5.722913944262819
+H regressions,"NEET, girls 15-18 | ppoor",2.820588604835436
+H regressions,"NEET, girls 15-18 | quintile_n",-4.4539194678658305
+H regressions,"NEET, girls 15-18 | any_difficulty",1.9846382229042816
+H regressions,"NEET, girls 15-18 | caste_broadJanajati",8.672666400605708
+H regressions,"NEET, girls 15-18 | caste_broadDalit",4.891879940834671
+H regressions,"NEET, girls 15-18 | caste_broadReligious/Linguistic",28.010941410996193
+H regressions,"NEET, girls 15-18 | caste_broadOther",11.741612107806167
+H regressions,"NEET, girls 15-18 | currently_married",60.810551787746704
+H regressions,"NEET, girls 19-24 | rural",5.318530237239447
+H regressions,"NEET, girls 19-24 | ppoor",-6.813938947942807
+H regressions,"NEET, girls 19-24 | quintile_n",-8.45617527006629
+H regressions,"NEET, girls 19-24 | any_difficulty",30.378231721342935
+H regressions,"NEET, girls 19-24 | caste_broadJanajati",-0.4737328637765489
+H regressions,"NEET, girls 19-24 | caste_broadDalit",-0.6424696768207102
+H regressions,"NEET, girls 19-24 | caste_broadReligious/Linguistic",13.158085419403188
+H regressions,"NEET, girls 19-24 | caste_broadOther",-11.641290005282462
+H regressions,"NEET, girls 19-24 | currently_married",43.24008672467679
+H regressions,"NEET, boys 15-24 | rural",7.613938516945527
+H regressions,"NEET, boys 15-24 | ppoor",5.25288318894409
+H regressions,"NEET, boys 15-24 | quintile_n",-3.393610291961815
+H regressions,"NEET, boys 15-24 | any_difficulty",26.149950859172055
+H regressions,"NEET, boys 15-24 | caste_broadJanajati",6.152427530100116
+H regressions,"NEET, boys 15-24 | caste_broadDalit",0.1024300222425135
+H regressions,"NEET, boys 15-24 | caste_broadReligious/Linguistic",-6.390410753239169
+H regressions,"NEET, boys 15-24 | caste_broadOther",-6.268118837617302
+H regressions,"NEET, boys 15-24 | currently_married",7.857872771071454
+H regressions,"grade 9+ on NEET, unmarried girls",-15.415465588730903
+H regressions,"grade 9+ on NEET, married girls",-4.60288133798533
+I disability,share without disability,99.52530455808468
+I disability,enrolled without disability,46.82168575010012
+I disability,neet without disability,43.84316621085615
+I disability,share with disability,0.4746954419153093
+I disability,enrolled with disability,25.04091347783362
+I disability,neet with disability,70.71292394735097
+J forest,average effect (pp),-15.008397551748477
+J forest,average effect SE (pp),3.119022710074701
+J forest,Province Koshi,-12.70933269599664
+J forest,Province Madhesh,-12.152039428814247
+J forest,Province Bagmati,-11.58001312560797
+J forest,Province Gandaki,-11.68516339457781
+J forest,Province Lumbini,-12.200321565571794
+J forest,Province Karnali,-13.930633094771128
+J forest,Province Sudurpashchim,-13.580948330991886
+J forest,Caste/Ethnicity Brahmin/Chhetri,-14.260564646810556
+J forest,Caste/Ethnicity Janajati,-10.725362966908019
+J forest,Caste/Ethnicity Dalit,-11.022966880566704
+J forest,Caste/Ethnicity Religious/Linguistic,-11.8732268668048
+J forest,Caste/Ethnicity Other,-13.210906154507523
+J forest,Wealth Quintile Poorest (Q1),-11.872858342111083
+J forest,Wealth Quintile Q2,-11.515543247373476
+J forest,Wealth Quintile Q3,-11.548815737251738
+J forest,Wealth Quintile Q4,-12.691230353117058
+J forest,Wealth Quintile Richest (Q5),-14.439731853558618
+K cost,Girls at grade 8 or below (N),1000493.8437787049
+K cost,of whom out of school (N),743163.9221963537
+K cost,"CoI, NPR bn (r = 9%)",10.78269717014527
+K cost,"CoI, USD million",81.07291105372383
+K cost,CoI % of health budget,12.503127516402216
+K cost,CoI % of social security allowances,10.172355820891765
+K cost,CoI % of education budget,5.294459967664377
+K cost,CoI per girl (NPR),10777.37483063439
+K cost,CoI per girl (USD),81.03289346341646
+K cost,"CoI, NPR bn (r = 12%)",14.583296970148623
+K cost,"CoI out of school only, NPR bn",7.909639383510618
+K cost,"CoI out of school only, USD million",59.47097280835051
+K cost,CoI out of school only % of health budget,9.17165976752159
+K cost,"CoI with the forest effect at its lower 95% bound, NPR bn",6.390642963304143
+K cost,"CoI with the forest effect at its upper 95% bound, NPR bn",15.174751376986395
+K cost,"One yearly cohort: girls ending at grade 8 or below (N, attainment of 19-24-year-olds)",95699.76405644468
+K cost,"CoI per yearly cohort, NPR bn",1.0296685251064503
+K cost,"CoI per yearly cohort, USD million",7.741868609822935
+K cost,CoI per yearly cohort % of health budget,1.193957009631784
+K cost,"One tenth of the 15-24 total, NPR bn",1.078269717014527
+K cost,"Forgone earnings per year for today's 15-24 stock, NPR bn",0.6585177247340246
+K cost,CoI NPR bn Bagmati,3.3183155517962355
+K cost,CoI share % Bagmati,30.774448168533045
+K cost,CoI % of provincial GDP Bagmati,0.1599959282447558
+K cost,girls at grade 8 or below (N) Bagmati,110759.4039261915
+K cost,CoI NPR bn Gandaki,0.447314944730183
+K cost,CoI share % Gandaki,4.148451335243764
+K cost,CoI % of provincial GDP Gandaki,0.08652126590525784
+K cost,girls at grade 8 or below (N) Gandaki,45189.1345954755
+K cost,CoI NPR bn Karnali,0.2966557305286986
+K cost,CoI share % Karnali,2.751220087586879
+K cost,CoI % of provincial GDP Karnali,0.12158021742979451
+K cost,girls at grade 8 or below (N) Karnali,54049.876071940715
+K cost,CoI NPR bn Koshi,1.5480745921364796
+K cost,CoI share % Koshi,14.357025591173336
+K cost,CoI % of provincial GDP Koshi,0.1714368319088017
+K cost,girls at grade 8 or below (N) Koshi,131825.41423963854
+K cost,CoI NPR bn Lumbini,1.2690852030384643
+K cost,CoI share % Lumbini,11.769645228953106
+K cost,CoI % of provincial GDP Lumbini,0.15590727310054844
+K cost,girls at grade 8 or below (N) Lumbini,187628.26509664982
+K cost,CoI NPR bn Madhesh,3.446072966648822
+K cost,CoI share % Madhesh,31.95928543917732
+K cost,CoI % of provincial GDP Madhesh,0.4607049420653505
+K cost,girls at grade 8 or below (N) Madhesh,383632.43848090566
+K cost,CoI NPR bn Sudurpashchim,0.45717818126638643
+K cost,CoI share % Sudurpashchim,4.239924149332547
+K cost,CoI % of provincial GDP Sudurpashchim,0.11316291615504614
+K cost,girls at grade 8 or below (N) Sudurpashchim,87409.31136790306
+L returns,"Main: all wage earners, survey-weighted | Women | avg_return",14.2697701541593
+L returns,"Main: all wage earners, survey-weighted | Women | at_primary_5",10.670697770027516
+L returns,"Main: all wage earners, survey-weighted | Women | at_lower_sec_8",19.11828225393136
+L returns,"Main: all wage earners, survey-weighted | Women | at_secondary_10",24.750005243200594
+L returns,"Main: all wage earners, survey-weighted | Women | at_higher_sec_12",30.381728232469825
+L returns,"Main: all wage earners, survey-weighted | Women | n",3478
+L returns,"Main: all wage earners, survey-weighted | Men | avg_return",9.322927584462375
+L returns,"Main: all wage earners, survey-weighted | Men | at_primary_5",4.5390772399908945
+L returns,"Main: all wage earners, survey-weighted | Men | at_lower_sec_8",9.654308790871356
+L returns,"Main: all wage earners, survey-weighted | Men | at_secondary_10",13.064463158124996
+L returns,"Main: all wage earners, survey-weighted | Men | at_higher_sec_12",16.474617525378637
+L returns,"Main: all wage earners, survey-weighted | Men | n",5591
+L returns,"All wage earners, unweighted | Women | avg_return",14.43920011449249
+L returns,"All wage earners, unweighted | Women | at_primary_5",11.193492412745472
+L returns,"All wage earners, unweighted | Women | at_lower_sec_8",19.85480038206219
+L returns,"All wage earners, unweighted | Women | at_secondary_10",25.62900569494
+L returns,"All wage earners, unweighted | Women | at_higher_sec_12",31.40321100781781
+L returns,"All wage earners, unweighted | Women | n",3478
+L returns,"All wage earners, unweighted | Men | avg_return",9.474454585492566
+L returns,"All wage earners, unweighted | Men | at_primary_5",4.625193285277783
+L returns,"All wage earners, unweighted | Men | at_lower_sec_8",10.022091950827685
+L returns,"All wage earners, unweighted | Men | at_secondary_10",13.620024394527618
+L returns,"All wage earners, unweighted | Men | at_higher_sec_12",17.21795683822755
+L returns,"All wage earners, unweighted | Men | n",5591
+L returns,Excluding those who never attended school | Women | avg_return,25.416157376743943
+L returns,Excluding those who never attended school | Women | at_primary_5,17.181901408084812
+L returns,Excluding those who never attended school | Women | at_lower_sec_8,22.287988674061165
+L returns,Excluding those who never attended school | Women | at_secondary_10,25.692046851378738
+L returns,Excluding those who never attended school | Women | at_higher_sec_12,29.0961050286963
+L returns,Excluding those who never attended school | Women | n,2214
+L returns,Excluding those who never attended school | Men | avg_return,10.639249869927204
+L returns,Excluding those who never attended school | Men | at_primary_5,0.9688927923650406
+L returns,Excluding those who never attended school | Men | at_lower_sec_8,7.794526973673658
+L returns,Excluding those who never attended school | Men | at_secondary_10,12.344949761212735
+L returns,Excluding those who never attended school | Men | at_higher_sec_12,16.895372548751816
+L returns,Excluding those who never attended school | Men | n,4679
+L returns,Long-term salaried workers only | Women | avg_return,12.88183330777948
+L returns,Long-term salaried workers only | Women | at_primary_5,4.441561629139599
+L returns,Long-term salaried workers only | Women | at_lower_sec_8,9.219316474819976
+L returns,Long-term salaried workers only | Women | at_secondary_10,12.404486371940225
+L returns,Long-term salaried workers only | Women | at_higher_sec_12,15.589656269060477
+L returns,Long-term salaried workers only | Women | n,1047
+L returns,Long-term salaried workers only | Men | avg_return,10.438917033966325
+L returns,Long-term salaried workers only | Men | at_primary_5,4.122688428199934
+L returns,Long-term salaried workers only | Men | at_lower_sec_8,7.725319561403186
+L returns,Long-term salaried workers only | Men | at_secondary_10,10.127073650205354
+L returns,Long-term salaried workers only | Men | at_higher_sec_12,12.528827739007523
+L returns,Long-term salaried workers only | Men | n,2075
+L returns,"Heckman two-step, unweighted (children under 5) | Women | avg_return",14.472718774803784
+L returns,"Heckman two-step, unweighted (children under 5) | Women | at_primary_5",10.561892639400964
+L returns,"Heckman two-step, unweighted (children under 5) | Women | at_lower_sec_8",20.998097216585883
+L returns,"Heckman two-step, unweighted (children under 5) | Women | at_secondary_10",27.955566934709164
+L returns,"Heckman two-step, unweighted (children under 5) | Women | at_higher_sec_12",34.913036652832446
+L returns,"Heckman two-step, unweighted (children under 5) | Women | n",3478
+L returns,"Heckman two-step, unweighted (children under 4) | Women | avg_return",14.475590138021024
+L returns,"Heckman two-step, unweighted (children under 4) | Women | at_primary_5",10.614967070491463
+L returns,"Heckman two-step, unweighted (children under 4) | Women | at_lower_sec_8",20.917202642512787
+L returns,"Heckman two-step, unweighted (children under 4) | Women | at_secondary_10",27.785359690527
+L returns,"Heckman two-step, unweighted (children under 4) | Women | at_higher_sec_12",34.653516738541214
+L returns,"Heckman two-step, unweighted (children under 4) | Women | n",3478
+L returns,"Heckman two-step, unweighted (children under 6) | Women | avg_return",14.470682926159096
+L returns,"Heckman two-step, unweighted (children under 6) | Women | at_primary_5",10.53372683022979
+L returns,"Heckman two-step, unweighted (children under 6) | Women | at_lower_sec_8",21.0396603097506
+L returns,"Heckman two-step, unweighted (children under 6) | Women | at_secondary_10",28.043615962764477
+L returns,"Heckman two-step, unweighted (children under 6) | Women | at_higher_sec_12",35.04757161577835
+L returns,"Heckman two-step, unweighted (children under 6) | Women | n",3478
+L returns,monthly earnings Men No schooling,5806.580821056745
+L returns,monthly earnings Men Primary,6357.505741280455
+L returns,monthly earnings Men Lower secondary,7749.130049128542
+L returns,monthly earnings Men Secondary,8613.257061253991
+L returns,monthly earnings Men Higher secondary,12926.79950664642
+L returns,monthly earnings Men Tertiary,28780.08119612445
+L returns,monthly earnings Women No schooling,1231.189885488541
+L returns,monthly earnings Women Primary,1378.3540697116096
+L returns,monthly earnings Women Lower secondary,2184.4673921679405
+L returns,monthly earnings Women Secondary,3081.026123707316
+L returns,monthly earnings Women Higher secondary,9307.851837173092
+L returns,monthly earnings Women Tertiary,22459.535309780775
+L returns,heckman rho,0.33048669931196645
+L returns,heckman IMR p-value,8.363478409568089e-4

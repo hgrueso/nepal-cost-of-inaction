@@ -1,0 +1,17 @@
+ATE on NEET: -15.0 pp (SE 3.1 pp)
+# A tibble: 12 × 6
+   dimension       group         mean_cate ci_lo ci_hi     n
+   <chr>           <chr>             <dbl> <dbl> <dbl> <dbl>
+ 1 Province        Bagmati           -11.6 -11.8 -11.3  2658
+ 2 Province        Gandaki           -11.7 -12   -11.3  1495
+ 3 Province        Madhesh           -12.2 -12.5 -11.8  2218
+ 4 Province        Lumbini           -12.2 -12.5 -11.9  2128
+ 5 Province        Koshi             -12.7 -13   -12.4  1939
+ 6 Province        Sudurpashchim     -13.6 -13.9 -13.2  1721
+ 7 Province        Karnali           -13.9 -14.3 -13.6  1427
+ 8 Wealth Quintile Richest (Q5)      -14.4 -14.7 -14.2  2843
+ 9 Wealth Quintile Q4                -12.7 -12.9 -12.5  2781
+10 Wealth Quintile Q3                -11.5 -11.8 -11.3  2672
+11 Wealth Quintile Q2                -11.5 -11.8 -11.2  2666
+12 Wealth Quintile Poorest (Q1)      -11.9 -12.2 -11.5  2624
+saved cf1_cate_province_wealth (report + slide versions)

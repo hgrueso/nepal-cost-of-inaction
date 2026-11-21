@@ -1,0 +1,10 @@
+age,status,n,pct,N_census
+15-18,"Grade 8 or below, out of school",261,16.088033639874098,NA
+15-18,"Grade 8 or below, still enrolled",356,20.314421119393756,NA
+15-18,Grade 9 or above,1064,63.597545240732146,NA
+15-24,"Grade 8 or below, out of school",991,25.134029349964276,743163.9221963537
+15-24,"Grade 8 or below, still enrolled",372,8.702976030590944,257329.92158235115
+15-24,Grade 9 or above,2603,66.16299461944477,1956309.9056265207
+19-24,"Grade 8 or below, out of school",730,31.412190690616544,NA
+19-24,"Grade 8 or below, still enrolled",16,0.6443246668372333,NA
+19-24,Grade 9 or above,1539,67.94348464254622,NA

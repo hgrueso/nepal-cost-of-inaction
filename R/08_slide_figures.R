@@ -14,7 +14,7 @@ slide_ggsave <- function(filename, plot = ggplot2::last_plot(), ...) {
   }
   ggplot2::ggsave(file.path(SLIDES_DIR, basename(filename)), plot, ...)
 }
-scripts <- c("R/03n_heckman_mincer.R", "R/04_slides_figures.R", "R/06_age_disagg_figures.R", "R/07_final_charts.R")
+scripts <- c("R/04_slides_figures.R", "R/03p_mincer_main.R", "R/06_age_disagg_figures.R", "R/07_final_charts.R")
 for (s in scripts) {
   cat("\n>>> slide versions from", s, "\n")
   env <- new.env(parent = globalenv()); env$ggsave <- slide_ggsave

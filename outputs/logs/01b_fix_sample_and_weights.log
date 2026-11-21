@@ -1,0 +1,20 @@
+As-built copy kept at outputs/cleaned_data_v2_asbuilt.RData 
+
+=== Sample and weights ===
+Roster rows: 46,870 | household members kept: 38,101 (81.3%) | dropped: 8,769
+Sum of person weights over members: 28,740,504 (Census 2021: 29,164,578) | as built: 163,463,962
+Females: 15,239,898 (Census 2021: 14,911,027) | girls 15-24: 3,022,018
+   sample                           n_as_built n    
+1  Roster (all listed persons)      46870      46870
+2  Household members                   NA      38101
+3  Youth 15-24                       9785       6950
+4    Girls 15-24                     4919       3966
+5    Boys 15-24                      4866       2984
+6    Girls 15-18                       NA       1681
+7    Girls 19-24                       NA       2285
+8  Working age 15-64                31585      23982
+9    Women 15-64                       NA      13586
+10   Women 15-64 with wage earnings    NA       3478
+
+Saved corrected outputs/cleaned_data_v2.RData 
+=== DONE ===
