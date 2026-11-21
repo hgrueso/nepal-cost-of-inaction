@@ -26,7 +26,7 @@ processing file: nepal_slides_en.qmd
   block-headings: true
   title: Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal
   author: |
-    Hernando Grueso, PhD \
+    Hernando Grueso-Hurtado, PhD \
     UNICEF
   date: November 2026
   lang: en
@@ -35,7 +35,7 @@ processing file: nepal_slides_en.qmd
   aspectratio: 169
   fontsize: 9pt
   shorttitle: Cost of Inaction · Adolescent Girls Nepal
-  shortauthor: Hernando Grueso, UNICEF
+  shortauthor: Hernando Grueso-Hurtado, UNICEF
   shortdate: November 2026
   header-includes:
     - |
@@ -67,7 +67,7 @@ processing file: nepal_slides_en.qmd
         \end{center}
         \vspace{0.6cm}
         \begin{center}
-          {\Large\bfseries Hernando Grueso, PhD\par}
+          {\Large\bfseries Hernando Grueso-Hurtado, PhD\par}
           \vspace{0.3em}
           {\large UNICEF\par}
           \vspace{0.5em}

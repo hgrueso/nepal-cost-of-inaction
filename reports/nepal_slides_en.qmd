@@ -1,7 +1,7 @@
 ---
 title: "Cost of Inaction Analysis for Adolescent Girls' Education and Human Capital in Nepal"
 author: |
-  Hernando Grueso, PhD \
+  Hernando Grueso-Hurtado, PhD \
   UNICEF
 date: "November 2026"
 lang: en
@@ -10,7 +10,7 @@ format:
     slide-level: 2
   revealjs:
     theme: [default, slides_theme.scss]
-    footer: "Hernando Grueso, UNICEF · Cost of Inaction Nepal · November 2026"
+    footer: "Hernando Grueso-Hurtado, UNICEF · Cost of Inaction Nepal · November 2026"
     slide-number: c/t
     transition: fade
     incremental: false
@@ -24,7 +24,7 @@ format:
     fontsize: 9pt
     fig-align: center
     shorttitle: "Cost of Inaction · Adolescent Girls Nepal"
-    shortauthor: "Hernando Grueso, UNICEF"
+    shortauthor: "Hernando Grueso-Hurtado, UNICEF"
     shortdate: "November 2026"
     keep-tex: false
     header-includes: |
@@ -56,7 +56,7 @@ format:
         \end{center}
         \vspace{0.6cm}
         \begin{center}
-          {\Large\bfseries Hernando Grueso, PhD\par}
+          {\Large\bfseries Hernando Grueso-Hurtado, PhD\par}
           \vspace{0.3em}
           {\large UNICEF\par}
           \vspace{0.5em}
@@ -269,7 +269,7 @@ The average effect of −15.0 pp (95% interval −21 to −9) is for **women age
 
 \vspace{0.2em}
 
-- **Break-even spending per girl.** USD `r nums$national_coi_usdm` million / `r format(nums$national_excluded, big.mark = ",")` girls = about **USD `r nums$breakeven_usd` per girl** in cumulative lifetime social spending. *Important caveat:* this break-even assumes every girl who completes secondary education enters the labour market and earns the median wage, which overstates realised returns, since many will not enter wage work. The figure is best read as the **theoretical maximum** spend that would still break even, not a prediction of per-girl returns.
+- **Break-even spending per girl.** USD `r nums$national_coi_usdm` million / `r format(nums$national_excluded, big.mark = ",")` girls = about **USD `r nums$breakeven_usd` per girl** in cumulative lifetime social spending. *Important caveat:* this is the spending threshold below which a programme pays for itself only if the modelled education and employment gains are achieved, including that girls who leave NEET earn the median wage. It is best read as the **theoretical maximum** spend that would still break even, not a prediction of per-girl returns.
 
 # Recommendations {.section-divider background-color="#00377C"}
 

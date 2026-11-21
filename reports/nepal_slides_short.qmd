@@ -161,7 +161,7 @@ Each layer answers a diagnosed problem: \textbf{learning} (gender-responsive ped
 \begin{center}
 {\fontsize{28pt}{34pt}\selectfont\bfseries\color{black} Thank you\par}
 \vspace{1em}
-{\fontsize{14pt}{17pt}\selectfont\color{black} Hernando Grueso, PhD\par}
+{\fontsize{14pt}{17pt}\selectfont\color{black} Hernando Grueso-Hurtado, PhD\par}
 \vspace{0.35em}
 {\fontsize{13pt}{16pt}\selectfont\color{uniceflight} hgrueso@unicef.org\par}
 \end{center}
