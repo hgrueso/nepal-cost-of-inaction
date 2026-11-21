@@ -198,7 +198,6 @@ Main specification, men:
 3 Ages 15-18 Married before 18   69  3.5          24.2  71.7
 4 Ages 19-24 Not married        878 41.0          55.8  29.1
 5 Ages 19-24 Currently married 1407 59.0           5.0  82.3
-  saved b1_marriage_by_age 
   saved b2_outcomes_marital_age 
   saved b3_neet_marriage_caste_age 
   saved b4_enrol_marriage_caste_age 

@@ -71,6 +71,7 @@ g_long <- bind_rows(
   mutate(outcome = factor(outcome, c("Enrolled", "Secondary", "Employed", "NEET")))
 
 figD1 <- ggplot(g_long, aes(x = outcome, y = value, fill = sex_lbl)) +
+  scale_x_discrete(labels = function(x) sub("^Secondary$", "In secondary school", x)) +
   geom_col(position = position_dodge(0.7), width = 0.6, alpha = 0.92) +
   geom_errorbar(aes(ymin = lo, ymax = hi),
                 position = position_dodge(0.7), width = 0.18, linewidth = 0.4) +
@@ -577,6 +578,7 @@ ga_long <- bind_rows(
               c("Enrolled", "Secondary", "Employed", "NEET")))
 
 figD4 <- ggplot(ga_long, aes(x = outcome, y = value, fill = sex_lbl)) +
+  scale_x_discrete(labels = function(x) sub("^Secondary$", "In secondary\nschool", x)) +
   geom_col(position = position_dodge(0.7), width = 0.6, alpha = 0.92) +
   geom_errorbar(aes(ymin = lo, ymax = hi),
                 position = position_dodge(0.7), width = 0.18, linewidth = 0.4) +

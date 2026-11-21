@@ -24,7 +24,7 @@ p <- ggplot(d,aes(v,item,fill=item=="Cost of inaction"))+
   scale_fill_manual(values=c(`TRUE`=ur,`FALSE`=ub),guide="none")+
   scale_x_continuous(expand=expansion(mult=c(0,.33)))+
   labs(title="The cost of inaction compared with national budget lines",
-       subtitle="NPR billion | census-anchored estimate (r = 9%), FY 2024/25 budgets",
+       subtitle="NPR billion | health and education budgets FY 2024/25, social security allowances FY 2022/23",
        x="NPR billion",y=NULL,
        caption="Author's calculations, NLSS IV 2022/23 and Census 2021; MoF Red Book FY 2024/25.")+th()
 sv(p,"c3_coi_vs_budget_census",11,5)

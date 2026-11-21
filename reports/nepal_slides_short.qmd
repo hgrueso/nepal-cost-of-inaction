@@ -71,7 +71,7 @@ execute:
 ```{=latex}
 \vspace{0.5cm}
 \begin{itemize}\setlength\itemsep{0.6em}
-\item At ages 15--18 girls and boys are enrolled at the same rate (\textbf{77\%}).
+\item At ages 15--18 girls and boys are enrolled at almost the same rate (\textbf{77\%} and 76\%).
 \item Yet girls' NEET (\textbf{44\%}) is far above boys' (25\%), and at ages 19--24 it reaches \textbf{61\%} against 35\%.
 \item Nepal's gender gap opens in the \textbf{transition from school to work}.
 \item Marriage is by far the strongest correlate of girls' NEET and the main reason girls give for leaving school (37\%). The share of girls married rises from \textbf{9\% at 15--18 to 59\% at 19--24} (4\% of girls aged 15--18 are married and still under 18).
@@ -116,7 +116,7 @@ execute:
 \item \textbf{NPR 10.8 billion (USD 81M)} is the lifetime earnings forgone by the 1.0 million girls aged 15--24 today who have not gone beyond grade 8 (counts anchored to the 2021 Census).
 \item Equivalent to \textbf{12.5\% of one year's health budget}, \textbf{10.2\% of the social-security-allowance budget} and \textbf{5.3\% of the education budget}. With a 12\% return the loss is NPR 14.6 billion; the 9\% ILO headline is the conservative choice.
 \item This covers ten yearly cohorts. \textit{Each new cohort} adds about NPR 1 billion.
-\item Break-even: any programme costing under \textbf{USD 81 per girl} lifetime yields positive ROI, a theoretical maximum that assumes jobs are available on completion.
+\item Break-even: about \textbf{USD 81 per girl} is the spending threshold below which a programme pays for itself, if the modelled education and employment gains are achieved.
 \end{itemize}
 ```
 
@@ -129,7 +129,7 @@ execute:
 \begin{itemize}\setlength\itemsep{0.7em}
 \item[\textbf{1.}] \textbf{Livelihoods: pathways from education to employment.} Every gain assumes jobs exist for qualified young women. Pair upper-secondary retention with skills bridges, TVET, apprenticeships and return-to-education pathways, and invest in employment-generating sectors alongside education.
 \item[\textbf{2.}] \textbf{Education: universal secondary completion with year-by-year retention.} 14.3\% higher earnings per year of schooling for women, rising through lower and upper secondary. Reward \textit{every year retained}, not only the completion milestone.
-\item[\textbf{3.}] \textbf{Marriage: treat prevention as an economic priority, starting in adolescence.} Marriage is associated with $-$63 pp enrolment and $+$43 pp NEET, the largest single lever, and dropout is itself a risk factor for child marriage. Combine enforcement of existing legislation, social-norm change and social protection, concentrated in Madhesh and Lumbini, reaching girls \textit{before} the post-18 transition.
+\item[\textbf{3.}] \textbf{Marriage: treat prevention as an economic priority, starting in adolescence.} Marriage is associated with $-$63 pp enrolment among girls and $+$43 pp NEET among all youth ($+$57 pp among girls), the largest single lever, and dropout is itself a risk factor for child marriage. Combine enforcement of existing legislation, social-norm change and social protection, concentrated in Madhesh and Lumbini, reaching girls \textit{before} the post-18 transition.
 \item[\textbf{4.}] \textbf{Equity: close the gaps facing Dalit and minority girls.} Dalit girls' enrolment is about 5 pp lower even after controlling for wealth, and the gap is larger for religious and linguistic minority girls. Pair education with apprenticeships, scholarships and anti-discrimination measures.
 \end{itemize}
 ```

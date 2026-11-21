@@ -85,7 +85,7 @@ figB1 <- ggplot(b1, aes(x = agegrp, y = pct, fill = marital_cat)) +
        x = NULL, y = "% currently married",
        caption = "NLSS IV 2022/23, survey-weighted. Age at first marriage is not recorded in NLSS IV; married 19-24-year-olds are shown by current status only.") +
   th_policy()
-sv(figB1, "b1_marriage_by_age", w = 9, h = 5)
+# b1_marriage_by_age is produced by R/07_final_charts.R (labels by current age and status)
 
 # ── B2: enrolment and NEET by marital category and age group ─────────────────
 b2 <- stats %>% filter(n >= 15) %>%

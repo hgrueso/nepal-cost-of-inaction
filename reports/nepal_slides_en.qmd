@@ -123,8 +123,8 @@ nums <- if (!is.null(res)) list(
 ```{=latex}
 \small
 \begin{itemize}\setlength\itemsep{0.55em}
-\item[\textbf{1.}] Nepal's gender gap \textbf{opens after school, in the transition to work}. At ages 15--18 girls and boys are enrolled at the same rate (77\%). By ages 19--24, 61\% of young women are NEET against 35\% of young men. Across ages 15--24, NEET is 44\% for girls and 25\% for boys.
-\item[\textbf{2.}] \textbf{Marriage is the strongest correlate of exclusion, and it begins in adolescence.} Being currently married is associated with 63 pp lower enrolment and 43 pp higher NEET, and it is the main reason girls give for leaving school (37\%). The share married rises from 9\% at ages 15--18 (4\% of girls in this age group are married and still under 18) to 59\% at 19--24.
+\item[\textbf{1.}] Nepal's gender gap \textbf{opens after school, in the transition to work}. At ages 15--18 girls and boys are enrolled at almost the same rate (77\% and 76\%). By ages 19--24, 61\% of young women are NEET against 35\% of young men. Across ages 15--24, NEET is 44\% for girls and 25\% for boys.
+\item[\textbf{2.}] \textbf{Marriage is the strongest correlate of exclusion, and it begins in adolescence.} Being currently married is associated with 63 pp lower enrolment among girls and 43 pp higher NEET among all youth (57 pp among girls), and it is the main reason girls give for leaving school (37\%). The share married rises from 9\% at ages 15--18 (4\% of girls in this age group are married and still under 18) to 59\% at 19--24.
 \item[\textbf{3.}] \textbf{Schooling beyond grade 8 is associated with lower exclusion}: a 15 pp lower NEET probability (95\% interval 9 to 21 pp), similar across provinces and caste groups (causal forest, n = 13{,}586).
 \item[\textbf{4.}] \textbf{Each additional year of schooling is associated with 14.3\% higher earnings for women (9.3\% for men)}, and returns rise with the level: about 11\% per year at primary, 25\% at secondary and 30\% at higher secondary.
 \item[\textbf{5.}] \textbf{About NPR 10.8 billion (USD 81 million) in lifetime earnings is forgone} by the 1.0 million girls aged 15--24 today who have not gone beyond grade 8, equivalent to \textbf{12.5\% of one year's health budget}, 10.2\% of the social-security-allowance budget and 5.3\% of the education budget. Each new yearly cohort adds about NPR 1 billion.
@@ -187,7 +187,7 @@ The 44.0% NEET figure reflects girls who are *neither* in school *nor* employed 
 
 ## Reading the Coefficient Plot {.smaller}
 
-- **Marriage is associated with the largest changes.** Being currently married is associated with a **−63 pp** lower enrolment probability and a **+43 pp** higher NEET probability, after controlling for poverty, caste, geography, and disability.
+- **Marriage is associated with the largest changes.** Being currently married is associated with a **−63 pp** lower enrolment probability among girls and a **+43 pp** higher NEET probability among all youth (+57 pp among girls alone), after controlling for poverty, caste, geography, and disability.
 
 \vspace{0.6em}
 
