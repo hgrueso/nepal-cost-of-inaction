@@ -437,14 +437,40 @@ Generalised random forest (Wager and Athey 2018), women 15–64 (n = 13,586). Tr
 
 ## Where the Path Breaks
 
-| Ages 19–24 | Women, grade 8 or below | Women, grade 9+ | Men, grade 8 or below | Men, grade 9+ |
+::: {.content-visible when-format="beamer"}
+
+```{=latex}
+\vspace{1em}
+\begin{center}
+\large
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{\textbf{Women}} & \multicolumn{2}{c}{\textbf{Men}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Ages 19--24 & Grade $\le$ 8 & Grade 9+ & Grade $\le$ 8 & Grade 9+\\
+\midrule
+NEET & 85\% & 49\% & 41\% & 32\%\\
+Employed & 14\% & 22\% & 57\% & 32\%\\
+Enrolled & 2\% & 37\% & 2\% & 43\%\\
+NEET, if out of school & 86\% & 78\% & 42\% & 56\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{1em}
+```
+
+:::
+
+::: {.content-visible unless-format="beamer"}
+
+| Ages 19–24 | Women: grade ≤ 8 | Women: grade 9+ | Men: grade ≤ 8 | Men: grade 9+ |
 |---|---:|---:|---:|---:|
 | NEET | 85% | 49% | 41% | 32% |
 | Employed | 14% | 22% | 57% | 32% |
 | Enrolled | 2% | 37% | 2% | 43% |
-| NEET, among those out of school | 86% | 78% | 42% | 56% |
+| NEET, if out of school | 86% | 78% | 42% | 56% |
 
-\vspace{0.6em}
+:::
 
 ::: {.content-visible when-format="beamer"}
 
